@@ -1,6 +1,7 @@
 package com.oblivion.nocturne.ui.theme
 
-import androidx.compose.material3.ColorScheme
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
 // ===== Brand =====
@@ -10,7 +11,7 @@ import androidx.compose.ui.graphics.Color
  * ColorScheme is generated from this at runtime when dynamic colour is on — see [AppTheme]. With
  * dynamic colour disabled (see Theme.kt) the app instead uses the fixed [brandDarkColorScheme] /
  * [brandLightColorScheme] built directly from the logo hex values below.
- */
+ * */
 val seed = Color(0xFFD4AF37)
 
 /**
@@ -23,8 +24,8 @@ val seed = Color(0xFFD4AF37)
  * Used by [AppTheme] once dynamic colour is disabled. Neutrals follow the M3 tonal ramp so the
  * container tiers still read as a coherent hierarchy above the charcoal base; error stays on the
  * app's favorite pink for consistency with the semantic colors below.
- */
-val brandDarkColorScheme = ColorScheme(
+ * */
+val brandDarkColorScheme = darkColorScheme(
     primary = Color(0xFFD4AF37),
     onPrimary = Color(0xFF2E2915),
 
@@ -59,10 +60,7 @@ val brandDarkColorScheme = ColorScheme(
     inversePrimary = Color(0xFFD4AF37),
     onInversePrimary = Color(0xFF2E2915),
 
-    // Fixed-tier (expressive) params required by the M3 1.5.0-alpha22 ColorScheme constructor.
-    // These are the "on-*Fixed" text colours and the surfaceBright/surfaceDim tiers that a hand-
-    // written palette must supply when dynamic colour is off; they sit alongside primary/secondary/
-    // tertiary so the fixed surfaces (sheets, dialogs) keep the brand gold + charcoal look.
+    // Standard Material 3 parameters for M3 1.5.0-alpha22
     onPrimaryFixed = Color(0xFF2E2915),
     onPrimaryFixedVariant = Color(0xFFF6F9FC),
 
@@ -84,8 +82,8 @@ val brandDarkColorScheme = ColorScheme(
  * Fixed Material 3 light palette, mirroring the dark one above so dynamic colour being off still
  * renders a coherent brand look. Surfaces follow the app's existing neutral-grey ramp (#FAFAFA page,
  * #F7F7F7 surfaces); primary/accent stay gold + ethereal blue; on-colours are charcoal.
- */
-val brandLightColorScheme = ColorScheme(
+ * */
+val brandLightColorScheme = lightColorScheme(
     primary = Color(0xFFD4AF37),
     onPrimary = Color(0xFFFDFCF9),
 
@@ -120,8 +118,7 @@ val brandLightColorScheme = ColorScheme(
     inversePrimary = Color(0xFFD4AF37),
     onInversePrimary = Color(0xFF2E2915),
 
-    // Fixed-tier (expressive) params required by the M3 1.5.0-alpha22 ColorScheme constructor; see
-    // [brandDarkColorScheme]. Light keeps gold + ethereal-blue accents with charcoal-on-light text.
+    // Standard Material 3 parameters for M3 1.5.0-alpha22
     onPrimaryFixed = Color(0xFFFDFCF9),
     onPrimaryFixedVariant = Color(0xFF3A352C),
 
@@ -158,17 +155,12 @@ val overlay = Color(0x32242424)
 val blackMoreOverlay = Color(0x8f242424)
 
 // ===== Desktop shell =====
-// Spotify-style layering for the desktop window: the window itself takes the extreme, panels
-// step one shade back towards the middle so they read as raised. The light panel is not here —
-// it comes from colorScheme.surfaceContainer, which already sits at the right distance.
 
 val desktopWindowDark = Color(0xFF000000)
 val desktopWindowLight = Color(0xFFFFFFFF)
 val desktopPanelDark = Color(0xFF121212)
 
 // ===== Desktop window controls =====
-// The macOS traffic lights. Fixed by convention rather than by theme — users read these by
-// colour, so they stay the same in light and dark.
 
 val windowCloseButton = Color(0xFFFF605C)
 val windowCloseButtonHover = Color(0xFFE54942)
@@ -179,9 +171,5 @@ val windowMaximiseButtonHover = Color(0xFF00B344)
 
 // ===== Legacy — do not add new usages =====
 
-/**
- * Old M3 primary (lavender). Kept only for the SettingScreen storage bar,
- * which stays untouched by owner's decision.
- */
 @Deprecated("Legacy storage bar color only — use MaterialTheme.colorScheme.primary in new code")
 val md_theme_dark_primary = Color(0xFFB2C5FF)
