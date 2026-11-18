@@ -1,0 +1,54 @@
+package com.my.kizzy
+
+import com.oblivion.nocturne.domain.data.entities.SongEntity
+import com.my.kizzy.rpc.KizzyRPC
+import com.my.kizzy.rpc.RpcImage
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
+
+class DiscordRPC(
+    token: String,
+) : KizzyRPC(token) {
+    @OptIn(ExperimentalTime::class)
+    suspend fun updateSong(
+        currentPlaybackTimeMillis: Long,
+        durationMillis: Long,
+        playbackSpeed: Float = 1.0f,
+        song: SongEntity,
+    ) = runCatching {
+        val currentTime = Clock.System.now().toEpochMilliseconds()
+
+        val adjustedPlaybackTime = (currentPlaybackTimeMillis / playbackSpeed).toLong()
+        val calculatedStartTime = currentTime - adjustedPlaybackTime
+
+        val remainingDuration = durationMillis - currentPlaybackTimeMillis
+        val adjustedRemainingDuration = (remainingDuration / playbackSpeed).toLong()
+
+        setActivity(
+            name = APP_NAME,
+            details = song.title,
+            state = song.artistName?.joinToString(", "),
+            largeImage = song.thumbnails?.let { RpcImage.ExternalImage(it) },
+            smallImage = RpcImage.ExternalImage(APP_ICON),
+            largeText = song.albumName,
+            smallText = song.artistName?.firstOrNull(),
+            buttons =
+                listOf(
+                    "Listen on OblivionNocturne" to "https://__OblivionNocturne_ORG_PLACEHOLDER__/app/watch?v=${song.videoId}",
+                    "Visit OblivionNocturne" to "https://github.com/mosske/Oblivion-Nocturne",
+                ),
+            type = Type.LISTENING,
+            since = currentTime,
+            startTime = calculatedStartTime,
+            endTime = currentTime + adjustedRemainingDuration,
+            applicationId = APPLICATION_ID,
+        )
+    }
+
+    companion object {
+        private const val APPLICATION_ID = "1271273225120125040"
+        private const val APP_NAME: String = "OblivionNocturne"
+        private const val APP_ICON: String =
+            "https://fra.cloud.appwrite.io/v1/storage/buckets/683f1f620010ba0fa5b1/files/69007bc8001a28a7cea8/view?project=67ec0369002bd8a96885"
+    }
+}
