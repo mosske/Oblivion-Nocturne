@@ -58,7 +58,6 @@ val brandDarkColorScheme = darkColorScheme(
     inverseSurface = Color(0xFFFAFAFA),
     inverseOnSurface = Color(0xFF121212),
     inversePrimary = Color(0xFFD4AF37),
-    inversePrimary = Color(0xFF2E2915),
 
     // Standard Material 3 parameters for M3 1.5.0-alpha22
     onPrimaryFixed = Color(0xFF2E2915),
@@ -116,7 +115,6 @@ val brandLightColorScheme = lightColorScheme(
     inverseSurface = Color(0xFF303030),
     inverseOnSurface = Color(0xFFF1F1F1),
     inversePrimary = Color(0xFFD4AF37),
-    inversePrimary = Color(0xFF2E2915),
 
     // Standard Material 3 parameters for M3 1.5.0-alpha22
     onPrimaryFixed = Color(0xFFFDFCF9),
