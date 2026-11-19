@@ -314,7 +314,7 @@ internal inline fun <reified T> GridLibraryPlaylist(
                                     vertical = 16.dp,
                                 ),
                             onClick = {
-                                uriHandler.openUri("https://chart.__OblivionNocturne_ORG_PLACEHOLDER__")
+                                uriHandler.openUri("https://chart.github.com/mosske/Oblivion-Nocturne")
                             },
                         )
                     }

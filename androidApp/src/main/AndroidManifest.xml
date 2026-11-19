@@ -167,7 +167,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="https" />
-                <data android:host="__OblivionNocturne_ORG_PLACEHOLDER__" />
+                <data android:host="github.com/mosske/Oblivion-Nocturne" />
                 <data android:pathPrefix="/app/" />
             </intent-filter>
 

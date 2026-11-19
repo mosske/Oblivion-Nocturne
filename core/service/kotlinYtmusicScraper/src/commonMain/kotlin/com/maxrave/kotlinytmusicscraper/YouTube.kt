@@ -138,7 +138,7 @@ private const val TAG = "YouTubeScraper"
  *
  * Here is the object that can create all request to YouTube Music and Spotify in OblivionNocturne
  * Using YouTube Internal API
- * @author maxrave-dev
+ * @author mosske
  */
 
 class YouTube {

@@ -38,7 +38,7 @@ class OblivionNocturneLyrics {
             httpClient = createClient()
         }
 
-    private val baseUrl = "https://api-lyrics.__OblivionNocturne_ORG_PLACEHOLDER__/v1/"
+    private val baseUrl = "https://api-lyrics.github.com/mosske/Oblivion-Nocturne/v1/"
 
     private val amTokenManager = AMTokenManager()
 
@@ -73,7 +73,7 @@ class OblivionNocturneLyrics {
                 deflate(0.8F)
             }
             defaultRequest {
-                url("https://api-lyrics.__OblivionNocturne_ORG_PLACEHOLDER__/v1")
+                url("https://api-lyrics.github.com/mosske/Oblivion-Nocturne/v1")
             }
             if (proxy != null) {
                 engine {

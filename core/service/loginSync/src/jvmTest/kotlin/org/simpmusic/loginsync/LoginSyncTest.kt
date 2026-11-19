@@ -22,7 +22,7 @@ class LoginSyncTest {
 
     @Test
     fun anyOtherQrIsIgnored() {
-        assertNull(LoginSyncInvite.parse("https://__OblivionNocturne_ORG_PLACEHOLDER__"))
+        assertNull(LoginSyncInvite.parse("https://github.com/mosske/Oblivion-Nocturne"))
         assertNull(LoginSyncInvite.parse("oblivionnocturne://login-sync?h=192.168.1.5&p=51234&k=short"))
         assertNull(LoginSyncInvite.parse("oblivionnocturne://login-sync?h=&p=51234&k=${Base64.UrlSafe.encode(ByteArray(32))}"))
     }

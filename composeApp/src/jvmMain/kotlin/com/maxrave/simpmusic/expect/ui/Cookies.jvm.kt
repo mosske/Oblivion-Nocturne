@@ -63,7 +63,7 @@ actual fun PlatformWebView(
             )
             Button(
                 onClick = {
-                    openUrl("https://www.__OblivionNocturne_ORG_PLACEHOLDER__/blogs/en/how-to-log-in-on-desktop-app")
+                    openUrl("https://www.github.com/mosske/Oblivion-Nocturne/blogs/en/how-to-log-in-on-desktop-app")
                 },
             ) {
                 Text(
@@ -99,7 +99,7 @@ actual fun DiscordWebView(
             )
             Button(
                 onClick = {
-                    openUrl("https://www.__OblivionNocturne_ORG_PLACEHOLDER__/blogs/en/how-to-log-in-to-Discord-on-desktop-app")
+                    openUrl("https://www.github.com/mosske/Oblivion-Nocturne/blogs/en/how-to-log-in-to-Discord-on-desktop-app")
                 },
             ) {
                 Text(

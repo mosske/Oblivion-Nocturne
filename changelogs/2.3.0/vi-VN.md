@@ -22,7 +22,7 @@
 - **Hình ảnh**: artwork được giữ lại một ngày và vẫn hiện khi bạn mất mạng. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
 - **Tải xuống**: chỉ tải âm thanh khi bạn đang tắt chế độ phát video. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
 - **UI mượt hơn**: thanh điều hướng dưới, mini player và hiệu ứng glass vẽ lại ít hơn khi màn hình không có gì thay đổi. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
-- **Developer blog**: blog và thông báo bài mới giờ lấy từ __OblivionNocturne_ORG_PLACEHOLDER__. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
+- **Developer blog**: blog và thông báo bài mới giờ lấy từ github.com/mosske/Oblivion-Nocturne. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
 - **Thêm vào hàng đợi**: khi đang phát radio hoặc mix, hoặc khi bật "Hàng đợi không dừng", nút "Thêm vào hàng đợi" bị làm mờ và ghi rõ lý do, vì những hàng chờ này không có điểm cuối để thêm vào. "Phát tiếp theo" vẫn dùng được, và vuốt một bài sẽ phát bài đó tiếp theo. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
 - **Màu trang**: ở các trang playlist, album, nghệ sĩ, podcast và Analytics, màu lấy từ artwork chuyển dần thay vì nháy, và video của nghệ sĩ không còn bắt đầu bằng một khung hình đen. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
 - **Hộp thoại xin đánh giá**: có thêm nút theo dõi nhà phát triển trên X. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))

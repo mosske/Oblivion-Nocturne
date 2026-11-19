@@ -459,7 +459,7 @@ class Ytmusic {
     }
 
     suspend fun getOblivionNocturneChart() =
-        httpClient.get("https://chart.__OblivionNocturne_ORG_PLACEHOLDER__/api/playlists") {
+        httpClient.get("https://chart.github.com/mosske/Oblivion-Nocturne/api/playlists") {
             accept(ContentType.Application.Json)
             contentType(ContentType.Application.Json)
         }
@@ -698,7 +698,7 @@ class Ytmusic {
 
     /***
      * SponsorBlock testing
-     * @author maxrave-dev
+     * @author mosske
      */
 
     suspend fun getSkipSegments(videoId: String) =
@@ -1407,11 +1407,11 @@ class Ytmusic {
         // Credentials are NOT hard-coded in source — they live only in this remote file,
         // kept in a separate repo (oblivionnocturne-files) so the main repo stays credential-free.
         const val TIDAL_REMOTE_CONFIG_URL =
-            "https://raw.githubusercontent.com/maxrave-dev/oblivionnocturne-files/refs/heads/main/remote-config.json"
+            "https://raw.githubusercontent.com/mosske/oblivionnocturne-files/refs/heads/main/remote-config.json"
 
         // Read by dev builds only, so a banner can be tried out without any real user seeing it.
         const val REMOTE_CONFIG_DEV_URL =
-            "https://raw.githubusercontent.com/maxrave-dev/oblivionnocturne-files/refs/heads/main/remote-config-dev.json"
+            "https://raw.githubusercontent.com/mosske/oblivionnocturne-files/refs/heads/main/remote-config-dev.json"
     }
 }
 

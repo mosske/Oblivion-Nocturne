@@ -49,7 +49,7 @@ fun UnofficialBuildScreen() {
             modifier = Modifier.widthIn(max = 480.dp),
         )
         Button(
-            onClick = { openUrl("https://__OblivionNocturne_ORG_PLACEHOLDER__/download") },
+            onClick = { openUrl("https://github.com/mosske/Oblivion-Nocturne/download") },
             modifier = Modifier.widthIn(max = 480.dp).fillMaxWidth(),
         ) {
             // typo() bakes a body colour into its styles; the label must take the button's own.

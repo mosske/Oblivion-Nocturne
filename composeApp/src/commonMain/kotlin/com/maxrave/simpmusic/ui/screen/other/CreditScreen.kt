@@ -130,7 +130,7 @@ fun CreditScreen(
             // Website button
             TextButton(
                 onClick = {
-                    openUrl("https://__OblivionNocturne_ORG_PLACEHOLDER__")
+                    openUrl("https://github.com/mosske/Oblivion-Nocturne")
                 },
                 modifier =
                     Modifier
@@ -144,7 +144,7 @@ fun CreditScreen(
             // Developer blog button
             TextButton(
                 onClick = {
-                    openUrl("https://www.__OblivionNocturne_ORG_PLACEHOLDER__/blogs")
+                    openUrl("https://www.github.com/mosske/Oblivion-Nocturne/blogs")
                 },
                 modifier =
                     Modifier

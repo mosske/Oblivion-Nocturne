@@ -684,7 +684,7 @@ fun SearchScreen(
                                     OblivionNocturneChartButton(
                                         modifier = Modifier.padding(top = 10.dp),
                                     ) {
-                                        uriHandler.openUri("https://chart.__OblivionNocturne_ORG_PLACEHOLDER__")
+                                        uriHandler.openUri("https://chart.github.com/mosske/Oblivion-Nocturne")
                                     }
                                 }
                             }

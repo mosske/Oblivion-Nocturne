@@ -48,7 +48,7 @@ data class SongItem(
     val isLive: Boolean = false,
 ) : YTItem() {
     override val shareLink: String
-        get() = "https://__OblivionNocturne_ORG_PLACEHOLDER__/app/watch?v=$id"
+        get() = "https://github.com/mosske/Oblivion-Nocturne/app/watch?v=$id"
     override val type: YTItemType
         get() = YTItemType.SONG
 
@@ -78,7 +78,7 @@ data class VideoItem(
     val isLive: Boolean = false,
 ) : YTItem() {
     override val shareLink: String
-        get() = "https://__OblivionNocturne_ORG_PLACEHOLDER__/app/watch?v=$id"
+        get() = "https://github.com/mosske/Oblivion-Nocturne/app/watch?v=$id"
     override val type: YTItemType
         get() = YTItemType.VIDEO
 }
@@ -95,7 +95,7 @@ data class AlbumItem(
     override val explicit: Boolean = false,
 ) : YTItem() {
     override val shareLink: String
-        get() = "https://__OblivionNocturne_ORG_PLACEHOLDER__/app/playlist?list=$playlistId"
+        get() = "https://github.com/mosske/Oblivion-Nocturne/app/playlist?list=$playlistId"
     override val type: YTItemType
         get() = YTItemType.ALBUM
 }
@@ -113,7 +113,7 @@ data class PlaylistItem(
     override val explicit: Boolean
         get() = false
     override val shareLink: String
-        get() = "https://__OblivionNocturne_ORG_PLACEHOLDER__/app/playlist?list=$id"
+        get() = "https://github.com/mosske/Oblivion-Nocturne/app/playlist?list=$id"
     override val type: YTItemType
         get() = YTItemType.PLAYLIST
 }
@@ -129,7 +129,7 @@ data class ArtistItem(
     override val explicit: Boolean
         get() = false
     override val shareLink: String
-        get() = "https://__OblivionNocturne_ORG_PLACEHOLDER__/app/channel/$id"
+        get() = "https://github.com/mosske/Oblivion-Nocturne/app/channel/$id"
     override val type: YTItemType
         get() = YTItemType.ARTIST
 }

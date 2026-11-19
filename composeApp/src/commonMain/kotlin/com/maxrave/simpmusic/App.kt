@@ -254,15 +254,15 @@ fun App(
                 Logger.d("MainActivity", "Discord callback, code present: ${!data.getQueryParameter("code").isNullOrEmpty()}")
                 viewModel.setIntent(null)
                 viewModel.completeDiscordLogin(data.toString())
-            } else if (data.host == "__OblivionNocturne_ORG_PLACEHOLDER__" || data.scheme == "oblivionnocturne") {
-                // https://__OblivionNocturne_ORG_PLACEHOLDER__/app/watch?v=VIDEO_ID
-                // https://__OblivionNocturne_ORG_PLACEHOLDER__/app/playlist?list=PLAYLIST_ID
-                // https://__OblivionNocturne_ORG_PLACEHOLDER__/app/channel/CHANNEL_ID
+            } else if (data.host == "github.com/mosske/Oblivion-Nocturne" || data.scheme == "oblivionnocturne") {
+                // https://github.com/mosske/Oblivion-Nocturne/app/watch?v=VIDEO_ID
+                // https://github.com/mosske/Oblivion-Nocturne/app/playlist?list=PLAYLIST_ID
+                // https://github.com/mosske/Oblivion-Nocturne/app/channel/CHANNEL_ID
                 // oblivionnocturne://watch?v=VIDEO_ID  (host="watch", no path)
                 // oblivionnocturne://playlist?list=PLAYLIST_ID
                 // oblivionnocturne://channel/CHANNEL_ID
                 val segments = data.pathSegments
-                // For __OblivionNocturne_ORG_PLACEHOLDER__: segments = ["app", "watch"] → appPath = segments[1]
+                // For github.com/mosske/Oblivion-Nocturne: segments = ["app", "watch"] → appPath = segments[1]
                 // For oblivionnocturne://: host IS the appPath (e.g. host="watch"), segments = []
                 val appPath =
                     if (data.scheme == "oblivionnocturne") {
@@ -270,7 +270,7 @@ fun App(
                     } else {
                         segments.getOrNull(1)
                     }
-                Logger.d("MainActivity", "__OblivionNocturne_ORG_PLACEHOLDER__ deep link, appPath: $appPath")
+                Logger.d("MainActivity", "github.com/mosske/Oblivion-Nocturne deep link, appPath: $appPath")
                 // A path added to the when below must also go into APP_LINK_PATHS in AppLinks.kt.
                 // Some screens exist only with local tracking on or while signed in to YouTube; see
                 // isAppLinkAvailable. Read before setIntent(null): clearing the intent changes this
@@ -300,7 +300,7 @@ fun App(
 
                     "channel", "c" -> {
                         // oblivionnocturne://channel/UCxxx → segments = ["UCxxx"]
-                        // __OblivionNocturne_ORG_PLACEHOLDER__/app/channel/UCxxx → segments = ["app", "channel", "UCxxx"]
+                        // github.com/mosske/Oblivion-Nocturne/app/channel/UCxxx → segments = ["app", "channel", "UCxxx"]
                         val artistId =
                             if (data.scheme == "oblivionnocturne") {
                                 segments.firstOrNull()
@@ -917,7 +917,7 @@ fun App(
                                 onClick = {
                                     shouldShowUpdateDialog = false
                                     viewModel.showedUpdateDialog = false
-                                    openUrl("https://__OblivionNocturne_ORG_PLACEHOLDER__/download")
+                                    openUrl("https://github.com/mosske/Oblivion-Nocturne/download")
                                 },
                             ) {
                                 Text(

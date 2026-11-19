@@ -19,7 +19,7 @@ import java.io.File
  * - oblivionnocturne://playlist?list=PLAYLIST_ID   (direct scheme)
  * - oblivionnocturne://channel/CHANNEL_ID          (direct scheme)
  * - oblivionnocturne://album?id=ALBUM_ID           (direct scheme)
- * - https://__OblivionNocturne_ORG_PLACEHOLDER__/app/...            (web URL passed via args)
+ * - https://github.com/mosske/Oblivion-Nocturne/app/...            (web URL passed via args)
  */
 object DesktopDeepLinkHandler {
     private const val TAG = "DesktopDeepLinkHandler"
@@ -95,10 +95,10 @@ object DesktopDeepLinkHandler {
      *    → Extract the `url` param and use it as intent data
      *
      * 2. oblivionnocturne://watch?v=xxx, oblivionnocturne://playlist?list=xxx, etc.
-     *    → Convert to https://__OblivionNocturne_ORG_PLACEHOLDER__/app/watch?v=xxx format
-     *      so App.kt handles it uniformly via the __OblivionNocturne_ORG_PLACEHOLDER__ branch
+     *    → Convert to https://github.com/mosske/Oblivion-Nocturne/app/watch?v=xxx format
+     *      so App.kt handles it uniformly via the github.com/mosske/Oblivion-Nocturne branch
      *
-     * 3. https://__OblivionNocturne_ORG_PLACEHOLDER__/app/... or YouTube URLs
+     * 3. https://github.com/mosske/Oblivion-Nocturne/app/... or YouTube URLs
      *    → Pass through as-is
      */
     private fun parseToIntent(uri: String): GenericIntent {
@@ -122,27 +122,27 @@ object DesktopDeepLinkHandler {
             // redirect, which App.kt matches on this exact scheme and host, not a page to open.
             parsed.scheme == "oblivionnocturne" && parsed.host == "discord-auth" -> parsed
 
-            // oblivionnocturne://watch?v=xxx → https://__OblivionNocturne_ORG_PLACEHOLDER__/app/watch?v=xxx
-            // oblivionnocturne://playlist?list=xxx → https://__OblivionNocturne_ORG_PLACEHOLDER__/app/playlist?list=xxx
-            // oblivionnocturne://channel/UCxxx → https://__OblivionNocturne_ORG_PLACEHOLDER__/app/channel/UCxxx
-            // oblivionnocturne://album?id=xxx → https://__OblivionNocturne_ORG_PLACEHOLDER__/app/album?id=xxx
+            // oblivionnocturne://watch?v=xxx → https://github.com/mosske/Oblivion-Nocturne/app/watch?v=xxx
+            // oblivionnocturne://playlist?list=xxx → https://github.com/mosske/Oblivion-Nocturne/app/playlist?list=xxx
+            // oblivionnocturne://channel/UCxxx → https://github.com/mosske/Oblivion-Nocturne/app/channel/UCxxx
+            // oblivionnocturne://album?id=xxx → https://github.com/mosske/Oblivion-Nocturne/app/album?id=xxx
             parsed.scheme == "oblivionnocturne" && parsed.host != null -> {
                 val host = parsed.host!!
                 val query = parsed.query?.let { "?$it" } ?: ""
                 val pathSuffix = parsed.pathSegments.joinToString("/").let {
                     if (it.isNotEmpty()) "/$it" else ""
                 }
-                val convertedUrl = "https://__OblivionNocturne_ORG_PLACEHOLDER__/app/$host$pathSuffix$query"
+                val convertedUrl = "https://github.com/mosske/Oblivion-Nocturne/app/$host$pathSuffix$query"
                 Logger.d(TAG, "Converted oblivionnocturne:// to: $convertedUrl")
                 Uri.parse(convertedUrl)
             }
 
             // wordbyword://lastfm-auth?token=xxx → pass through untouched. It must NOT be rewritten
-            // to __OblivionNocturne_ORG_PLACEHOLDER__ like the branch above does: App.kt matches on this exact scheme to
+            // to github.com/mosske/Oblivion-Nocturne like the branch above does: App.kt matches on this exact scheme to
             // read the Last.fm request token.
             parsed.scheme == "wordbyword" -> parsed
 
-            // https://__OblivionNocturne_ORG_PLACEHOLDER__/app/... or YouTube URLs → pass through
+            // https://github.com/mosske/Oblivion-Nocturne/app/... or YouTube URLs → pass through
             else -> parsed
         }
 

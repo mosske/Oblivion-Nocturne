@@ -38,7 +38,7 @@ fun BlogPromoDialog(
         confirmButton = {
             TextButton(onClick = {
                 onVisitBlog.invoke()
-                uriHandler.openUri("https://www.__OblivionNocturne_ORG_PLACEHOLDER__/blogs")
+                uriHandler.openUri("https://www.github.com/mosske/Oblivion-Nocturne/blogs")
             }) {
                 Text(
                     stringResource(Res.string.visit_blog),

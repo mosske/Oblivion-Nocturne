@@ -139,7 +139,7 @@ class RssFeedNotifyWork(
         return items
     }
 
-    // Rows pushed before the feed moved to __OblivionNocturne_ORG_PLACEHOLDER__ hold the post's old maxrave.dev link.
+    // Rows pushed before the feed moved to github.com/mosske/Oblivion-Nocturne hold the post's old maxrave.dev link.
     private suspend fun isPushed(
         link: String,
         slug: String,
@@ -170,7 +170,7 @@ class RssFeedNotifyWork(
 
     companion object {
         private const val TAG = "RssFeedNotifyWork"
-        const val FEED_URL = "https://www.__OblivionNocturne_ORG_PLACEHOLDER__/rss.xml"
+        const val FEED_URL = "https://www.github.com/mosske/Oblivion-Nocturne/rss.xml"
 
         // The only link form the old maxrave.dev feed served: https://maxrave.dev/articles/<slug>.
         private const val LEGACY_POST_URL = "https://maxrave.dev/articles/"

@@ -22,7 +22,7 @@
 - **Images**: artwork is kept for a day and still shows when you are offline. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
 - **Downloads**: only the audio is downloaded while video playback is off. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
 - **Smoother UI**: the bottom bar, the mini player and the glass effects redraw less while nothing on screen changes. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
-- **Developer blog**: the blog and its notifications now come from __OblivionNocturne_ORG_PLACEHOLDER__. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
+- **Developer blog**: the blog and its notifications now come from github.com/mosske/Oblivion-Nocturne. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
 - **Add to queue**: while a radio or mix is playing, or Endless queue is on, Add to queue is greyed out and says why, since those queues have no end to add to. Play next still works, and swiping a song plays it next. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
 - **Page colours**: on playlist, album, artist, podcast and Analytics pages, the colours taken from the artwork fade in instead of flashing, and an artist's video no longer starts on a black frame. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))
 - **Review request**: the dialog has a button to follow the developer on X. ([#2600](https://github.com/maxrave-dev/OblivionNocturne/issues/2600))

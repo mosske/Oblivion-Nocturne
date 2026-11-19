@@ -259,7 +259,7 @@ class FaradayCipherEngine(
          * A URL that fails either gate makes the store return null with no error anywhere.
          */
         const val PLAYER_CONFIG_URL: String =
-            "https://raw.githubusercontent.com/maxrave-dev/oblivionnocturne-files/main/registry/player_configs.json"
+            "https://raw.githubusercontent.com/mosske/oblivionnocturne-files/main/registry/player_configs.json"
 
         /** Metrolist's own table — same schema, already whitelisted by [RemotePlayerConfigStore]. */
         const val METROLIST_PLAYER_CONFIG_URL: String =

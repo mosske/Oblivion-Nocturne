@@ -2585,18 +2585,18 @@ fun SettingScreen(
             SettingGroup(
                 title = stringResource(Res.string.backup),
                 footer = {
-                    val beforeUrl = stringResource(Res.string.import_data_intro).substringBefore("https://www.__OblivionNocturne_ORG_PLACEHOLDER__/tools")
-                    val afterUrl = stringResource(Res.string.import_data_intro).substringAfter("https://www.__OblivionNocturne_ORG_PLACEHOLDER__/tools")
+                    val beforeUrl = stringResource(Res.string.import_data_intro).substringBefore("https://www.github.com/mosske/Oblivion-Nocturne/tools")
+                    val afterUrl = stringResource(Res.string.import_data_intro).substringAfter("https://www.github.com/mosske/Oblivion-Nocturne/tools")
                     Text(
                         buildAnnotatedString {
                             append(beforeUrl)
                             withLink(
                                 LinkAnnotation.Url(
-                                    "https://www.__OblivionNocturne_ORG_PLACEHOLDER__/tools",
+                                    "https://www.github.com/mosske/Oblivion-Nocturne/tools",
                                     TextLinkStyles(style = SpanStyle(color = MaterialTheme.colorScheme.primary)),
                                 ),
                             ) {
-                                append("https://www.__OblivionNocturne_ORG_PLACEHOLDER__/tools")
+                                append("https://www.github.com/mosske/Oblivion-Nocturne/tools")
                             }
                             append(afterUrl)
                         },
@@ -2810,7 +2810,7 @@ fun SettingScreen(
                     title = stringResource(Res.string.developer_blog),
                     subtitle = stringResource(Res.string.developer_blog_tagline),
                     onClick = {
-                        uriHandler.openUri("https://www.__OblivionNocturne_ORG_PLACEHOLDER__/blogs")
+                        uriHandler.openUri("https://www.github.com/mosske/Oblivion-Nocturne/blogs")
                     },
                 )
                 if (getPlatform() == Platform.Android) {

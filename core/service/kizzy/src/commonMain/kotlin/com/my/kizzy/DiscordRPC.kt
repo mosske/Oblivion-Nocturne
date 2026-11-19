@@ -34,7 +34,7 @@ class DiscordRPC(
             smallText = song.artistName?.firstOrNull(),
             buttons =
                 listOf(
-                    "Listen on OblivionNocturne" to "https://__OblivionNocturne_ORG_PLACEHOLDER__/app/watch?v=${song.videoId}",
+                    "Listen on OblivionNocturne" to "https://github.com/mosske/Oblivion-Nocturne/app/watch?v=${song.videoId}",
                     "Visit OblivionNocturne" to "https://github.com/mosske/Oblivion-Nocturne",
                 ),
             type = Type.LISTENING,

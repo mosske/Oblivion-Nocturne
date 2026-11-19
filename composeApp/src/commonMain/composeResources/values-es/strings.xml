@@ -689,7 +689,7 @@
     <string name="import_result">Creadas %1$d listas de reproducción e importadas %2$d canciones.</string>
     <string name="import_result_skipped">Se omitieron %1$d entradas porque su canción no estaba en el archivo.</string>
     <string name="import_failed">Error en la importación</string>
-    <string name="import_invalid_file">Este archivo no es un archivo de importación válido de OblivionNocturne. Convierte tu biblioteca en __OblivionNocturne_ORG_PLACEHOLDER__ primero.</string>
+    <string name="import_invalid_file">Este archivo no es un archivo de importación válido de OblivionNocturne. Convierte tu biblioteca en github.com/mosske/Oblivion-Nocturne primero.</string>
     <string name="analytics">Analíticas</string>
     <string name="select_all">Seleccionar todo</string>
     <string name="n_selected">%1$d seleccionados</string>
