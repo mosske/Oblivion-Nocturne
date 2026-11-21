@@ -1,9 +1,10 @@
 package com.oblivion.nocturne.data.repository
 
+import com.maxrave.domain.utils.Resource
 import com.oblivion.nocturne.domain.data.model.update.UpdateData
 import com.oblivion.nocturne.domain.repository.UpdateRepository
-import com.oblivion.nocturne.kotlinytmusicscraper.models.oblivion.nocturne.GithubResponse
-import com.oblivion.nocturne.ktorext.getEngine
+import com.maxrave.kotlinytmusicscraper.models.simpmusic.GithubResponse
+import com.maxrave.ktorext.getEngine
 import io.ktor.client.*
 import io.ktor.client.plugins.*
 import io.ktor.client.request.*
@@ -12,14 +13,12 @@ import io.ktor.http.*
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import kotlinx.coroutines.withContext
-import okio.Path.Companion.toPath
-import okio.FileSystem
 import kotlinx.coroutines.Dispatchers
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 import com.oblivion.nocturne.domain.utils.Resource
+
 
 private val httpClient = HttpClient(getEngine()) {
     install(ContentNegotiation) {
