@@ -99,7 +99,6 @@ import com.oblivion.nocturne.ui.component.LyricText
 import com.oblivion.nocturne.ui.component.ExplicitBadge
 import com.oblivion.nocturne.ui.component.heartBurst
 import com.oblivion.nocturne.ui.component.rememberHeartBurstState
-import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.ui.icon.AddCircleOutline
 import com.oblivion.nocturne.ui.icon.CheckCircle
 import com.oblivion.nocturne.ui.icon.CommentOutline
@@ -710,8 +709,8 @@ internal fun ExpressiveTrackInfoRow(
                         .diskCacheKey(state.screenData.thumbnailURL + "BIGGER")
                         .crossfade(true)
                         .build(),
-                placeholder = rememberHolderPainter(square = true),
-                error = rememberHolderPainter(square = true),
+                placeholder = Res.drawable.oblivion_owl,
+                error = Res.drawable.oblivion_owl,
                 contentDescription = null,
                 contentScale = ContentScale.FillWidth,
                 modifier =

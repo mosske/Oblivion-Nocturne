@@ -232,7 +232,7 @@ fun CommentsBottomSheet(
                                 sheetState = sheetState,
                                 isLoggedIn = isLoggedIn,
                                 userAvatar = uiState.header?.userAvatar,
-                                placeholder = uiState.replyingTo?.replyPlaceholder ?: uiState.header?.placeholder.orEmpty(),
+                                placeholder = painterResource(Res.drawable.oblivion_owl),
                                 replyingTo = uiState.replyingTo?.author,
                                 posting = uiState.posting,
                                 colors = colors,

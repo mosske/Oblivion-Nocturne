@@ -88,7 +88,6 @@ import com.oblivion.nocturne.getPlatform
 import com.oblivion.nocturne.ui.component.LyricText
 import com.oblivion.nocturne.ui.component.ExplicitBadge
 import com.oblivion.nocturne.ui.component.LiquidGlassIconButton
-import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.ui.icon.Forward5
 import com.oblivion.nocturne.ui.icon.Fullscreen
 import com.oblivion.nocturne.ui.icon.Replay5
@@ -735,8 +734,8 @@ private fun AppleMusicMainView(
                                             .diskCacheKey(state.screenData.thumbnailURL)
                                             .crossfade(300)
                                             .build(),
-                                    placeholder = rememberHolderPainter(),
-                                    error = rememberHolderPainter(),
+                                    placeholder = Res.drawable.oblivion_owl,
+                                    error = Res.drawable.oblivion_owl,
                                     contentDescription = null,
                                     contentScale = ContentScale.Crop,
                                     modifier = Modifier.size(55.dp).clip(RoundedCornerShape(4.dp)),
@@ -976,8 +975,8 @@ private fun AppleMusicArtworkPage(
                         if (fallback != null && fallback != artworkUrl) artworkUrl = fallback
                     },
                     contentScale = ContentScale.Crop,
-                    placeholder = rememberHolderPainter(),
-                    error = rememberHolderPainter(),
+                    placeholder = Res.drawable.oblivion_owl,
+                    error = Res.drawable.oblivion_owl,
                     // The artwork DISSOLVES (alpha mask) instead of being covered by a colour
                     // overlay: that overlay had to land on exactly the page's colour at that Y,
                     // and any drift drew a hard horizontal line across the screen. Masking lets
@@ -1212,8 +1211,8 @@ private fun AppleMusicArtworkPage(
                     model = thumbRequest,
                     contentDescription = pageTrack.title,
                     contentScale = ContentScale.Crop,
-                    placeholder = rememberHolderPainter(),
-                    error = rememberHolderPainter(),
+                    placeholder = Res.drawable.oblivion_owl,
+                    error = Res.drawable.oblivion_owl,
                     // Faded like the current page's, or its top edge would turn sharp mid-swipe.
                     modifier = Modifier.fillMaxSize().appleMusicVerticalFadeEdges(topFade = topFade, bottomFade = artworkFade),
                 )

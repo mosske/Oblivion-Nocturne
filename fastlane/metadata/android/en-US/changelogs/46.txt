@@ -1,13 +1,13 @@
-- Add Support for Custom OpenAI Compatible API in AI Lyrics Translate
-- Add BetterLyrics Lyrics Provider
-- Improve Word-by-word lyrics
-- Add OblivionNocturne Chart to Library screen
-- Add 320kbps stream option
-- Improve full screen lyrics screen
-- Improve local playlist
-- Improve some UI
-- Improve file download speed
-# Desktop app:
- - Improve GStreamer path handling in Windows
-# Android app:
- - Add Crossfade and DJ-style transition like Apple Music
+1: - Add Support for Custom OpenAI Compatible API in AI Lyrics Translate
+2: - Add BetterLyrics Lyrics Provider
+3: - Improve Word-by-word lyrics
+4: - Add Oblivion Nocturne Chart to Library screen
+5: - Add 320kbps stream option
+6: - Improve full screen lyrics screen
+7: - Improve local playlist
+8: - Improve some UI
+9: - Improve file download speed
+10: # Desktop app:
+11:  - Improve GStreamer path handling in Windows
+12: # Android app:
+13:  - Add Crossfade and DJ-style transition like Apple Music

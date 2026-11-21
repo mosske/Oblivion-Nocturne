@@ -1646,8 +1646,8 @@ fun NowPlayingBottomSheet(
                                     .diskCacheKey(thumb)
                                     .crossfade(550)
                                     .build(),
-                            placeholder = rememberHolderPainter(),
-                            error = rememberHolderPainter(),
+                            placeholder = Res.drawable.oblivion_owl,
+                            error = Res.drawable.oblivion_owl,
                             contentDescription = null,
                             contentScale = ContentScale.Crop,
                             modifier =

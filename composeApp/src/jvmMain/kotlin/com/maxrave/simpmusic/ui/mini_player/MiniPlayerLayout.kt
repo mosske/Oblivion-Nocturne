@@ -63,7 +63,6 @@ import com.oblivion.nocturne.domain.data.model.streams.TimeLine
 import com.oblivion.nocturne.domain.manager.DataStoreManager
 import com.oblivion.nocturne.domain.mediaservice.handler.ControlState
 import com.oblivion.nocturne.extension.LeftToRight
-import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.extension.parseRichSyncWords
 import com.oblivion.nocturne.ui.component.PlayPauseButton
 import com.oblivion.nocturne.ui.component.RichSyncLyricsLineItem
@@ -291,8 +290,8 @@ fun MediumMiniLayout(
                     AsyncImage(
                         model = nowPlayingData.thumbnailURL,
                         contentDescription = "Album Art",
-                        placeholder = rememberHolderPainter(),
-                        error = rememberHolderPainter(),
+                        placeholder = Res.drawable.oblivion_owl,
+                        error = Res.drawable.oblivion_owl,
                         contentScale = ContentScale.Crop,
                         modifier =
                             Modifier
@@ -513,8 +512,8 @@ fun SquareMiniLayout(
             AsyncImage(
                 model = nowPlayingData.thumbnailURL,
                 contentDescription = "Album Art",
-                placeholder = rememberHolderPainter(),
-                error = rememberHolderPainter(),
+                        placeholder = Res.drawable.oblivion_owl,
+                        error = Res.drawable.oblivion_owl,
                 contentScale = ContentScale.Crop,
                 modifier =
                     Modifier
@@ -779,8 +778,8 @@ fun ExpandedMiniLayout(
                 AsyncImage(
                     model = nowPlayingData.thumbnailURL,
                     contentDescription = "Album Art",
-                    placeholder = rememberHolderPainter(),
-                    error = rememberHolderPainter(),
+                    placeholder = Res.drawable.oblivion_owl,
+                    error = Res.drawable.oblivion_owl,
                     contentScale = ContentScale.Crop,
                     modifier =
                         Modifier

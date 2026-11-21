@@ -42,7 +42,7 @@ A FOSS YouTube Music client for Android and Desktop with many features from<br>S
 - Browsing Home, Charts, Podcast, Moods & Genre with YouTube Music data at high speed    
 - Search everything on YouTube    
 - Spotify Canvas and Animated Album Art supported (NEW)
-- Power your experience with OblivionNocturne Chart (https://chart.github.com/mosske/Oblivion-Nocturne/)
+- Power your experience with Oblivion Nocturne Chart (https://chart.github.com/mosske/Oblivion-Nocturne/)
 - Play 1080p video option with subtitle    
 - Play YouTube Music live stations (NEW)
 - AI song suggestions and an AI reading of your music taste (NEW)

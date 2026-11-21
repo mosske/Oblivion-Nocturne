@@ -13,9 +13,8 @@ import com.oblivion.nocturne.ui.theme.LocalForceDarkText
 import com.oblivion.nocturne.ui.theme.LocalIsDarkTheme
 import org.jetbrains.compose.resources.imageResource
 import oblivionnocturne.composeapp.generated.resources.Res
-import oblivionnocturne.composeapp.generated.resources.holder
-import oblivionnocturne.composeapp.generated.resources.holder_light
 import kotlin.math.min
+import kotlin.math.roundToInt
 import kotlin.math.roundToInt
 
 /** The note's box inside the square holder art, measured from holder.png: centred, 51.2% wide, 65.7% tall. */
@@ -43,7 +42,7 @@ private const val MIN_PADDING = 0.30f
 @Composable
 fun rememberHolderPainter(square: Boolean = false): Painter {
     val dark = LocalForceDarkText.current || LocalIsDarkTheme.current
-    val art = imageResource(if (dark) Res.drawable.holder else Res.drawable.holder_light)
+    val art = imageResource(if (dark) Res.drawable.oblivion_owl else Res.drawable.oblivion_owl)
     return remember(art, square) { HolderPainter(art, square) }
 }
 

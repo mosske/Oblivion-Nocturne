@@ -278,8 +278,8 @@ private fun SleeveFan(
                             .data(covers[count - 1 - i])
                             .crossfade(true)
                             .build(),
-                    placeholder = rememberHolderPainter(),
-                    error = rememberHolderPainter(),
+                    placeholder = Res.drawable.oblivion_owl,
+                    error = Res.drawable.oblivion_owl,
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = placed.clip(shape).border(2.dp, ring, shape),

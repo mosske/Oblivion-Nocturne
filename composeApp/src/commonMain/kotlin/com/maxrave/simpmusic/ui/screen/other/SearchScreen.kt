@@ -1281,8 +1281,8 @@ fun SuggestItemRow(
                         .diskCacheKey(url)
                         .crossfade(true)
                         .build(),
-                placeholder = rememberHolderPainter(),
-                error = rememberHolderPainter(),
+                placeholder = painterResource(Res.drawable.oblivion_owl),
+                error = painterResource(Res.drawable.oblivion_owl),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier =

@@ -138,7 +138,6 @@ import com.oblivion.nocturne.ui.component.PlayerControlLayout
 import com.oblivion.nocturne.ui.component.hasTiming
 import com.oblivion.nocturne.ui.component.lyrics.ShareLyricsSheet
 import com.oblivion.nocturne.ui.component.lyrics.toShareLyricsLines
-import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.ui.icon.AddCircleOutline
 import com.oblivion.nocturne.ui.icon.AvTimer
 import com.oblivion.nocturne.ui.icon.CheckCircle
@@ -582,8 +581,8 @@ fun NowPlayingContentSpotify(
                                                     if (fallback != null && fallback != artworkUrl) artworkUrl = fallback
                                                 },
                                                 contentScale = ContentScale.Crop,
-                                                placeholder = rememberHolderPainter(),
-                                                error = rememberHolderPainter(),
+                                                placeholder = Res.drawable.oblivion_owl,
+                                                error = Res.drawable.oblivion_owl,
                                                 modifier =
                                                     Modifier
                                                         .align(Alignment.Center)
@@ -797,8 +796,8 @@ fun NowPlayingContentSpotify(
                                                         .build(),
                                                 contentDescription = pageTrack.title,
                                                 contentScale = ContentScale.Crop,
-                                                placeholder = rememberHolderPainter(),
-                                                error = rememberHolderPainter(),
+                                                placeholder = Res.drawable.oblivion_owl,
+                                                error = Res.drawable.oblivion_owl,
                                                 // Feed the per-page palette using the SAME bitmap
                                                 // we just rendered so the Layer 0 gradient backdrop
                                                 // matches what the user sees on screen.
@@ -1510,8 +1509,8 @@ fun NowPlayingContentSpotify(
                                                     .diskCacheKey(thumb)
                                                     .crossfade(550)
                                                     .build(),
-                                            placeholder = rememberHolderPainter(),
-                                            error = rememberHolderPainter(),
+                                            placeholder = Res.drawable.oblivion_owl,
+                                            error = Res.drawable.oblivion_owl,
                                             contentDescription = null,
                                             contentScale = ContentScale.Crop,
                                             // No explicit clip: the ElevatedCard already clips to
@@ -1842,8 +1841,8 @@ internal fun NowPlayingTrackInfoRow(
                         .diskCacheKey(state.screenData.thumbnailURL + "BIGGER")
                         .crossfade(true)
                         .build(),
-                placeholder = rememberHolderPainter(square = true),
-                error = rememberHolderPainter(square = true),
+                placeholder = Res.drawable.oblivion_owl,
+                error = Res.drawable.oblivion_owl,
                 contentDescription = null,
                 contentScale = ContentScale.FillWidth,
                 modifier =

@@ -879,8 +879,8 @@ private fun FullscreenLyricsLandscape(
                                     .diskCacheKey(artworkUrl)
                                     .crossfade(300)
                                     .build(),
-                            placeholder = rememberHolderPainter(),
-                            error = rememberHolderPainter(),
+                            placeholder = Res.drawable.oblivion_owl,
+                            error = Res.drawable.oblivion_owl,
                             contentDescription = null,
                             contentScale = ContentScale.Crop,
                             // Same fallback the player's artwork carries: maxresdefault is missing

@@ -131,8 +131,8 @@ fun HomeDiscoverSection(
                                 .crossfade(550)
                                 .build(),
                         contentDescription = null,
-                        placeholder = rememberHolderPainter(),
-                        error = rememberHolderPainter(),
+                        placeholder = Res.drawable.oblivion_owl,
+                        error = Res.drawable.oblivion_owl,
                         contentScale = ContentScale.Crop,
                         modifier = Modifier.fillMaxSize().hoverZoom(hovered),
                     )

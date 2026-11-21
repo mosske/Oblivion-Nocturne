@@ -741,7 +741,7 @@ fun LocalPlaylistScreen(
                                                     .memoryCacheKey(uiState.thumbnail)
                                                     .crossfade(550)
                                                     .build(),
-                                            placeholder = painterPlaylistThumbnail(uiState.title, style = typo().labelMedium, 250.dp to 250.dp),
+                                            placeholder = painterResource(Res.drawable.oblivion_owl),
                                             error = painterPlaylistThumbnail(uiState.title, style = typo().labelMedium, 250.dp to 250.dp),
                                             fallback = painterPlaylistThumbnail(uiState.title, style = typo().labelMedium, 250.dp to 250.dp),
                                             contentDescription = null,

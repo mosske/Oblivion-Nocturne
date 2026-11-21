@@ -51,7 +51,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
-import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.expect.ui.toImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalUriHandler
@@ -215,8 +214,8 @@ fun PodcastScreen(
                                                 .diskCacheKey(data.thumbnail.lastOrNull()?.url)
                                                 .crossfade(true)
                                                 .build(),
-                                        placeholder = rememberHolderPainter(square = true),
-                                        error = rememberHolderPainter(square = true),
+                                        placeholder = Res.drawable.oblivion_owl,
+                                        error = Res.drawable.oblivion_owl,
                                         contentDescription = null,
                                         contentScale = ContentScale.FillHeight,
                                         onSuccess = {
@@ -256,8 +255,8 @@ fun PodcastScreen(
                                                                 .diskCacheKey(data.authorThumbnail)
                                                                 .crossfade(true)
                                                                 .build(),
-                                                        placeholder = rememberHolderPainter(),
-                                                        error = rememberHolderPainter(),
+                                                        placeholder = Res.drawable.oblivion_owl,
+                                                        error = Res.drawable.oblivion_owl,
                                                         contentDescription = null,
                                                         modifier =
                                                             Modifier

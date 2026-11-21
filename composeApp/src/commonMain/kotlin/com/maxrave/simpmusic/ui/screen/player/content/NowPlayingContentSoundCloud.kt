@@ -111,7 +111,6 @@ import com.oblivion.nocturne.ui.component.LiquidGlassIconButton
 import com.oblivion.nocturne.ui.component.RippleIconButton
 import com.oblivion.nocturne.ui.component.TIMESTAMP_REGEX
 import com.oblivion.nocturne.ui.component.liquidGlass
-import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.ui.icon.AddCircleOutline
 import com.oblivion.nocturne.ui.icon.CheckCircle
 import com.oblivion.nocturne.ui.icon.CommentOutline
@@ -851,8 +850,8 @@ private fun SoundCloudArtwork(
                     if (fallback != null && fallback != artworkUrl) artworkUrl = fallback
                 },
                 contentScale = ContentScale.Crop,
-                placeholder = rememberHolderPainter(),
-                error = rememberHolderPainter(),
+                placeholder = Res.drawable.oblivion_owl,
+                error = Res.drawable.oblivion_owl,
                 modifier = Modifier.fillMaxSize().alpha(coverAlpha),
             )
         }
@@ -1116,8 +1115,8 @@ private fun TimedCommentBubble(comment: TimedComment) {
         AsyncImage(
             model = comment.authorAvatar,
             contentDescription = null,
-            placeholder = rememberHolderPainter(),
-            error = rememberHolderPainter(),
+            placeholder = Res.drawable.oblivion_owl,
+            error = Res.drawable.oblivion_owl,
             contentScale = ContentScale.Crop,
             modifier = Modifier.size(28.dp).clip(CircleShape),
         )

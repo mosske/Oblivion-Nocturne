@@ -93,7 +93,6 @@ import com.oblivion.nocturne.domain.utils.toSongEntity
 import com.oblivion.nocturne.logger.Logger
 import com.oblivion.nocturne.ui.component.SearchBarExit
 import com.oblivion.nocturne.ui.component.SearchBarEnter
-import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.expect.ui.layerBackdrop
 import com.oblivion.nocturne.expect.ui.rememberBackdrop
 import com.oblivion.nocturne.expect.ui.toImageBitmap
@@ -412,8 +411,8 @@ fun PlaylistScreen(
                                                                 .memoryCacheKey(data.thumbnail)
                                                                 .crossfade(550)
                                                                 .build(),
-                                                        placeholder = rememberHolderPainter(),
-                                                        error = rememberHolderPainter(),
+                                                        placeholder = Res.drawable.oblivion_owl,
+                                                        error = Res.drawable.oblivion_owl,
                                                         contentDescription = null,
                                                         contentScale = ContentScale.Crop,
                                                         onSuccess = {
@@ -590,8 +589,8 @@ fun PlaylistScreen(
                                                                     .memoryCacheKey(data.thumbnail)
                                                                     .crossfade(550)
                                                                     .build(),
-                                                            placeholder = rememberHolderPainter(),
-                                                            error = rememberHolderPainter(),
+                                                            placeholder = Res.drawable.oblivion_owl,
+                                                            error = Res.drawable.oblivion_owl,
                                                             contentDescription = null,
                                                             contentScale = ContentScale.Crop,
                                                             onSuccess = {

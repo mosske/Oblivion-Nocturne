@@ -125,7 +125,6 @@ import com.oblivion.nocturne.ui.component.PlayerControlLayout
 import com.oblivion.nocturne.ui.component.QueueBottomSheet
 import com.oblivion.nocturne.ui.component.liquidGlass
 import com.oblivion.nocturne.ui.component.rememberGlassLuminance
-import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.ui.icon.Close
 import com.oblivion.nocturne.ui.icon.Headphones
 import com.oblivion.nocturne.ui.icon.OpenInFull
@@ -414,8 +413,8 @@ fun MiniPlayer(
                                             .data(songEntity?.thumbnails)
                                             .crossfade(550)
                                             .build(),
-                                    placeholder = rememberHolderPainter(),
-                                    error = rememberHolderPainter(),
+                                    placeholder = Res.drawable.oblivion_owl,
+                                    error = Res.drawable.oblivion_owl,
                                     contentDescription = null,
                                     // Crop in the circle: FillWidth would leave bands around a 16:9 video thumbnail.
                                     contentScale = if (isFlat) ContentScale.Crop else ContentScale.FillWidth,
@@ -768,8 +767,8 @@ fun MiniPlayer(
                                         .data(songEntity?.thumbnails)
                                         .crossfade(550)
                                         .build(),
-                                placeholder = rememberHolderPainter(),
-                                error = rememberHolderPainter(),
+                                placeholder = Res.drawable.oblivion_owl,
+                                error = Res.drawable.oblivion_owl,
                                 contentDescription = null,
                                 contentScale = ContentScale.Crop,
                                 modifier = Modifier.fillMaxSize(),

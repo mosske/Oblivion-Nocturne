@@ -69,7 +69,6 @@ import com.oblivion.nocturne.ui.component.AmbientThemeGlow
 import com.oblivion.nocturne.ui.component.CenterLoadingBox
 import com.oblivion.nocturne.ui.component.EndOfPage
 import com.oblivion.nocturne.ui.component.RippleIconButton
-import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.ui.icon.ArrowBackIosNew
 import com.oblivion.nocturne.ui.icon.RssFeed
 import com.oblivion.nocturne.ui.icon.SimpIcons
@@ -251,8 +250,8 @@ fun NotificationItem(
                             .diskCacheKey(thumb)
                             .crossfade(true)
                             .build(),
-                    placeholder = rememberHolderPainter(),
-                    error = rememberHolderPainter(),
+                    placeholder = Res.drawable.oblivion_owl,
+                    error = Res.drawable.oblivion_owl,
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier =
@@ -398,8 +397,8 @@ fun ItemAlbumNotification(
                         .diskCacheKey(thumbnail)
                         .crossfade(true)
                         .build(),
-                placeholder = rememberHolderPainter(),
-                error = rememberHolderPainter(),
+                placeholder = Res.drawable.oblivion_owl,
+                error = Res.drawable.oblivion_owl,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier =
