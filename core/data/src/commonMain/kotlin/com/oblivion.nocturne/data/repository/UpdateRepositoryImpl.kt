@@ -2,7 +2,7 @@ package com.oblivion.nocturne.data.repository
 
 import com.oblivion.nocturne.domain.data.model.update.UpdateData
 import com.oblivion.nocturne.domain.repository.UpdateRepository
-import com.oblivion.nocturne.kotlinytmusicscraper.models.simpmusic.GithubResponse
+import com.oblivion.nocturne.kotlinytmusicscraper.models.oblivion.nocturne.GithubResponse
 import com.oblivion.nocturne.ktorext.getEngine
 import io.ktor.client.*
 import io.ktor.client.plugins.*
