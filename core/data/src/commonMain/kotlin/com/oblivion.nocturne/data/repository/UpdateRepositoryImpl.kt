@@ -1,3 +1,5 @@
+package com.oblivion.nocturne.data.repository
+
 import com.oblivion.nocturne.domain.data.model.update.UpdateData
 import com.oblivion.nocturne.domain.repository.UpdateRepository
 import com.oblivion.nocturne.kotlinytmusicscraper.models.simpmusic.GithubResponse
