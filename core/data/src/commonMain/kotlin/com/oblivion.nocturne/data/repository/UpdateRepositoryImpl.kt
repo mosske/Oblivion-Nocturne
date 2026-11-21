@@ -1,6 +1,3 @@
-package com.oblivion.nocturne.data.repository
-
-import com.oblivion.nocturne.domain.data.model.download.DownloadProgress
 import com.oblivion.nocturne.domain.data.model.update.UpdateData
 import com.oblivion.nocturne.domain.repository.UpdateRepository
 import com.oblivion.nocturne.kotlinytmusicscraper.models.simpmusic.GithubResponse
@@ -20,7 +17,7 @@ import kotlinx.coroutines.Dispatchers
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
-import com.oblivion.nocturne.ktorext.getEngine
+import com.oblivion.nocturne.domain.utils.Resource
 
 private val httpClient = HttpClient(getEngine()) {
     install(ContentNegotiation) {
@@ -36,11 +33,7 @@ private val httpClient = HttpClient(getEngine()) {
     }
 }
 
-class UpdateRepositoryImpl(
-    private val downloader: UpdateDownloader,
-    private val installer: UpdateInstaller
-) : UpdateRepository {
-
+class UpdateRepositoryImpl : UpdateRepository {
     override fun checkForGithubReleaseUpdate(): Flow<Resource<UpdateData>> = flow {
         emit(Resource.Loading)
         try {
@@ -65,7 +58,7 @@ class UpdateRepositoryImpl(
                     }
                 }
             }
-
+            
             val updateData = UpdateData(
                 tagName = tagName,
                 releaseTime = releaseTime,
