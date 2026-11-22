@@ -1,10 +1,10 @@
 package com.oblivion.nocturne.data.repository
 
-import com.maxrave.domain.utils.Resource
+import com.oblivion.nocturne.domain.utils.Resource
 import com.oblivion.nocturne.domain.data.model.update.UpdateData
 import com.oblivion.nocturne.domain.repository.UpdateRepository
-import com.maxrave.kotlinytmusicscraper.models.simpmusic.GithubResponse
-import com.maxrave.ktorext.getEngine
+import com.oblivion.nocturne.kotlinytmusicscraper.models.simpmusic.GithubResponse
+import com.oblivion.nocturne.ktorext.getEngine
 import io.ktor.client.*
 import io.ktor.client.plugins.*
 import io.ktor.client.request.*
