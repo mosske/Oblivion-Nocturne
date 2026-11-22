@@ -31,12 +31,12 @@ class UpdateRepositoryImpl : UpdateRepository {
             val response: GithubResponse = httpClient
                 .get("https://api.github.com/repos/mosske/Oblivion-Nocturne/releases/latest")
                 .body()
-            val apkAsset = response.assets.firstOrNull { it.name.endsWith(".apk", ignoreCase = true) }
+            val apkAsset = response.assets?.firstOrNull { it.name?.endsWith(".apk", ignoreCase = true) == true }
             val updateData = UpdateData(
-                tagName = response.tagName,
-                releaseNotes = response.body,
+                tagName = response.tagName ?: "",
+                body = response.body ?: "",
                 downloadUrl = apkAsset?.browserDownloadUrl,
-                publishedAt = response.publishedAt,
+                releaseTime = response.publishedAt ?: "",
             )
             emit(LocalResource.Success(updateData))
         } catch (e: Exception) {
