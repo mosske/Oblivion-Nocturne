@@ -1,3 +1,15 @@
+import com.maxrave.simpmusic.ui.theme.typo
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.unit.dp
+import oblivionnocturne.composeapp.generated.resources.Res
+import oblivionnocturne.composeapp.generated.resources.oblivion_owl
+
 @Composable
 fun BrandRow() {
     Row(
@@ -8,7 +20,7 @@ fun BrandRow() {
         horizontalArrangement = Arrangement.Center,
     ) {
         Image(
-            painter = painterResource(Res.drawable.oblivion_owl),
+            painter = Res.drawable.oblivion_owl,
             contentDescription = "Oblivion Nocturne Logo",
             modifier = Modifier
                 .size(32.dp)

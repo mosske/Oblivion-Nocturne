@@ -1,20 +1,18 @@
-package com.oblivion.nocturne.expect
+package com.maxrave.simpmusic.expect
 
-import android.app.DownloadManager
-import android.content.BroadcastReceiver
 import android.content.Context
+
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
-import android.content.pm.PackageManager
-import android.content.pm.DownloadManager.*Request as DownloadRequest
 import android.net.Uri
-import android.os.Build
-import android.os.Environment
+import android.app.DownloadManager
+import android.widget.Toast
+import android.content.BroadcastReceiver
 import androidx.core.content.FileProvider
 import org.koin.mp.KoinPlatform.getKoin
 
 actual fun openUrl(url: String) {
-    val context: android.content.Context = getKoin().get()
+    val context: Context = getKoin().get()
     val browserIntent = Intent(
         Intent.ACTION_VIEW,
         url.toUri(),
@@ -27,22 +25,23 @@ actual fun downloadAndInstallUpdate(url: String, versionTag: String) {
     val context = getKoin().get<Context>()
     
     if (url.substringBefore("?").endsWith(".apk", ignoreCase = true)) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            val req = DownloadManager.Request(url).apply {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            val downloadManager = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+            val req = DownloadManager.Request(Uri.parse(url)).apply {
                 allowed_content_types = listOf("application/vnd.android.package-archive", "application/octet-stream")
                 description = "Updating Oblivion Nocturne to $versionTag"
             }
             
-            val id = DownloadManager.enqueue(req)
+            val id = downloadManager.enqueue(req)
             
             android.widget.Toast.makeText(context, "Downloading Oblivion Nocturne $versionTag...", android.widget.Toast.LENGTH_LONG).show()
             
-            val receiver = object : BroadcastReceiver() {
+            val receiver = object : android.content.BroadcastReceiver() {
                 override fun onReceive(context: Context, intent: Intent) {
                     if (intent.action == DownloadManager.ACTION_DOWNLOAD_COMPLETE) {
                         val downloadId = intent.extras?.get("id") as? Int ?: -1
                         if (downloadId == id) {
-                            val downloadManager = DownloadManager.getInstance(context)
+                            val downloadManager = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
                             val downloadDetails = downloadManager.getDownloadDetails(id)
                             if (downloadDetails != null) {
                                 val filePath = downloadDetails.realPath
@@ -63,13 +62,13 @@ actual fun downloadAndInstallUpdate(url: String, versionTag: String) {
                 }
             }
             
-            val receiverFlags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            val receiverFlags = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
                 Context.RECEIVER_EXPORTED
             } else {
                 Context.RECEIVER_DEFAULT
             }
             
-            context.registerReceiver(receiver, Intent.ACTION_DOWNLOAD_COMPLETE, receiverFlags)
+            context.registerReceiver(receiver, DownloadManager.ACTION_DOWNLOAD_COMPLETE, receiverFlags)
         }
     }
 }
@@ -78,7 +77,7 @@ actual fun shareUrl(
     title: String,
     url: String,
 ) {
-    val context: android.content.Context = getKoin().get()
+    val context: Context = getKoin().get()
     val shareIntent = Intent(Intent.ACTION_SEND)
     shareIntent.type = "text/plain"
     shareIntent.putExtra(Intent.EXTRA_TEXT, url)
