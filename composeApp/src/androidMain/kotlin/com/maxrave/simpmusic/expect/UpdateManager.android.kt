@@ -59,17 +59,6 @@ actual fun downloadAndInstallUpdate(url: String, versionTag: String) {
     }
 }
 
-actual fun openUrl(url: String) {
-    val context: AppCompatActivity = getKoin().get()
-    val browserIntent =
-        Intent(
-            Intent.ACTION_VIEW,
-            url.toUri(),
-        )
-    browserIntent.setFlags(FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(browserIntent)
-}
-
 actual fun shareUrl(
     title: String,
     url: String,

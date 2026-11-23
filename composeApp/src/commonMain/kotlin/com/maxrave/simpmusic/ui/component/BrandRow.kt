@@ -1,4 +1,4 @@
-import com.maxrave.simpmusic.ui.theme.typo
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -29,7 +29,7 @@ fun BrandRow() {
         Spacer(Modifier.width(8.dp))
         Text(
             text = "Oblivion Nocturne",
-            style = typo().bodyMedium,
+            style = MaterialTheme.typography.bodyMedium,
         )
     }
 }
