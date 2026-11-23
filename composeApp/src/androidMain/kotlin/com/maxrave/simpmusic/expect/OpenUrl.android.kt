@@ -1,4 +1,4 @@
-package com.oblivion.nocturne.expect
+package com.maxrave.simpmusic.expect
 
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
