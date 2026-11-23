@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.expect
+package com.oblivion.nocturne.expect
 
 /**
  * Whether the device is on a network the system does not meter, such as Wi-Fi. Smart downloads only

@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.expect
+package com.oblivion.nocturne.expect
 
 enum class Orientation {
     PORTRAIT, LANDSCAPE, UNSPECIFIED

@@ -1,3 +1,3 @@
-package com.maxrave.simpmusic.expect
+package com.oblivion.nocturne.expect
 
 expect fun getDownloadFolderPath(): String
