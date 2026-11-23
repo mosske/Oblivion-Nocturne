@@ -282,8 +282,8 @@ fun LibraryItem(
                                                 .diskCacheKey(item.canvasThumbUrl)
                                                 .crossfade(true)
                                                 .build(),
-                                        placeholder = Res.drawable.oblivion_owl,
-                                        error = Res.drawable.oblivion_owl,
+                                        placeholder = rememberHolderPainter(),
+                                        error = rememberHolderPainter(),
                                         contentDescription = null,
                                         contentScale = ContentScale.Crop,
                                         modifier =

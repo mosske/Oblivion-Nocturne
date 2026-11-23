@@ -449,7 +449,7 @@ fun App(
         // Only a NEWER release is offered. This used to compare the tags for inequality, which told a
         // build ahead of the latest release (dev, beta) to "update" back down to it, and told every
         // F-Droid-channel user to update on each launch: that channel's tag carries no leading "v".
-        if (viewModel.showedUpdateDialog && VersionManager.isBehind(response.tagName.removePrefix("v"))) {
+        if (viewModel.showedUpdateDialog && VersionManager.isBehind(response.tagName)) {
             shouldShowUpdateDialog = true
         }
     }
@@ -917,7 +917,7 @@ fun App(
                                 onClick = {
                                     shouldShowUpdateDialog = false
                                     viewModel.showedUpdateDialog = false
-                                    openUrl(response.downloadUrl ?: "https://github.com/mosske/Oblivion-Nocturne/download")
+                                    openUrl("https://github.com/mosske/Oblivion-Nocturne/download")
                                 },
                             ) {
                                 Text(

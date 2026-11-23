@@ -56,13 +56,7 @@ import kotlin.reflect.KClass
  * bar, drawn flat. One capsule of tabs (Search stays out — it is the round button beside it, the
  * same split the glass bar makes), a sliding rounded indicator instead of the frosted blob, solid
  * theme surfaces instead of refraction. Geometry mirrors the glass bar so switching the setting
-* changes the material, not the layout: 96dp tab cap, 64dp bar, 56dp indicator and FAB.
- *
- * @param startDestination The initial destination of the navigation.
- * @param navController The navigation controller.
- * @param showAnalyticsTab Whether to show the analytics tab.
- * @param showMixForYouTab Whether to show the "Mix for you" tab.
- * @param reloadDestinationIfNeeded A callback to reload the destination if it's already selected.
+ * changes the material, not the layout: 96dp tab cap, 64dp bar, 56dp indicator and FAB.
  */
 @Composable
 fun AppBottomNavigationBar(
@@ -109,9 +103,9 @@ fun AppBottomNavigationBar(
     val selectTab: (BottomNavScreen) -> Unit = { screen ->
         if (selectedIndex == screen.ordinal) {
             if (currentBackStackEntry?.destination?.hierarchy?.any {
-                        it.hasRoute(screen.destination::class)
-                    } == true
-                ) {
+                    it.hasRoute(screen.destination::class)
+                } == true
+            ) {
                 reloadDestinationIfNeeded(screen.destination::class)
             } else {
                 navController.navigate(screen.destination)
@@ -165,13 +159,6 @@ fun AppBottomNavigationBar(
  * [CollapsedBarSize] circle up to its full width: the surface follows that width, the tabs keep
  * their full-width layout and are uncovered from the start edge, and folded it shows
  * [collapsedContent] instead.
- *
- * @param tabs The list of tabs to display.
- * @param selectedIndex The index of the currently selected tab.
- * @param availableWidth The available width for the tab bar.
- * @param onTabSelected Callback triggered when a tab is selected.
- * @param modifier Modifier to apply to the tab bar.
- * @param collapsedContent Content to show when the bar is collapsed.
  */
 @Composable
 internal fun FlatTabBar(
@@ -361,9 +348,6 @@ private fun Density.foldProgress(
  * For a tab bar's tabs, laid out at the bar's [fullWidth] while the bar itself may be narrower.
  * They fade in once the folded circle's icon has gone, stay unplaced (so untappable) before that,
  * and while the bar folds they are clipped to [clipShape] — null when the surface clips already.
- *
- * @param fullWidth The full width of the tab bar.
- * @param clipShape The shape to clip the tabs with when folding.
  */
 internal fun Modifier.unfoldingTabs(
     fullWidth: Dp,
@@ -447,7 +431,6 @@ fun AppNavigationRail(
     // Transparent, not the default `surface`: the rail sits on the Desktop window (pure black/white)
     // and on the page background on tablets, and must read as part of whatever is behind it.
     NavigationRail(containerColor = Color.Transparent) {
-        BrandRow()
         Spacer(Modifier.height(16.dp))
         Image(
             painter = painterResource(Res.drawable.circle_app_icon),
@@ -476,11 +459,11 @@ fun AppNavigationRail(
                 onClick = {
                     if (selectedIndex == screen.ordinal) {
                         if (currentBackStackEntry?.destination?.hierarchy?.any {
-                                 it.hasRoute(screen.destination::class)
+                                it.hasRoute(screen.destination::class)
                             } == true
                         ) {
                             reloadDestinationIfNeeded(
-                                 screen.destination::class,
+                                screen.destination::class,
                             )
                         } else {
                             navController.navigate(screen.destination)

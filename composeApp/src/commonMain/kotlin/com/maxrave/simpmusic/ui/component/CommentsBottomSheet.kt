@@ -232,7 +232,7 @@ fun CommentsBottomSheet(
                                 sheetState = sheetState,
                                 isLoggedIn = isLoggedIn,
                                 userAvatar = uiState.header?.userAvatar,
-        placeholder = ""
+                                placeholder = uiState.replyingTo?.replyPlaceholder ?: uiState.header?.placeholder.orEmpty(),
                                 replyingTo = uiState.replyingTo?.author,
                                 posting = uiState.posting,
                                 colors = colors,

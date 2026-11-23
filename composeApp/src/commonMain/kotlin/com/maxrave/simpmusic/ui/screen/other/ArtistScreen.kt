@@ -113,6 +113,7 @@ import com.oblivion.nocturne.extension.rememberPaletteColor
 import com.oblivion.nocturne.extension.toSquareThumbnailUrl
 import com.oblivion.nocturne.ui.component.AddToPlaylistModalBottomSheet
 import com.oblivion.nocturne.ui.component.CenterLoadingBox
+import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.ui.component.DescriptionView
 import com.oblivion.nocturne.ui.component.EndOfPage
 import com.oblivion.nocturne.ui.component.HomeItemArtist
@@ -381,8 +382,8 @@ fun ArtistScreen(
                                                         .memoryCacheKey(headerImageUrl)
                                                         .crossfade(550)
                                                         .build(),
-                                                placeholder = Res.drawable.oblivion_owl,
-                                                error = Res.drawable.oblivion_owl,
+                                                placeholder = rememberHolderPainter(),
+                                                error = rememberHolderPainter(),
                                                 contentDescription = null,
                                                 // FillWidth fits the square source into the square portrait
                                                 // frame. The landscape frame takes the banner's own aspect,

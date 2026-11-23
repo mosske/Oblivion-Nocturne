@@ -318,7 +318,6 @@ fun DesktopSidebar(
                 Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 2.dp),
                 verticalArrangement = Arrangement.spacedBy(2.dp),
             ) {
-                BrandRow(),
                 navScreens.forEach { screen ->
                     SidebarNavRow(
                         backdrop = backdrop,
@@ -714,7 +713,7 @@ private fun SidebarCover(item: LibrarySidebarItem) {
         )
         return
     }
-    val fallback = Res.drawable.oblivion_owl
+    val fallback = rememberHolderPainter()
     AsyncImage(
         // A row the list rebuilds (filter, sort, scroll back) must not flash the holder and fade the
         // cover in again: one size-free memory key, used as its own placeholder, puts the cover that
@@ -728,7 +727,7 @@ private fun SidebarCover(item: LibrarySidebarItem) {
                 .memoryCacheKey(item.thumbnail)
                 .placeholderMemoryCacheKey(item.thumbnail)
                 .build(),
-         placeholder = painterResource(Res.drawable.oblivion_owl),
+        placeholder = fallback,
         error = fallback,
         fallback = fallback,
         contentDescription = null,

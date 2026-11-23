@@ -1,0 +1,21 @@
+* 1b484ae Fix composeApp compilation errors: package mismatch in OpenUrl.android.kt, placeholder in CommentsBottomSheet.kt, and resource imports
+* 8c1a8c3 Use HttpURLConnection and kotlinx.serialization in UpdateRepositoryImpl
+* 407eaed Rewrite UpdateRepositoryImpl with matching UpdateData fields and null-safety
+* 5aa96a9 Rewrite UpdateRepositoryImpl cleanly without ktorext
+* 0e7891e Replace leftover maxrave import in UpdateRepositoryImpl
+* cdcf9b5 Remove duplicate Flow import in UpdateRepository
+* 224f585 Fix ktorext import and verify all references in UpdateRepositoryImpl
+* cbb2ef4 Fix GithubResponse import package in UpdateRepositoryImpl
+* 317c3d4 Fix: Restore UpdateRepositoryImpl.kt with zero-arg constructor and correct package
+* 6a83223 Fix UpdateRepositoryImpl constructor, imports, and RepositoryModule binding
+* 38fc285 Remove orphaned UpdateInstaller expect declaration in domain
+* 10e325d Complete Oblivion Nocturne brand headers and owl artwork placeholders
+* fa5ed46 Implement direct in-app APK download and installation
+* b5a1d79 Final branding rehaul: replace SimpMusic and maxrave-dev references
+* 4708277 Align namespace and applicationId to com.oblivion.nocturne
+* c3e328d Remove duplicate inversePrimary arguments in Color.kt
+* 5201408 Fix onInversePrimary to inversePrimary in Color.kt
+* 2f6a6a8 Fallback Color.kt to standard clean upstream color schemes
+* 9811c31 Fix Material3 ColorScheme parameters in Color.kt and Theme.kt
+* 2dab3c5 Sync clean Oblivion-Nocturne codebase with JDK 21 debug workflow
+* aa4da96 Fix corrupted jvmargs newline in gradle.properties and use JDK 21

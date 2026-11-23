@@ -86,6 +86,7 @@ import com.oblivion.nocturne.getPlatform
 import com.oblivion.nocturne.ui.component.ExplicitBadge
 import com.oblivion.nocturne.ui.component.heartBurst
 import com.oblivion.nocturne.ui.component.rememberHeartBurstState
+import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.ui.icon.AddCircleOutline
 import com.oblivion.nocturne.ui.icon.ArrowBackIosNew
 import com.oblivion.nocturne.ui.icon.CheckCircle
@@ -430,8 +431,8 @@ internal fun AppleMusicCompactHeader(
                     .diskCacheKey(state.screenData.thumbnailURL)
                     .crossfade(300)
                     .build(),
-                        placeholder = Res.drawable.oblivion_owl,
-                        error = Res.drawable.oblivion_owl,
+            placeholder = rememberHolderPainter(),
+            error = rememberHolderPainter(),
             contentDescription = null,
             modifier = Modifier.size(55.dp).clip(RoundedCornerShape(4.dp)),
         )

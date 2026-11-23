@@ -93,6 +93,7 @@ import com.oblivion.nocturne.ui.component.PlaylistBottomSheet
 import com.oblivion.nocturne.ui.component.RippleIconButton
 import com.oblivion.nocturne.ui.component.SongFullWidthItems
 import com.oblivion.nocturne.ui.component.liquidGlass
+import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.ui.component.selection.SelectedSongsBottomSheet
 import com.oblivion.nocturne.ui.component.selection.SongSelectionTopAppBar
 import com.oblivion.nocturne.ui.component.selection.rememberSongSelectionState
@@ -270,8 +271,8 @@ fun AlbumScreen(
                                                             .memoryCacheKey(uiState.thumbnail)
                                                             .crossfade(550)
                                                             .build(),
-                                                    placeholder = Res.drawable.oblivion_owl,
-                                                    error = Res.drawable.oblivion_owl,
+                                                    placeholder = rememberHolderPainter(),
+                                                    error = rememberHolderPainter(),
                                                     contentDescription = null,
                                                     contentScale = ContentScale.Crop,
                                                     onSuccess = {
@@ -426,8 +427,8 @@ fun AlbumScreen(
                                                                 .memoryCacheKey(uiState.thumbnail)
                                                                 .crossfade(550)
                                                                 .build(),
-                                                        placeholder = Res.drawable.oblivion_owl,
-                                                        error = Res.drawable.oblivion_owl,
+                                                        placeholder = rememberHolderPainter(),
+                                                        error = rememberHolderPainter(),
                                                         contentDescription = null,
                                                         contentScale = ContentScale.Crop,
                                                         onSuccess = {

@@ -254,8 +254,8 @@ private fun Header(
                     it.result.image.toImageBitmap(),
                 )
             },
-            placeholder = Res.drawable.oblivion_owl,
-            error = Res.drawable.oblivion_owl,
+            placeholder = rememberHolderPainter(),
+            error = rememberHolderPainter(),
             contentDescription = null,
             contentScale = ContentScale.FillWidth,
             modifier =

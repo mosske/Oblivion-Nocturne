@@ -3089,8 +3089,8 @@ fun SettingScreen(
                                                 .data(it.thumbnailUrl)
                                                 .crossfade(550)
                                                 .build(),
-                                        placeholder = Res.drawable.oblivion_owl,
-                                        error = Res.drawable.oblivion_owl,
+                                        placeholder = rememberVectorPainter(SimpIcons.PeopleAlt),
+                                        error = rememberVectorPainter(SimpIcons.PeopleAlt),
                                         contentDescription = it.name,
                                         modifier =
                                             Modifier

@@ -289,8 +289,8 @@ fun SongFullWidthItems(
                                         .diskCacheKey(thumb)
                                         .crossfade(true)
                                         .build(),
-                                placeholder = Res.drawable.oblivion_owl,
-                                error = Res.drawable.oblivion_owl,
+                                placeholder = rememberHolderPainter(),
+                                error = rememberHolderPainter(),
                                 contentDescription = null,
                                 contentScale = ContentScale.FillWidth,
                                 modifier =
@@ -451,8 +451,8 @@ fun SuggestItems(
                                     .diskCacheKey(thumb)
                                     .crossfade(true)
                                     .build(),
-                            placeholder = Res.drawable.oblivion_owl,
-                            error = Res.drawable.oblivion_owl,
+                            placeholder = rememberHolderPainter(),
+                            error = rememberHolderPainter(),
                             contentDescription = null,
                             contentScale = ContentScale.FillWidth,
                             modifier =
@@ -609,8 +609,8 @@ fun PlaylistFullWidthItems(
                             .diskCacheKey(thumb)
                             .crossfade(true)
                             .build(),
-                    placeholder = Res.drawable.oblivion_owl,
-                    error = Res.drawable.oblivion_owl,
+                    placeholder = rememberHolderPainter(),
+                    error = rememberHolderPainter(),
                     contentDescription = null,
                     contentScale = ContentScale.FillWidth,
                     modifier =
@@ -731,8 +731,8 @@ fun ArtistFullWidthItems(
                             .diskCacheKey(thumbnails)
                             .crossfade(true)
                             .build(),
-                    placeholder = Res.drawable.oblivion_owl,
-                    error = Res.drawable.oblivion_owl,
+                    placeholder = rememberHolderPainter(),
+                    error = rememberHolderPainter(),
                     contentDescription = null,
                     contentScale = ContentScale.FillHeight,
                     modifier =

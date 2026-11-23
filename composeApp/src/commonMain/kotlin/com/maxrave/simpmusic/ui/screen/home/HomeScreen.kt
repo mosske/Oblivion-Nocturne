@@ -157,6 +157,7 @@ import com.oblivion.nocturne.ui.component.ReviewDialog
 import com.oblivion.nocturne.ui.component.SectionHeaderButton
 import com.oblivion.nocturne.ui.component.ShareSavedLyricsDialog
 import com.oblivion.nocturne.ui.component.homeCardAspectRatio
+import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.ui.icon.Notifications
 import com.oblivion.nocturne.ui.icon.Person
 import com.oblivion.nocturne.ui.icon.SimpIcons
@@ -338,9 +339,10 @@ fun HomeScreen(
         } else {
             backgroundColor
         }
-        
-        val animatedColor by animateColorAsState(topHeaderColor, tween(500))
-
+    var topHeaderColor by remember {
+        mutableStateOf(backgroundColor)
+    }
+    val animatedColor by animateColorAsState(topHeaderColor, tween(500))
     val mainHomeThumbnail by viewModel.mainHomeThumbnail.collectAsStateWithLifecycle()
     // YouTube's Home backdrop, drawn over the tint taken from the first card's artwork. A response
     // that carries none keeps the tint alone, and a failed load drops the image and its scrim,
@@ -1077,16 +1079,19 @@ fun HomeScreen(
                 val chipTailFade by animateFloatAsState(if (chipRowState.canScrollForward) 1f else 0f)
                 // Notifications moved into the avatar menu, Listen Together into the Create sheet.
                 val createActions: @Composable () -> Unit = {
+                    CreateActions(
+                        backdrop = chipBackdrop,
+                        navController = navController,
+                        onSettings = { navController.navigate(SettingsDestination) },
+                    )
                 }
-
-                 BrandRow()
-                 Row(
-                     modifier =
-                         Modifier
-                             .fillMaxWidth()
-                             .height(56.dp),
-                     verticalAlignment = Alignment.CenterVertically,
-                 ) {
+                Row(
+                    modifier =
+                        Modifier
+                            .fillMaxWidth()
+                            .height(56.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
                     Box(Modifier.padding(start = 16.dp, end = 8.dp)) {
                         HomeAccountButton(
                             accountName = accountInfo?.first,
@@ -1312,8 +1317,8 @@ private fun AccountAvatar(
                     .diskCacheKey(thumbnailUrl)
                     .crossfade(true)
                     .build(),
-            placeholder = Res.drawable.oblivion_owl,
-            error = Res.drawable.oblivion_owl,
+            placeholder = rememberHolderPainter(),
+            error = rememberHolderPainter(),
             contentDescription = contentDescription,
             contentScale = ContentScale.Crop,
             modifier = avatarModifier,

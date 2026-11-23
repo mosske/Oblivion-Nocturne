@@ -97,6 +97,7 @@ import com.oblivion.nocturne.ui.component.PlayPauseButton
 import com.oblivion.nocturne.ui.component.hasTiming
 import com.oblivion.nocturne.ui.component.lyrics.ShareLyricsSheet
 import com.oblivion.nocturne.ui.component.lyrics.toShareLyricsLines
+import com.oblivion.nocturne.ui.component.rememberHolderPainter
 import com.oblivion.nocturne.ui.icon.AvTimer
 import com.oblivion.nocturne.ui.icon.Forward5
 import com.oblivion.nocturne.ui.icon.Fullscreen
@@ -341,8 +342,8 @@ internal fun ExpressiveArtworkCardPage(
                             if (fallback != null && fallback != artworkUrl) artworkUrl = fallback
                         },
                         contentScale = ContentScale.Crop,
-                        placeholder = Res.drawable.oblivion_owl,
-                        error = Res.drawable.oblivion_owl,
+                        placeholder = rememberHolderPainter(),
+                        error = rememberHolderPainter(),
                         modifier =
                             Modifier
                                 .align(Alignment.Center)
@@ -532,8 +533,8 @@ internal fun ExpressiveArtworkCardPage(
                                 .build(),
                         contentDescription = pageTrack.title,
                         contentScale = ContentScale.Crop,
-                        placeholder = Res.drawable.oblivion_owl,
-                        error = Res.drawable.oblivion_owl,
+                        placeholder = rememberHolderPainter(),
+                        error = rememberHolderPainter(),
                         modifier = Modifier.fillMaxSize(),
                     )
                 }
@@ -773,8 +774,8 @@ internal fun ExpressiveBelowTheFold(
                                     .diskCacheKey(thumb)
                                     .crossfade(550)
                                     .build(),
-                            placeholder = Res.drawable.oblivion_owl,
-                            error = Res.drawable.oblivion_owl,
+                            placeholder = rememberHolderPainter(),
+                            error = rememberHolderPainter(),
                             contentDescription = null,
                             contentScale = ContentScale.Crop,
                             modifier = Modifier.fillMaxSize(),

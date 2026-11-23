@@ -442,9 +442,7 @@ fun LibraryScreen(
                 topAppBarHeight = with(density) { coordinates.size.height.toDp() }
             },
     ) {
-        BrandRow(),
         TopAppBar(
-
             title = {
                 Text(
                     text = stringResource(Res.string.library),
@@ -470,8 +468,8 @@ fun LibraryScreen(
                                 .data(accountThumbnail)
                                 .crossfade(550)
                                 .build(),
-                        placeholder = painterResource(Res.drawable.oblivion_owl),
-                        error = Res.drawable.oblivion_owl,
+                        placeholder = rememberVectorPainter(SimpIcons.PeopleAlt),
+                        error = rememberVectorPainter(SimpIcons.PeopleAlt),
                         contentDescription = null,
                         modifier =
                             Modifier

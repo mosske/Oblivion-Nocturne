@@ -243,8 +243,8 @@ fun HomeSectionHeader(
                         .crossfade(550)
                         .build(),
                 contentDescription = "",
-                placeholder = painterResource(Res.drawable.oblivion_owl),
-                error = Res.drawable.oblivion_owl,
+                placeholder = rememberHolderPainter(),
+                error = rememberHolderPainter(),
                 // The gap belongs to the picture: a shelf without one starts its title on the
                 // section's edge, where Quick picks and the other headers start theirs.
                 modifier =
@@ -639,7 +639,7 @@ fun HomeItemContentPlaylist(
                             }
 
                             else -> {
-                                Res.drawable.oblivion_owl
+                                rememberHolderPainter()
                             }
                         },
                     error =
@@ -672,7 +672,7 @@ fun HomeItemContentPlaylist(
                             }
 
                             else -> {
-                                Res.drawable.oblivion_owl
+                                rememberHolderPainter()
                             }
                         },
                     contentDescription = null,
@@ -843,7 +843,7 @@ fun QuickPicksItem(
                         .diskCacheKey(data.thumbnails.lastOrNull()?.url)
                         .diskCachePolicy(CachePolicy.ENABLED)
                         .build(),
-                placeholder = painterResource(Res.drawable.oblivion_owl),
+                placeholder = rememberHolderPainter(),
                 contentDescription = stringResource(Res.string.description),
                 contentScale = ContentScale.Crop,
                 modifier =
@@ -976,8 +976,8 @@ fun HomeItemSong(
                             .diskCacheKey(thumb)
                             .crossfade(550)
                             .build(),
-                    placeholder = painterResource(Res.drawable.oblivion_owl),
-                    error = Res.drawable.oblivion_owl,
+                    placeholder = rememberHolderPainter(),
+                    error = rememberHolderPainter(),
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier =
@@ -1080,8 +1080,8 @@ fun HomeItemVideo(
                             .diskCacheKey(thumb)
                             .crossfade(550)
                             .build(),
-                    placeholder = painterResource(Res.drawable.oblivion_owl),
-                    error = Res.drawable.oblivion_owl,
+                    placeholder = rememberHolderPainter(),
+                    error = rememberHolderPainter(),
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier =
@@ -1197,8 +1197,8 @@ fun HomeItemArtist(
                         .diskCacheKey(thumb)
                         .crossfade(550)
                         .build(),
-                placeholder = painterResource(Res.drawable.oblivion_owl),
-                error = Res.drawable.oblivion_owl,
+                placeholder = rememberHolderPainter(),
+                error = rememberHolderPainter(),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier =
@@ -1315,8 +1315,8 @@ fun ItemVideoChart(
                         .diskCacheKey(thumb)
                         .crossfade(550)
                         .build(),
-                placeholder = painterResource(Res.drawable.oblivion_owl),
-                error = Res.drawable.oblivion_owl,
+                placeholder = rememberHolderPainter(),
+                error = rememberHolderPainter(),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier =
@@ -1428,8 +1428,8 @@ fun ItemArtistChart(
                         .diskCacheKey(thumb)
                         .crossfade(550)
                         .build(),
-                placeholder = painterResource(Res.drawable.oblivion_owl),
-                error = Res.drawable.oblivion_owl,
+                placeholder = rememberHolderPainter(),
+                error = rememberHolderPainter(),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier =
@@ -1536,8 +1536,8 @@ fun ItemTrackChart(
                         .diskCacheKey(thumb)
                         .crossfade(550)
                         .build(),
-                placeholder = painterResource(Res.drawable.oblivion_owl),
-                error = Res.drawable.oblivion_owl,
+                placeholder = rememberHolderPainter(),
+                error = rememberHolderPainter(),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier =
