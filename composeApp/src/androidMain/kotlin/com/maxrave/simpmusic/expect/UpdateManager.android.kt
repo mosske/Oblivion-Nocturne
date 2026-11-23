@@ -59,16 +59,3 @@ actual fun downloadAndInstallUpdate(url: String, versionTag: String) {
     }
 }
 
-actual fun shareUrl(
-    title: String,
-    url: String,
-) {
-    val context: AppCompatActivity = getKoin().get()
-    val shareIntent = Intent(Intent.ACTION_SEND)
-    shareIntent.type = "text/plain"
-    shareIntent.putExtra(Intent.EXTRA_TEXT, url)
-    shareIntent.setFlags(FLAG_ACTIVITY_NEW_TASK)
-    val chooserIntent =
-        Intent.createChooser(shareIntent, title)
-    context.startActivity(chooserIntent)
-}
