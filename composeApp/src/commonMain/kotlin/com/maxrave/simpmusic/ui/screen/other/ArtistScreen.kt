@@ -96,11 +96,11 @@ import com.oblivion.nocturne.domain.mediaservice.handler.QueueData
 import com.oblivion.nocturne.domain.utils.toSongEntity
 import com.oblivion.nocturne.Platform
 import com.oblivion.nocturne.getPlatform
-import com.oblivion.nocturne.expect.shareUrl
-import com.oblivion.nocturne.expect.ui.MediaPlayerView
-import com.oblivion.nocturne.expect.ui.layerBackdrop
-import com.oblivion.nocturne.expect.ui.rememberBackdrop
-import com.oblivion.nocturne.expect.ui.toImageBitmap
+import com.maxrave.simpmusic.expect.shareUrl
+import com.maxrave.simpmusic.expect.ui.MediaPlayerView
+import com.maxrave.simpmusic.expect.ui.layerBackdrop
+import com.maxrave.simpmusic.expect.ui.rememberBackdrop
+import com.maxrave.simpmusic.expect.ui.toImageBitmap
 import com.oblivion.nocturne.extension.artworkScrimBrush
 import com.oblivion.nocturne.extension.barBlurStyle
 import com.oblivion.nocturne.extension.getColorFromPalette

@@ -1,4 +1,4 @@
-package com.oblivion.nocturne.expect.ui
+package com.maxrave.simpmusic.expect.ui
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.HorizontalScrollbar

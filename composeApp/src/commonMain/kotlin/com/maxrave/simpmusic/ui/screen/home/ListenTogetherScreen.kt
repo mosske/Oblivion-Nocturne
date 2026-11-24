@@ -77,10 +77,10 @@ import com.oblivion.nocturne.domain.data.model.listentogether.RoomConnection
 import com.oblivion.nocturne.domain.data.model.listentogether.RoomJoinRequest
 import com.oblivion.nocturne.domain.data.model.listentogether.RoomMember
 import com.oblivion.nocturne.domain.data.model.listentogether.RoomSuggestion
-import com.oblivion.nocturne.expect.shareUrl
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
-import com.oblivion.nocturne.expect.ui.layerBackdrop
-import com.oblivion.nocturne.expect.ui.rememberBackdrop
+import com.maxrave.simpmusic.expect.shareUrl
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.ui.layerBackdrop
+import com.maxrave.simpmusic.expect.ui.rememberBackdrop
 import com.oblivion.nocturne.extension.angledGradientBackground
 import com.oblivion.nocturne.extension.artworkScrimBrush
 import com.oblivion.nocturne.extension.rgbFactor

@@ -43,7 +43,7 @@ import com.oblivion.nocturne.domain.utils.toListName
 import com.oblivion.nocturne.domain.utils.toSongEntity
 import com.oblivion.nocturne.domain.utils.toTrack
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.ui.HorizontalScrollBar
+import com.maxrave.simpmusic.expect.ui.HorizontalScrollBar
 import com.oblivion.nocturne.extension.mouseDragScroll
 import com.oblivion.nocturne.extension.smoothScrimBrush
 import com.oblivion.nocturne.getPlatform

@@ -67,11 +67,11 @@ import com.oblivion.nocturne.domain.data.player.GenericMediaItem
 import com.oblivion.nocturne.domain.manager.DataStoreManager
 import com.oblivion.nocturne.domain.manager.DataStoreManager.Values.TRUE
 import com.oblivion.nocturne.logger.Logger
-import com.oblivion.nocturne.expect.Orientation
-import com.oblivion.nocturne.expect.currentOrientation
-import com.oblivion.nocturne.expect.openUrl
-import com.oblivion.nocturne.expect.ui.layerBackdrop
-import com.oblivion.nocturne.expect.ui.rememberBackdrop
+import com.maxrave.simpmusic.expect.Orientation
+import com.maxrave.simpmusic.expect.currentOrientation
+import com.maxrave.simpmusic.expect.openUrl
+import com.maxrave.simpmusic.expect.ui.layerBackdrop
+import com.maxrave.simpmusic.expect.ui.rememberBackdrop
 import com.oblivion.nocturne.extension.copy
 import com.oblivion.nocturne.ui.component.AppBottomNavigationBar
 import com.oblivion.nocturne.ui.component.AppNavigationRail

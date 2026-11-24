@@ -29,7 +29,7 @@ import com.oblivion.nocturne.domain.repository.SongRepository
 import com.oblivion.nocturne.domain.utils.LocalResource
 import com.oblivion.nocturne.logger.LogLevel
 import com.oblivion.nocturne.logger.Logger
-import com.oblivion.nocturne.expect.isOnUnmeteredNetwork
+import com.maxrave.simpmusic.expect.isOnUnmeteredNetwork
 import com.oblivion.nocturne.viewModel.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO

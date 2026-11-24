@@ -26,8 +26,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.oblivion.nocturne.expect.ui.DiscordWebView
-import com.oblivion.nocturne.expect.ui.rememberWebViewState
+import com.maxrave.simpmusic.expect.ui.DiscordWebView
+import com.maxrave.simpmusic.expect.ui.rememberWebViewState
 import com.oblivion.nocturne.extension.getStringBlocking
 import com.oblivion.nocturne.ui.component.DevLogInBottomSheet
 import com.oblivion.nocturne.ui.component.DevLogInType

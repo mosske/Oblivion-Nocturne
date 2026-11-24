@@ -1,4 +1,4 @@
-package com.oblivion.nocturne.expect
+package com.maxrave.simpmusic.expect
 
 /**
  * Platform-specific function to toggle mini player window.

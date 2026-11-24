@@ -48,7 +48,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import com.kyant.backdrop.highlight.Highlight
 import com.oblivion.nocturne.domain.repository.ListenTogetherRepository
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
 import com.oblivion.nocturne.ui.icon.Add
 import com.oblivion.nocturne.ui.icon.Groups
 import com.oblivion.nocturne.ui.icon.PlaylistAdd

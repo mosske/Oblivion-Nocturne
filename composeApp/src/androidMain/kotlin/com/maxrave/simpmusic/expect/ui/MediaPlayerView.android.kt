@@ -1,4 +1,4 @@
-package com.oblivion.nocturne.expect.ui
+package com.maxrave.simpmusic.expect.ui
 
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity

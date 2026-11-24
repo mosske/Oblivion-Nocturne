@@ -27,7 +27,7 @@ import com.oblivion.nocturne.domain.utils.collectResource
 import com.oblivion.nocturne.domain.utils.isLive
 import com.oblivion.nocturne.domain.utils.toTrack
 import com.oblivion.nocturne.logger.LogLevel
-import com.oblivion.nocturne.expect.shareUrl
+import com.maxrave.simpmusic.expect.shareUrl
 import com.oblivion.nocturne.viewModel.base.BaseViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -1,4 +1,4 @@
-package com.oblivion.nocturne.expect.ui
+package com.maxrave.simpmusic.expect.ui
 
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asComposeImageBitmap

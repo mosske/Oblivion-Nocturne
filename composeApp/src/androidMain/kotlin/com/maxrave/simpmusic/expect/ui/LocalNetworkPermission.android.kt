@@ -1,4 +1,4 @@
-package com.oblivion.nocturne.expect.ui
+package com.maxrave.simpmusic.expect.ui
 
 import android.content.pm.PackageManager
 import android.os.Build

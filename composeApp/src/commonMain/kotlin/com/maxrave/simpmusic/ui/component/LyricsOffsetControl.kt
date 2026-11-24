@@ -23,7 +23,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
 import com.oblivion.nocturne.ui.icon.Add
 import com.oblivion.nocturne.ui.icon.Remove
 import com.oblivion.nocturne.ui.icon.RestartAlt

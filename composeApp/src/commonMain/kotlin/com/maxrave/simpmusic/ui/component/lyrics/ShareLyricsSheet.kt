@@ -47,10 +47,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.saveImageToDevice
-import com.oblivion.nocturne.expect.shareImage
-import com.oblivion.nocturne.expect.ui.rememberSaveImagePermission
-import com.oblivion.nocturne.expect.ui.toPngByteArray
+import com.maxrave.simpmusic.expect.saveImageToDevice
+import com.maxrave.simpmusic.expect.shareImage
+import com.maxrave.simpmusic.expect.ui.rememberSaveImagePermission
+import com.maxrave.simpmusic.expect.ui.toPngByteArray
 import com.oblivion.nocturne.getPlatform
 import com.oblivion.nocturne.ui.component.capture.capturable
 import com.oblivion.nocturne.ui.component.capture.rememberCaptureController

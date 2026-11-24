@@ -112,8 +112,8 @@ import com.oblivion.nocturne.domain.manager.DataStoreManager
 import com.oblivion.nocturne.domain.utils.connectArtists
 import com.oblivion.nocturne.logger.Logger
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.toggleMiniPlayer
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.toggleMiniPlayer
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
 import com.oblivion.nocturne.extension.LeftToRight
 import com.oblivion.nocturne.extension.elapsedLabel
 import com.oblivion.nocturne.extension.formatDuration

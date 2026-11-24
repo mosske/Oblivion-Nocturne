@@ -81,10 +81,10 @@ import com.oblivion.nocturne.domain.utils.LocalResource
 import com.oblivion.nocturne.domain.utils.connectArtists
 import com.oblivion.nocturne.domain.utils.toArrayListTrack
 import com.oblivion.nocturne.domain.utils.toTrack
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
-import com.oblivion.nocturne.expect.ui.layerBackdrop
-import com.oblivion.nocturne.expect.ui.rememberBackdrop
-import com.oblivion.nocturne.expect.ui.toImageBitmap
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.ui.layerBackdrop
+import com.maxrave.simpmusic.expect.ui.rememberBackdrop
+import com.maxrave.simpmusic.expect.ui.toImageBitmap
 import com.oblivion.nocturne.extension.getScreenSizeInfo
 import com.oblivion.nocturne.extension.getStringBlocking
 import com.oblivion.nocturne.extension.smoothScrimBrush

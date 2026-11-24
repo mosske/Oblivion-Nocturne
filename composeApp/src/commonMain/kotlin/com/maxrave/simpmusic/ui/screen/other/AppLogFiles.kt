@@ -3,7 +3,7 @@ package com.oblivion.nocturne.ui.screen.other
 import com.oblivion.nocturne.domain.extension.epochMillisToLocalDateTime
 import com.oblivion.nocturne.domain.extension.now
 import com.oblivion.nocturne.logger.Logger
-import com.oblivion.nocturne.expect.shareImage
+import com.maxrave.simpmusic.expect.shareImage
 import com.oblivion.nocturne.getPlatform
 import com.oblivion.nocturne.utils.VersionManager
 import kotlinx.coroutines.Dispatchers

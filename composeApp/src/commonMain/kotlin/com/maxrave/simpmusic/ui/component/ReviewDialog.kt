@@ -17,7 +17,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withLink
 import androidx.compose.ui.window.DialogProperties
-import com.oblivion.nocturne.expect.openUrl
+import com.maxrave.simpmusic.expect.openUrl
 import com.oblivion.nocturne.ui.theme.seed
 import com.oblivion.nocturne.ui.theme.typo
 import org.jetbrains.compose.resources.painterResource

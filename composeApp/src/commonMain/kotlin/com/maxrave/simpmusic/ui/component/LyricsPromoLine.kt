@@ -28,8 +28,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.oblivion.nocturne.domain.manager.DataStoreManager.Values.TRUE
-import com.oblivion.nocturne.expect.openUrl
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.openUrl
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
 import com.oblivion.nocturne.getPlatform
 import com.oblivion.nocturne.ui.icon.ArrowOutward
 import com.oblivion.nocturne.ui.icon.Close

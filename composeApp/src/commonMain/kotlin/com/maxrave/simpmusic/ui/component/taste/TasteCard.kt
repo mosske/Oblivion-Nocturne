@@ -45,7 +45,7 @@ import coil3.compose.AsyncImage
 import com.oblivion.nocturne.domain.data.model.taste.TasteException
 import com.oblivion.nocturne.domain.data.model.taste.TasteProfile
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.copyToClipboard
+import com.maxrave.simpmusic.expect.copyToClipboard
 import com.oblivion.nocturne.getPlatform
 import com.oblivion.nocturne.ui.component.RippleIconButton
 import com.oblivion.nocturne.ui.icon.ContentCopy

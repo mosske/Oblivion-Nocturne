@@ -44,7 +44,7 @@ import com.kyant.backdrop.effects.colorControls
 import com.kyant.backdrop.effects.lens
 import com.kyant.backdrop.effects.vibrancy
 import com.kyant.backdrop.highlight.Highlight
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
 import com.oblivion.nocturne.ui.theme.LocalIsDarkTheme
 import com.oblivion.nocturne.ui.theme.LocalLiquidGlassEnabled
 import kotlinx.coroutines.CoroutineScope
@@ -62,7 +62,7 @@ import kotlin.math.sign
  * The press gesture is observe-only, so wrapped click handlers keep working.
  *
  * The element MUST be a sibling of the backdrop source (the box carrying
- * [com.oblivion.nocturne.expect.ui.layerBackdrop]); nesting it inside the source
+ * [com.maxrave.simpmusic.expect.ui.layerBackdrop]); nesting it inside the source
  * creates a render-feedback loop that crashes the RuntimeShader.
  *
  * Runs on Android and desktop alike: Kyant's backdrop is a KMP artifact whose desktop

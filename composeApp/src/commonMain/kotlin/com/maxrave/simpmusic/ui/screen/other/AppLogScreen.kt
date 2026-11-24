@@ -59,7 +59,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.oblivion.nocturne.logger.Logger
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.copyToClipboard
+import com.maxrave.simpmusic.expect.copyToClipboard
 import com.oblivion.nocturne.getPlatform
 import com.oblivion.nocturne.ui.component.Chip
 import com.oblivion.nocturne.ui.component.EndOfPage

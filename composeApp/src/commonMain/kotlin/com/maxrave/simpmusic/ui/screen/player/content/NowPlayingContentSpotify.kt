@@ -112,9 +112,9 @@ import com.kmpalette.rememberPaletteState
 import com.oblivion.nocturne.common.Config.MAIN_PLAYER
 import com.oblivion.nocturne.domain.mediaservice.handler.RepeatState
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.ui.MediaPlayerView
-import com.oblivion.nocturne.expect.ui.MediaPlayerViewWithSubtitle
-import com.oblivion.nocturne.expect.ui.toImageBitmap
+import com.maxrave.simpmusic.expect.ui.MediaPlayerView
+import com.maxrave.simpmusic.expect.ui.MediaPlayerViewWithSubtitle
+import com.maxrave.simpmusic.expect.ui.toImageBitmap
 import com.oblivion.nocturne.extension.LeftToRight
 import com.oblivion.nocturne.extension.elapsedLabel
 import com.oblivion.nocturne.extension.formatDuration

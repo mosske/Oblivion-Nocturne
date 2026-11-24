@@ -46,9 +46,9 @@ import com.oblivion.nocturne.domain.data.player.AudioOutputKind
 import com.oblivion.nocturne.domain.data.player.GenericCastState
 import com.oblivion.nocturne.domain.mediaservice.handler.MediaPlayerHandler
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.ui.DeviceVolumeController
-import com.oblivion.nocturne.expect.ui.rememberCastReceivers
-import com.oblivion.nocturne.expect.ui.rememberDeviceVolumeController
+import com.maxrave.simpmusic.expect.ui.DeviceVolumeController
+import com.maxrave.simpmusic.expect.ui.rememberCastReceivers
+import com.maxrave.simpmusic.expect.ui.rememberDeviceVolumeController
 import com.oblivion.nocturne.getPlatform
 import com.oblivion.nocturne.ui.component.SurfaceDarkColors
 import com.oblivion.nocturne.ui.component.rememberSurfaceDarkColors

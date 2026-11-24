@@ -2,7 +2,7 @@ package com.oblivion.nocturne.ui.component
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
 import com.oblivion.nocturne.viewModel.SharedViewModel
 import kotlin.reflect.KClass
 

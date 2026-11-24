@@ -59,7 +59,7 @@ import com.kyant.backdrop.effects.vibrancy
 import com.kyant.backdrop.highlight.Highlight
 import com.kyant.backdrop.shadow.InnerShadow
 import com.kyant.backdrop.shadow.Shadow
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
 import com.oblivion.nocturne.ui.theme.LocalIsDarkTheme
 import com.oblivion.nocturne.ui.theme.typo
 import kotlinx.coroutines.CoroutineScope

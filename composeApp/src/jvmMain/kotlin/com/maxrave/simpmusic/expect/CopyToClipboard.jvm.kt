@@ -1,4 +1,4 @@
-package com.oblivion.nocturne.expect
+package com.maxrave.simpmusic.expect
 
 import java.awt.Toolkit
 import java.awt.datatransfer.Clipboard

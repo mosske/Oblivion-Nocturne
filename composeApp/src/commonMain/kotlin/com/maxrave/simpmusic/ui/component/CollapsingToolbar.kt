@@ -66,7 +66,7 @@ import coil3.request.crossfade
 import coil3.toBitmap
 import com.kmpalette.rememberPaletteState
 import com.oblivion.nocturne.logger.Logger
-import com.oblivion.nocturne.expect.ui.toImageBitmap
+import com.maxrave.simpmusic.expect.ui.toImageBitmap
 import com.oblivion.nocturne.extension.getColorFromPalette
 import com.oblivion.nocturne.extension.getScreenSizeInfo
 import com.oblivion.nocturne.extension.rgbFactor

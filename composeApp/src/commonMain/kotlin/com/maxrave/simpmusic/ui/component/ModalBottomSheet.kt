@@ -137,10 +137,10 @@ import com.oblivion.nocturne.domain.utils.FilterState
 import com.oblivion.nocturne.domain.utils.connectArtists
 import com.oblivion.nocturne.domain.utils.toListName
 import com.oblivion.nocturne.logger.Logger
-import com.oblivion.nocturne.expect.copyToClipboard
-import com.oblivion.nocturne.expect.shareUrl
-import com.oblivion.nocturne.expect.ui.persistPickedImage
-import com.oblivion.nocturne.expect.ui.photoPickerResult
+import com.maxrave.simpmusic.expect.copyToClipboard
+import com.maxrave.simpmusic.expect.shareUrl
+import com.maxrave.simpmusic.expect.ui.persistPickedImage
+import com.maxrave.simpmusic.expect.ui.photoPickerResult
 import com.oblivion.nocturne.extension.displayNameRes
 import com.oblivion.nocturne.extension.greyScale
 import com.oblivion.nocturne.ui.icon.AccessAlarm

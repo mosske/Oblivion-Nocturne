@@ -1,4 +1,4 @@
-package com.oblivion.nocturne.expect
+package com.maxrave.simpmusic.expect
 
 import android.content.Context
 import android.net.ConnectivityManager

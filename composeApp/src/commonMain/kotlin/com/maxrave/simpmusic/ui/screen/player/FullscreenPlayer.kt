@@ -62,7 +62,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import com.oblivion.nocturne.common.Config.MAIN_PLAYER
-import com.oblivion.nocturne.expect.ui.MediaPlayerViewWithSubtitle
+import com.maxrave.simpmusic.expect.ui.MediaPlayerViewWithSubtitle
 import com.oblivion.nocturne.extension.LeftToRight
 import com.oblivion.nocturne.extension.artworkScrimBrush
 import com.oblivion.nocturne.extension.elapsedLabel

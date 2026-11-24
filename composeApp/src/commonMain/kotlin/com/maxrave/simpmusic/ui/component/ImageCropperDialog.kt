@@ -37,8 +37,8 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
-import com.oblivion.nocturne.expect.ui.decodeImageBitmap
-import com.oblivion.nocturne.expect.ui.toByteArray
+import com.maxrave.simpmusic.expect.ui.decodeImageBitmap
+import com.maxrave.simpmusic.expect.ui.toByteArray
 import kotlin.math.max
 import kotlin.math.roundToInt
 import androidx.compose.ui.graphics.Canvas as GraphicsCanvas

@@ -46,8 +46,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
-import com.oblivion.nocturne.expect.ui.layerBackdrop
-import com.oblivion.nocturne.expect.ui.rememberBackdrop
+import com.maxrave.simpmusic.expect.ui.layerBackdrop
+import com.maxrave.simpmusic.expect.ui.rememberBackdrop
 import com.oblivion.nocturne.extension.angledGradientBackground
 import com.oblivion.nocturne.extension.artworkScrimBrush
 import com.oblivion.nocturne.extension.rgbFactor

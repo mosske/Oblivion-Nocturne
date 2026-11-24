@@ -16,7 +16,7 @@ import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import com.oblivion.nocturne.domain.manager.DataStoreManager
-import com.oblivion.nocturne.expect.ui.SystemBarAppearanceEffect
+import com.maxrave.simpmusic.expect.ui.SystemBarAppearanceEffect
 
 /**
  * Semantic colors that sit outside the Material 3 ColorScheme.

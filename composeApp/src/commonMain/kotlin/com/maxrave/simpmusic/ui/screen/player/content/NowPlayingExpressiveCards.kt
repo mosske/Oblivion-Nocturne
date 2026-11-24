@@ -79,9 +79,9 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import com.oblivion.nocturne.common.Config.MAIN_PLAYER
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.ui.MediaPlayerView
-import com.oblivion.nocturne.expect.ui.MediaPlayerViewWithSubtitle
-import com.oblivion.nocturne.expect.ui.toImageBitmap
+import com.maxrave.simpmusic.expect.ui.MediaPlayerView
+import com.maxrave.simpmusic.expect.ui.MediaPlayerViewWithSubtitle
+import com.maxrave.simpmusic.expect.ui.toImageBitmap
 import com.oblivion.nocturne.extension.LeftToRight
 import com.oblivion.nocturne.extension.parseTimestampToMilliseconds
 import com.oblivion.nocturne.extension.mouseDragScroll

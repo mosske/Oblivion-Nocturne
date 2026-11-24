@@ -47,10 +47,10 @@ import com.oblivion.nocturne.domain.repository.BrowserProfileStatus
 import com.oblivion.nocturne.logger.Logger
 import com.oblivion.nocturne.Platform
 import com.oblivion.nocturne.getPlatform
-import com.oblivion.nocturne.expect.openUrl
-import com.oblivion.nocturne.expect.ui.PlatformWebView
-import com.oblivion.nocturne.expect.ui.createWebViewCookieManager
-import com.oblivion.nocturne.expect.ui.rememberWebViewState
+import com.maxrave.simpmusic.expect.openUrl
+import com.maxrave.simpmusic.expect.ui.PlatformWebView
+import com.maxrave.simpmusic.expect.ui.createWebViewCookieManager
+import com.maxrave.simpmusic.expect.ui.rememberWebViewState
 import com.oblivion.nocturne.extension.ultraThinBarStyle
 import com.oblivion.nocturne.ui.component.DevLogInBottomSheet
 import com.oblivion.nocturne.ui.component.DevLogInType
@@ -162,8 +162,8 @@ fun LoginScreen(
                 "LogInScreen",
                 "WebViewState: ${
                     when (it) {
-                        is com.oblivion.nocturne.expect.ui.WebViewState.Finished -> "Finished"
-                        is com.oblivion.nocturne.expect.ui.WebViewState.Loading -> "Loading ${it.progress}%"
+                        is com.maxrave.simpmusic.expect.ui.WebViewState.Finished -> "Finished"
+                        is com.maxrave.simpmusic.expect.ui.WebViewState.Loading -> "Loading ${it.progress}%"
                     }
                 }",
             )

@@ -59,8 +59,8 @@ import com.oblivion.nocturne.domain.data.model.taste.TasteProfile
 import com.oblivion.nocturne.domain.utils.LocalResource
 import com.oblivion.nocturne.logger.Logger
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.ui.layerBackdrop
-import com.oblivion.nocturne.expect.ui.rememberBackdrop
+import com.maxrave.simpmusic.expect.ui.layerBackdrop
+import com.maxrave.simpmusic.expect.ui.rememberBackdrop
 import com.oblivion.nocturne.extension.copy
 import com.oblivion.nocturne.extension.isScrollingUp
 import com.oblivion.nocturne.extension.ultraThinBarStyle

@@ -43,7 +43,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.oblivion.nocturne.domain.extension.now
-import com.oblivion.nocturne.expect.openUrl
+import com.maxrave.simpmusic.expect.openUrl
 import com.oblivion.nocturne.extension.ultraThinBarStyle
 import com.oblivion.nocturne.ui.component.RippleIconButton
 import com.oblivion.nocturne.ui.icon.ArrowBackIosNew

@@ -86,7 +86,7 @@ import com.materialkolor.ktx.themeColorOrNull
 import com.materialkolor.rememberDynamicColorScheme
 import com.oblivion.nocturne.domain.mediaservice.handler.RepeatState
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.ui.toReadableBitmap
+import com.maxrave.simpmusic.expect.ui.toReadableBitmap
 import com.oblivion.nocturne.extension.LeftToRight
 import com.oblivion.nocturne.extension.elapsedLabel
 import com.oblivion.nocturne.extension.formatDuration

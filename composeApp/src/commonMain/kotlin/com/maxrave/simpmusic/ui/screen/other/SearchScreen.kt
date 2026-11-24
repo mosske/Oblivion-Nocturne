@@ -103,10 +103,10 @@ import com.oblivion.nocturne.domain.utils.connectArtists
 import com.oblivion.nocturne.domain.utils.toSongEntity
 import com.oblivion.nocturne.domain.utils.toTrack
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.ui.PlatformBackHandler
-import com.oblivion.nocturne.expect.ui.SongRecognitionSheet
-import com.oblivion.nocturne.expect.ui.layerBackdrop
-import com.oblivion.nocturne.expect.ui.rememberBackdrop
+import com.maxrave.simpmusic.expect.ui.PlatformBackHandler
+import com.maxrave.simpmusic.expect.ui.SongRecognitionSheet
+import com.maxrave.simpmusic.expect.ui.layerBackdrop
+import com.maxrave.simpmusic.expect.ui.rememberBackdrop
 import com.oblivion.nocturne.extension.getScreenSizeInfo
 import com.oblivion.nocturne.extension.ultraThinBarStyle
 import com.oblivion.nocturne.getPlatform

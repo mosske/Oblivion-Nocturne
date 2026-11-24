@@ -73,9 +73,9 @@ import com.oblivion.nocturne.ui.component.DownloadingIndicator
 import com.oblivion.nocturne.domain.data.entities.DownloadState
 import com.oblivion.nocturne.domain.data.model.browse.album.Track
 import com.oblivion.nocturne.domain.utils.toSongEntity
-import com.oblivion.nocturne.expect.ui.layerBackdrop
-import com.oblivion.nocturne.expect.ui.rememberBackdrop
-import com.oblivion.nocturne.expect.ui.toImageBitmap
+import com.maxrave.simpmusic.expect.ui.layerBackdrop
+import com.maxrave.simpmusic.expect.ui.rememberBackdrop
+import com.maxrave.simpmusic.expect.ui.toImageBitmap
 import com.oblivion.nocturne.extension.artworkScrimBrush
 import com.oblivion.nocturne.extension.getColorFromPalette
 import com.oblivion.nocturne.extension.getScreenSizeInfo

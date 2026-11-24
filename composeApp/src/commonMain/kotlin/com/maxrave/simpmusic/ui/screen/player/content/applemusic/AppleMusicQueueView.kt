@@ -56,7 +56,7 @@ import com.oblivion.nocturne.domain.manager.DataStoreManager
 import com.oblivion.nocturne.domain.mediaservice.handler.MediaPlayerHandler
 import com.oblivion.nocturne.domain.mediaservice.handler.QueueData
 import com.oblivion.nocturne.domain.mediaservice.handler.RepeatState
-import com.oblivion.nocturne.expect.ui.DeviceVolumeController
+import com.maxrave.simpmusic.expect.ui.DeviceVolumeController
 import com.oblivion.nocturne.ui.component.DraggableItem
 import com.oblivion.nocturne.ui.component.SongFullWidthItems
 import com.oblivion.nocturne.ui.component.rememberDragDropState

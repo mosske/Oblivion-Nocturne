@@ -72,9 +72,9 @@ import com.oblivion.nocturne.domain.utils.toTrack
 import com.oblivion.nocturne.logger.LogLevel
 import com.oblivion.nocturne.logger.Logger
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.getDownloadFolderPath
-import com.oblivion.nocturne.expect.isOnUnmeteredNetwork
-import com.oblivion.nocturne.expect.ui.toByteArray
+import com.maxrave.simpmusic.expect.getDownloadFolderPath
+import com.maxrave.simpmusic.expect.isOnUnmeteredNetwork
+import com.maxrave.simpmusic.expect.ui.toByteArray
 import com.oblivion.nocturne.getPlatform
 import com.oblivion.nocturne.utils.LyricsPromo
 import com.oblivion.nocturne.utils.VersionManager

@@ -68,7 +68,7 @@ import com.oblivion.nocturne.domain.manager.DataStoreManager
 import com.oblivion.nocturne.domain.mediaservice.handler.MediaPlayerHandler
 import com.oblivion.nocturne.logger.Logger
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.ui.rememberVideoAspectRatio
+import com.maxrave.simpmusic.expect.ui.rememberVideoAspectRatio
 import com.oblivion.nocturne.extension.GradientAngle
 import com.oblivion.nocturne.extension.GradientOffset
 import com.oblivion.nocturne.extension.KeepScreenOn

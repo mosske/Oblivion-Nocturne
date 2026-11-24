@@ -1,4 +1,4 @@
-package com.oblivion.nocturne.expect
+package com.maxrave.simpmusic.expect
 
 import com.oblivion.nocturne.logger.Logger
 import multiplatform.network.cmptoast.showToast

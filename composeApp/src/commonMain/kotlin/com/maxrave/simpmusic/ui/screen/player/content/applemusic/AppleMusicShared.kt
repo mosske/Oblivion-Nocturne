@@ -79,7 +79,7 @@ import com.oblivion.nocturne.domain.mediaservice.handler.ControlState
 import com.oblivion.nocturne.domain.mediaservice.handler.RepeatState
 import com.oblivion.nocturne.domain.repository.ListenTogetherRepository
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.ui.DeviceVolumeController
+import com.maxrave.simpmusic.expect.ui.DeviceVolumeController
 import com.oblivion.nocturne.extension.LeftToRight
 import com.oblivion.nocturne.extension.formatDuration
 import com.oblivion.nocturne.getPlatform

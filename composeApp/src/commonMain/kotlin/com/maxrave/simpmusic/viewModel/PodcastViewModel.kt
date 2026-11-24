@@ -11,7 +11,7 @@ import com.oblivion.nocturne.domain.mediaservice.handler.QueueData
 import com.oblivion.nocturne.domain.repository.PodcastRepository
 import com.oblivion.nocturne.domain.utils.Resource
 import com.oblivion.nocturne.domain.utils.toTrack
-import com.oblivion.nocturne.expect.shareUrl
+import com.maxrave.simpmusic.expect.shareUrl
 import com.oblivion.nocturne.viewModel.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

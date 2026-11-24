@@ -70,7 +70,7 @@ import com.oblivion.nocturne.domain.manager.DataStoreManager
 import com.oblivion.nocturne.domain.data.model.lyrics.RomanizationDictionaryState
 import com.oblivion.nocturne.domain.data.model.lyrics.RomanizationLanguage
 import com.oblivion.nocturne.domain.repository.LyricsRomanizerRepository
-import com.oblivion.nocturne.expect.ui.isLyricsBlurSupported
+import com.maxrave.simpmusic.expect.ui.isLyricsBlurSupported
 import com.oblivion.nocturne.domain.data.model.metadata.Line
 import com.oblivion.nocturne.ui.screen.player.content.NowPlayingContentActions
 import com.oblivion.nocturne.ui.screen.player.content.NowPlayingContentState

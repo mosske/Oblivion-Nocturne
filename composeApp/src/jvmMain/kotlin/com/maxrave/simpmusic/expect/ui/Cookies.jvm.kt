@@ -1,4 +1,4 @@
-package com.oblivion.nocturne.expect.ui
+package com.maxrave.simpmusic.expect.ui
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Box
@@ -14,7 +14,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
-import com.oblivion.nocturne.expect.openUrl
+import com.maxrave.simpmusic.expect.openUrl
 import com.oblivion.nocturne.ui.theme.typo
 import org.jetbrains.compose.resources.stringResource
 import oblivionnocturne.composeapp.generated.resources.Res

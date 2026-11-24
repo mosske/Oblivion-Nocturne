@@ -35,10 +35,10 @@ import com.oblivion.nocturne.common.Config
 import com.oblivion.nocturne.domain.repository.BrowserLoginTarget
 import com.oblivion.nocturne.Platform
 import com.oblivion.nocturne.getPlatform
-import com.oblivion.nocturne.expect.openUrl
-import com.oblivion.nocturne.expect.ui.PlatformWebView
-import com.oblivion.nocturne.expect.ui.createWebViewCookieManager
-import com.oblivion.nocturne.expect.ui.rememberWebViewState
+import com.maxrave.simpmusic.expect.openUrl
+import com.maxrave.simpmusic.expect.ui.PlatformWebView
+import com.maxrave.simpmusic.expect.ui.createWebViewCookieManager
+import com.maxrave.simpmusic.expect.ui.rememberWebViewState
 import com.oblivion.nocturne.extension.getStringBlocking
 import com.oblivion.nocturne.extension.ultraThinBarStyle
 import com.oblivion.nocturne.ui.component.DevCookieLogInBottomSheet

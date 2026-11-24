@@ -84,11 +84,11 @@ import coil3.request.crossfade
 import com.kyant.backdrop.highlight.Highlight
 import com.oblivion.nocturne.domain.manager.DataStoreManager
 import com.oblivion.nocturne.Platform
-import com.oblivion.nocturne.expect.toggleMiniPlayer
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
-import com.oblivion.nocturne.expect.ui.isLyricsBlurSupported
-import com.oblivion.nocturne.expect.ui.layerBackdrop
-import com.oblivion.nocturne.expect.ui.rememberBackdrop
+import com.maxrave.simpmusic.expect.toggleMiniPlayer
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.ui.isLyricsBlurSupported
+import com.maxrave.simpmusic.expect.ui.layerBackdrop
+import com.maxrave.simpmusic.expect.ui.rememberBackdrop
 import com.oblivion.nocturne.extension.KeepScreenOn
 import com.oblivion.nocturne.extension.LeftToRight
 import com.oblivion.nocturne.extension.formatDuration

@@ -16,7 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.oblivion.nocturne.expect.openUrl
+import com.maxrave.simpmusic.expect.openUrl
 import com.oblivion.nocturne.ui.theme.typo
 import org.jetbrains.compose.resources.stringResource
 import oblivionnocturne.composeapp.generated.resources.Res

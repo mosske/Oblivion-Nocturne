@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import com.oblivion.nocturne.expect.ui.toReadableBitmap
+import com.maxrave.simpmusic.expect.ui.toReadableBitmap
 import com.oblivion.nocturne.extension.smoothScrimBrush
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

@@ -79,9 +79,9 @@ import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import com.kyant.backdrop.highlight.Highlight
 import com.oblivion.nocturne.domain.data.model.library.LibraryCollectionPreview
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
-import com.oblivion.nocturne.expect.ui.layerBackdrop
-import com.oblivion.nocturne.expect.ui.rememberBackdrop
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.ui.layerBackdrop
+import com.maxrave.simpmusic.expect.ui.rememberBackdrop
 import com.oblivion.nocturne.extension.barBlurStyle
 import com.oblivion.nocturne.extension.mouseDragScroll
 import com.oblivion.nocturne.ui.icon.Close

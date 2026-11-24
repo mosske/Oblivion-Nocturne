@@ -44,8 +44,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.oblivion.nocturne.domain.manager.DataStoreManager
-import com.oblivion.nocturne.expect.ui.DeviceVolumeController
-import com.oblivion.nocturne.expect.ui.isLyricsBlurSupported
+import com.maxrave.simpmusic.expect.ui.DeviceVolumeController
+import com.maxrave.simpmusic.expect.ui.isLyricsBlurSupported
 import com.oblivion.nocturne.ui.component.AppleMusicLyricPaddingX
 import com.oblivion.nocturne.ui.component.LyricsOffsetFloatingControl
 import com.oblivion.nocturne.ui.component.LyricsPromoLine

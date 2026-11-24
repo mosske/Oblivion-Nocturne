@@ -1,4 +1,4 @@
-package com.oblivion.nocturne.expect.ui
+package com.maxrave.simpmusic.expect.ui
 
 import android.graphics.Bitmap
 import android.graphics.Bitmap.CompressFormat.JPEG

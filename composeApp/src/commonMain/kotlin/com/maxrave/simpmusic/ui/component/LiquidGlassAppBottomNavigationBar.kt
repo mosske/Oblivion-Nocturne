@@ -3,7 +3,7 @@ package com.oblivion.nocturne.ui.component
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
 import com.oblivion.nocturne.ui.icon.AutoGraph
 import com.oblivion.nocturne.ui.icon.Home
 import com.oblivion.nocturne.ui.icon.LibraryMusic

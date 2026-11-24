@@ -47,7 +47,7 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.oblivion.nocturne.domain.data.player.GenericMediaItem
 import com.oblivion.nocturne.logger.Logger
-import com.oblivion.nocturne.expect.ui.PlatformBackdrop
+import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
 import com.oblivion.nocturne.ui.navigation.destination.home.AnalyticsDestination
 import com.oblivion.nocturne.ui.navigation.destination.home.HomeDestination
 import com.oblivion.nocturne.ui.navigation.destination.library.LibraryDestination
