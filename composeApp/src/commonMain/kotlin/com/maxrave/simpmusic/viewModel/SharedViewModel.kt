@@ -1800,7 +1800,7 @@ class SharedViewModel(
                 is Resource.Success<*> -> {
                     // If OblivionNocturne translated lyrics are RICH_SYNCED (word-by-word),
                     // convert to LINE_SYNCED, downvote, and fallback to AI translation
-                    if (data.syncType == "RICH_SYNCED") {
+                    if (data?.syncType == "RICH_SYNCED") {
                         Logger.w(tag, "OblivionNocturne translated lyrics are RICH_SYNCED, downvoting and falling back to AI")
                         val oblivionNocturneLyricsId = data.oblivionNocturneLyrics?.id
                         if (!oblivionNocturneLyricsId.isNullOrEmpty()) {
@@ -1888,8 +1888,8 @@ class SharedViewModel(
                                         videoId = videoId,
                                         language = dataStoreManager.translationLanguage.first(),
                                         error = false,
-                                        lines = data.lines,
-                                        syncType = data.syncType,
+                                        lines = data?.lines,
+                                        syncType = data?.syncType,
                                     ),
                                 )
                                 updateLyrics(
