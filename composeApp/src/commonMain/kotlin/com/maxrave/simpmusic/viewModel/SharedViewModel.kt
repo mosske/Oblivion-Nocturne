@@ -1260,7 +1260,7 @@ class SharedViewModel(
                 updateRepository.checkForGithubReleaseUpdate().collectLatest { response ->
                     val data = response.data
                     when (response) {
-                        is Resource.Success -> {
+                        is LocalResource.Success<*> -> {
                             _updateResponse.value = data
                             showedUpdateDialog = true
                         }
@@ -1411,7 +1411,7 @@ class SharedViewModel(
                                                 Logger.w(tag, "Vote OblivionNocturne Translated Lyrics Error ${it.message}")
                                             }
 
-                                            is Resource.Success -> {
+                                            is LocalResource.Success<*> -> {
                                                 Logger.d(tag, "Vote OblivionNocturne Translated Lyrics Success")
                                             }
                                         }
@@ -1469,7 +1469,7 @@ class SharedViewModel(
                                             log("Insert OblivionNocturne Translated Lyrics Error ${it.message}", LogLevel.WARN)
                                         }
 
-                                        is Resource.Success -> {
+                                        is LocalResource.Success<*> -> {
                                             log("Insert OblivionNocturne Translated Lyrics Success")
                                         }
                                     }
@@ -1521,7 +1521,7 @@ class SharedViewModel(
                                             Logger.w(tag, "Insert OblivionNocturne Lyrics Error ${it.message}")
                                         }
 
-                                        is Resource.Success -> {
+                                        is LocalResource.Success<*> -> {
                                             Logger.d(tag, "Insert OblivionNocturne Lyrics Success")
                                         }
                                     }
@@ -1810,7 +1810,7 @@ class SharedViewModel(
                                     .collectLatest { voteResult ->
                                         when (voteResult) {
                                             is Resource.Error -> Logger.w(tag, "Downvote RICH_SYNCED translated lyrics error: ${voteResult.message}")
-                                            is Resource.Success -> Logger.d(tag, "Downvote RICH_SYNCED translated lyrics success")
+                                            is LocalResource.Success<*> -> Logger.d(tag, "Downvote RICH_SYNCED translated lyrics success")
                                         }
                                     }
                             }
@@ -1921,7 +1921,7 @@ class SharedViewModel(
                 Logger.d("Check SpotifyLyrics", response.toString())
                 val data = response.data
                 when (response) {
-                    is Resource.Success -> {
+                    is LocalResource.Success<*> -> {
                         if (data != null) {
                             insertLyrics(
                                 data.toLyricsEntity(
@@ -2234,7 +2234,7 @@ class SharedViewModel(
                             }
                         }
 
-                        is Resource.Success -> {
+                        is LocalResource.Success<*> -> {
                             Logger.d(tag, "Vote OblivionNocturne Lyrics Success")
                             _lyricsVoteState.update {
                                 it?.copy(
@@ -2289,7 +2289,7 @@ class SharedViewModel(
                             }
                         }
 
-                        is Resource.Success -> {
+                        is LocalResource.Success<*> -> {
                             Logger.d(tag, "Vote OblivionNocturne Translated Lyrics Success")
                             _translatedVoteState.update {
                                 it?.copy(
