@@ -703,7 +703,7 @@ class SharedViewModel(
                 if (resolved) break
                 source.cancellable().collect { response ->
                     val data = response.data
-                    if (response is Resource.Success<*> && data != null && nowPlayingState.value?.mediaItem?.mediaId == videoId) {
+                    if (response is Resource.Success && data != null && nowPlayingState.value?.mediaItem?.mediaId == videoId) {
                         resolved = true
                         _canvas.value = data
                         _nowPlayingScreenData.update {
@@ -955,7 +955,7 @@ class SharedViewModel(
                 streamRepository.getFullMetadata(videoId).collectLatest { response ->
                     val track = response.data
                     when (response) {
-                        is Resource.Success<*> if (track != null) -> {
+                        is Resource.Success if (track != null) -> {
                             mediaPlayerHandler.setQueueData(
                                 QueueData.Data(
                                     listTracks = arrayListOf(track),
@@ -1260,7 +1260,7 @@ class SharedViewModel(
                 updateRepository.checkForGithubReleaseUpdate().collectLatest { response ->
                     val data = response.data
                     when (response) {
-                        is Resource.Success<*> -> {
+                        is Resource.Success if (data != null) -> {
                             _updateResponse.value = data
                             showedUpdateDialog = true
                         }
@@ -1411,7 +1411,7 @@ class SharedViewModel(
                                                 Logger.w(tag, "Vote OblivionNocturne Translated Lyrics Error ${it.message}")
                                             }
 
-                                            is Resource.Success<*> -> {
+                                            is Resource.Success -> {
                                                 Logger.d(tag, "Vote OblivionNocturne Translated Lyrics Success")
                                             }
                                         }
@@ -1469,7 +1469,7 @@ class SharedViewModel(
                                             log("Insert OblivionNocturne Translated Lyrics Error ${it.message}", LogLevel.WARN)
                                         }
 
-                                        is Resource.Success<*> -> {
+                                        is Resource.Success -> {
                                             log("Insert OblivionNocturne Translated Lyrics Success")
                                         }
                                     }
@@ -1521,7 +1521,7 @@ class SharedViewModel(
                                             Logger.w(tag, "Insert OblivionNocturne Lyrics Error ${it.message}")
                                         }
 
-                                        is Resource.Success<*> -> {
+                                        is Resource.Success -> {
                                             Logger.d(tag, "Insert OblivionNocturne Lyrics Success")
                                         }
                                     }
@@ -1611,7 +1611,7 @@ class SharedViewModel(
         lyricsCanvasRepository.getOblivionNocturneLyrics(videoId).collectLatest {
             Logger.d(tag, "Get OblivionNocturne Lyrics for $videoId: ${it::class.simpleName}")
             val data = it.data
-            if (it is Resource.Success<*> && data != null) {
+            if (it is Resource.Success && data != null) {
                 Logger.d(tag, "Get OblivionNocturne Lyrics Success")
                 updateLyrics(
                     videoId,
@@ -1655,7 +1655,7 @@ class SharedViewModel(
             .collect { response ->
                 val data = response.data
                 when (response) {
-                    is Resource.Success<*> -> {
+                    is Resource.Success if (data != null) -> {
                         val lyrics = data.first
                         val translatedLyrics = data.second
                         insertLyrics(lyrics.toLyricsEntity(videoId))
@@ -1708,7 +1708,7 @@ class SharedViewModel(
                 ).collectLatest { res ->
                     val data = res.data
                     when (res) {
-                        is Resource.Success<*> -> {
+                        is Resource.Success if (data != null) -> {
                             Logger.d(tag, "Get Lyrics Data Success")
                             updateLyrics(
                                 song.videoId,
@@ -1754,7 +1754,7 @@ class SharedViewModel(
                 ).collectLatest { res ->
                     val data = res.data
                     when (res) {
-                    is Resource.Success<*> -> {
+                        is Resource.Success if (data != null) -> {
                             Logger.d(tag, "Get BetterLyrics Success")
                             updateLyrics(
                                 song.videoId,
@@ -1764,7 +1764,7 @@ class SharedViewModel(
                                 LyricsProvider.BETTER_LYRICS,
                             )
                             insertLyrics(
-                                data. toLyricsEntity(
+                                data.toLyricsEntity(
                                     song.videoId,
                                 ),
                             )
@@ -1795,14 +1795,14 @@ class SharedViewModel(
         val translationLanguage =
             dataStoreManager.translationLanguage.first()
         lyricsCanvasRepository.getOblivionNocturneTranslatedLyrics(videoId, translationLanguage).collectLatest { response ->
-            val data = response.data ?: return@collectLatest
+            val data = response.data
             when (response) {
-                is Resource.Success<*> -> {
+                is Resource.Success if (data != null) -> {
                     // If OblivionNocturne translated lyrics are RICH_SYNCED (word-by-word),
                     // convert to LINE_SYNCED, downvote, and fallback to AI translation
-                    if (data?.syncType == "RICH_SYNCED") {
+                    if (data.syncType == "RICH_SYNCED") {
                         Logger.w(tag, "OblivionNocturne translated lyrics are RICH_SYNCED, downvoting and falling back to AI")
-                        val oblivionNocturneLyricsId = data. oblivionNocturneLyrics?.id
+                        val oblivionNocturneLyricsId = data.oblivionNocturneLyrics?.id
                         if (!oblivionNocturneLyricsId.isNullOrEmpty()) {
                             viewModelScope.launch {
                                 lyricsCanvasRepository
@@ -1810,7 +1810,7 @@ class SharedViewModel(
                                     .collectLatest { voteResult ->
                                         when (voteResult) {
                                             is Resource.Error -> Logger.w(tag, "Downvote RICH_SYNCED translated lyrics error: ${voteResult.message}")
-                                            is Resource.Success<*> -> Logger.d(tag, "Downvote RICH_SYNCED translated lyrics success")
+                                            is Resource.Success -> Logger.d(tag, "Downvote RICH_SYNCED translated lyrics success")
                                         }
                                     }
                             }
@@ -1879,17 +1879,17 @@ class SharedViewModel(
                         dataStoreManager.translationLanguage.first(),
                     ).cancellable()
                     .collectLatest {
-                        val data = it.data ?: return@collectLatest
+                        val data = it.data
                         when (it) {
-                            is Resource.Success<*> -> {
+                            is Resource.Success if (data != null) -> {
                                 Logger.d(tag, "Get AI Translate Lyrics Success")
                                 lyricsCanvasRepository.insertTranslatedLyrics(
                                     TranslatedLyricsEntity(
                                         videoId = videoId,
                                         language = dataStoreManager.translationLanguage.first(),
                                         error = false,
-                                        lines = data?.lines,
-                                        syncType = data?.syncType,
+                                        lines = data.lines,
+                                        syncType = data.syncType,
                                     ),
                                 )
                                 updateLyrics(
@@ -1921,10 +1921,10 @@ class SharedViewModel(
                 Logger.d("Check SpotifyLyrics", response.toString())
                 val data = response.data
                 when (response) {
-                    is Resource.Success<*> -> {
+                    is Resource.Success -> {
                         if (data != null) {
                             insertLyrics(
-                                data. toLyricsEntity(
+                                data.toLyricsEntity(
                                     track.videoId,
                                 ),
                             )
@@ -2234,7 +2234,7 @@ class SharedViewModel(
                             }
                         }
 
-                        is Resource.Success<*> -> {
+                        is Resource.Success -> {
                             Logger.d(tag, "Vote OblivionNocturne Lyrics Success")
                             _lyricsVoteState.update {
                                 it?.copy(
@@ -2289,7 +2289,7 @@ class SharedViewModel(
                             }
                         }
 
-                        is Resource.Success<*> -> {
+                        is Resource.Success -> {
                             Logger.d(tag, "Vote OblivionNocturne Translated Lyrics Success")
                             _translatedVoteState.update {
                                 it?.copy(
