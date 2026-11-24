@@ -1,4 +1,5 @@
 import androidx.compose.material3.MaterialTheme
+import org.jetbrains.compose.resources.painterResource
 import androidx.compose.material3.Text
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -21,7 +22,7 @@ fun BrandRow() {
         horizontalArrangement = Arrangement.Center,
     ) {
         Image(
-            painter = Res.drawable.oblivion_owl,
+            painter = painterResource(Res.drawable.oblivion_owl),
             contentDescription = "Oblivion Nocturne Logo",
             modifier = Modifier
                 .size(32.dp)
