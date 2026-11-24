@@ -1759,18 +1759,18 @@ class SharedViewModel(
                             updateLyrics(
                                 song.videoId,
                                 duration,
-                                data!!,
+                                data,
                                 false,
                                 LyricsProvider.BETTER_LYRICS,
                             )
                             insertLyrics(
-                                data!!. toLyricsEntity(
+                                data. toLyricsEntity(
                                     song.videoId,
                                 ),
                             )
                             getAITranslationLyrics(
                                 song.videoId,
-                                data!!,
+                                data,
                             )
                         }
 
@@ -1795,14 +1795,14 @@ class SharedViewModel(
         val translationLanguage =
             dataStoreManager.translationLanguage.first()
         lyricsCanvasRepository.getOblivionNocturneTranslatedLyrics(videoId, translationLanguage).collectLatest { response ->
-            val data!! = response.data
+            val data = response.data ?: return@collectLatest
             when (response) {
                 is Resource.Success<*> -> {
                     // If OblivionNocturne translated lyrics are RICH_SYNCED (word-by-word),
                     // convert to LINE_SYNCED, downvote, and fallback to AI translation
                     if (data?.syncType == "RICH_SYNCED") {
                         Logger.w(tag, "OblivionNocturne translated lyrics are RICH_SYNCED, downvoting and falling back to AI")
-                        val oblivionNocturneLyricsId = data!!. oblivionNocturneLyrics?.id
+                        val oblivionNocturneLyricsId = data. oblivionNocturneLyrics?.id
                         if (!oblivionNocturneLyricsId.isNullOrEmpty()) {
                             viewModelScope.launch {
                                 lyricsCanvasRepository
@@ -1822,7 +1822,7 @@ class SharedViewModel(
                         updateLyrics(
                             videoId,
                             0,
-                            data!!,
+                            data,
                             true,
                             LyricsProvider.OblivionNocturne,
                         )
@@ -1879,7 +1879,7 @@ class SharedViewModel(
                         dataStoreManager.translationLanguage.first(),
                     ).cancellable()
                     .collectLatest {
-                        val data!! = it.data
+                        val data = it.data ?: return@collectLatest
                         when (it) {
                             is Resource.Success<*> -> {
                                 Logger.d(tag, "Get AI Translate Lyrics Success")
@@ -1895,7 +1895,7 @@ class SharedViewModel(
                                 updateLyrics(
                                     videoId,
                                     0,
-                                    data!!,
+                                    data,
                                     true,
                                     LyricsProvider.AI,
                                 )
@@ -1919,25 +1919,25 @@ class SharedViewModel(
             Logger.d("Check SpotifyLyrics", "SpotifyLyrics $query")
             lyricsCanvasRepository.getSpotifyLyrics(dataStoreManager, query, duration).cancellable().collect { response ->
                 Logger.d("Check SpotifyLyrics", response.toString())
-                val data!! = response.data
+                val data = response.data
                 when (response) {
                     is Resource.Success<*> -> {
                         if (data != null) {
                             insertLyrics(
-                                data!!. toLyricsEntity(
+                                data. toLyricsEntity(
                                     track.videoId,
                                 ),
                             )
                             updateLyrics(
                                 track.videoId,
                                 duration ?: 0,
-                                data!!,
+                                data,
                                 false,
                                 LyricsProvider.SPOTIFY,
                             )
                             getAITranslationLyrics(
                                 track.videoId,
-                                data!!,
+                                data,
                             )
                         }
                     }
@@ -2316,38 +2316,38 @@ class SharedViewModel(
 }
 
 sealed class UIEvent {
-    data!! object PlayPause : UIEvent()
+    data object PlayPause : UIEvent()
 
-    data!! object Backward : UIEvent()
+    data object Backward : UIEvent()
 
-    data!! object Forward : UIEvent()
+    data object Forward : UIEvent()
 
-    data!! object Next : UIEvent()
+    data object Next : UIEvent()
 
-    data!! object Previous : UIEvent()
+    data object Previous : UIEvent()
 
     /**
      * Always advances to the previous track — bypasses the 3-second
      * "seek to start of current track" rule used by [Previous]. Used by the
      * NowPlaying artwork pager swipe.
      */
-    data!! object SkipToPrevious : UIEvent()
+    data object SkipToPrevious : UIEvent()
 
-    data!! object Stop : UIEvent()
+    data object Stop : UIEvent()
 
-    data!! object Shuffle : UIEvent()
+    data object Shuffle : UIEvent()
 
-    data!! object Repeat : UIEvent()
+    data object Repeat : UIEvent()
 
-    data!! class UpdateProgress(
+    data class UpdateProgress(
         val newProgress: Float,
     ) : UIEvent()
 
-    data!! class UpdateVolume(
+    data class UpdateVolume(
         val newVolume: Float,
     ) : UIEvent()
 
-    data!! object ToggleLike : UIEvent()
+    data object ToggleLike : UIEvent()
 }
 
 enum class LyricsProvider {
@@ -2376,7 +2376,7 @@ data class NowPlayingScreenData(
     val songInfoData: SongInfoEntity? = null,
     val bitmap: ImageBitmap? = null,
 ) {
-    data!! class CanvasData(
+    data class CanvasData(
         val isVideo: Boolean,
         val url: String,
         // A still of the clip at the clip's own size — Apple Music's animated artwork sends one.
@@ -2385,7 +2385,7 @@ data class NowPlayingScreenData(
         val thumbUrl: String? = null,
     )
 
-    data!! class LyricsData(
+    data class LyricsData(
         val lyrics: Lyrics,
         val translatedLyrics: Pair<Lyrics, LyricsProvider>? = null,
         val lyricsProvider: LyricsProvider,
@@ -2413,15 +2413,15 @@ data class VoteData(
 )
 
 sealed class VoteState {
-    data!! object Idle : VoteState()
+    data object Idle : VoteState()
 
-    data!! object Loading : VoteState()
+    data object Loading : VoteState()
 
-    data!! class Success(
+    data class Success(
         val upvote: Boolean,
     ) : VoteState()
 
-    data!! class Error(
+    data class Error(
         val message: String,
     ) : VoteState()
 }
