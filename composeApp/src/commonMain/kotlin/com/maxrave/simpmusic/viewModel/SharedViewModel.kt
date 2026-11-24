@@ -1260,7 +1260,7 @@ class SharedViewModel(
                 updateRepository.checkForGithubReleaseUpdate().collectLatest { response ->
                     val data = response.data
                     when (response) {
-                        is LocalResource.Success<*> -> {
+                        is LocalResource.Success<UpdateData> -> {
                             _updateResponse.value = data
                             showedUpdateDialog = true
                         }
