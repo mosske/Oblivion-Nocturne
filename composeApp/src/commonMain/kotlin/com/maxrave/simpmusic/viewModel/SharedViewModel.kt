@@ -1,6 +1,7 @@
 package com.oblivion.nocturne.viewModel
 
 import androidx.compose.ui.graphics.ImageBitmap
+import com.oblivion.nocturne.domain.utils.LocalResource
 import androidx.lifecycle.viewModelScope
 import com.oblivion.nocturne.common.AppIdentity
 import com.oblivion.nocturne.common.Config
@@ -1260,7 +1261,7 @@ class SharedViewModel(
                 updateRepository.checkForGithubReleaseUpdate().collectLatest { response ->
                     val data = response.data
                     when (response) {
-                        is LocalResource.Success<*> -> {
+                        is LocalResource.Success -> {
                             _updateResponse.value = data
                             showedUpdateDialog = true
                         }
