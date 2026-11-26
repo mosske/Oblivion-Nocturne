@@ -139,7 +139,7 @@
     <string name="about_us">About us</string>
     <string name="version">Version</string>
     <string name="github">Github</string>
-    <string name="maxrave_dev">Oblivion-Nocturne</string>
+    <string name="maxrave_dev">Shadowflash</string>
     <string name="follow_me_on_x">Follow me on X</string>
     <string name="buy_me_a_coffee">Buy me a coffee</string>
     <string name="developer_blog">Developer Blog</string>
@@ -256,7 +256,7 @@
     <string name="upload_your_listening_history_to_youtube_music_server_it_will_make_yt_music_recommendation_system_better_working_only_if_logged_in">Upload your listening history to YouTube Music server, it will make YT Music recommendation system better. Working only if logged in</string>
     <string name="send_back_listening_data_to_google">Send back listening data to Google</string>
     <string name="videos_inArtist">Videos</string>
-    <string name="your_youtube_playlists">Your YouTube Playlists</string>
+    <string name="your_youtube_playlists">YouTube Playlists</string>
     <string name="no_YouTube_playlists">No YouTube Playlists</string>
     <string name="track">track(s)</string>
     <string name="save_to_local_playlist">Save to local playlist</string>
@@ -646,7 +646,7 @@
     <string name="update_channel">Update channel</string>
     <string name="enable_liquid_glass_effect">Enable liquid glass (BETA)</string>
     <string name="enable_liquid_glass_effect_description">Enable iOS's liquid glass effect in some position (Android 13+)</string>
-    <string name="your_library">Your library</string>
+    <string name="your_library">Unified Library</string>
     <string name="play_explicit_content">Play explicit content</string>
     <string name="play_explicit_content_description">Enable to play explicit content</string>
     <string name="explicit_content_blocked">Explicit content is skipped</string>
