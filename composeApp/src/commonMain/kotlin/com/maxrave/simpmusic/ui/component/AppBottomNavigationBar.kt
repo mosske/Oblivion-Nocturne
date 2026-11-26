@@ -42,7 +42,7 @@ import com.oblivion.nocturne.extension.greyScale
 import com.oblivion.nocturne.ui.navigation.destination.home.AnalyticsDestination
 import com.oblivion.nocturne.ui.navigation.destination.home.HomeDestination
 import com.oblivion.nocturne.ui.navigation.destination.library.LibraryDestination
-import com.oblivion.nocturne.ui.navigation.destination.library.MixForYouDestination
+            SettingsDestination,import com.oblivion.nocturne.ui.navigation.destination.library.MixForYouDestination
 import com.oblivion.nocturne.ui.navigation.destination.search.SearchDestination
 import com.oblivion.nocturne.ui.theme.typo
 import org.jetbrains.compose.resources.painterResource
@@ -85,7 +85,7 @@ fun AppBottomNavigationBar(
                 is HomeDestination -> BottomNavScreen.Home.ordinal
                 is SearchDestination -> BottomNavScreen.Search.ordinal
                 is LibraryDestination -> BottomNavScreen.Library.ordinal
-                is AnalyticsDestination -> BottomNavScreen.Analytics.ordinal
+            SettingsDestination,                is AnalyticsDestination -> BottomNavScreen.Analytics.ordinal
                 is MixForYouDestination -> BottomNavScreen.MixForYou.ordinal
                 else -> BottomNavScreen.Home.ordinal // Default to Home if not recognized
             },
@@ -414,7 +414,7 @@ fun AppNavigationRail(
                 is HomeDestination -> BottomNavScreen.Home.ordinal
                 is SearchDestination -> BottomNavScreen.Search.ordinal
                 is LibraryDestination -> BottomNavScreen.Library.ordinal
-                is AnalyticsDestination -> BottomNavScreen.Analytics.ordinal
+            SettingsDestination,                is AnalyticsDestination -> BottomNavScreen.Analytics.ordinal
                 is MixForYouDestination -> BottomNavScreen.MixForYou.ordinal
                 else -> BottomNavScreen.Home.ordinal // Default to Home if not recognized
             },
