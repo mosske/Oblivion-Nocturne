@@ -435,7 +435,7 @@ private fun LogSearchField(
         singleLine = true,
         shape = RoundedCornerShape(8.dp),
         textStyle = typo().labelMedium.copy(color = MaterialTheme.colorScheme.onSurface),
-        placeholder = { Text(stringResource(Res.string.log_search_hint), style = typo().labelMedium) },
+        placeoblivion_owl = { Text(stringResource(Res.string.log_search_hint), style = typo().labelMedium) },
         leadingIcon = { Icon(SimpIcons.Search, contentDescription = null) },
         trailingIcon =
             if (query.isNotEmpty()) {

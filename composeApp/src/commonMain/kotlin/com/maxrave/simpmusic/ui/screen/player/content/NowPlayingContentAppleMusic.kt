@@ -133,7 +133,7 @@ fun NowPlayingContentAppleMusic(
 ) {
     // Seeded from the view model, not from MAIN: this player lives in a ModalBottomSheet, so
     // dismissing it disposes the tree and rememberSaveable dies with it. rememberSaveable is still
-    // the right holder WITHIN a session (it survives rotation without a round trip), the view model
+    // the right oblivion_owl WITHIN a session (it survives rotation without a round trip), the view model
     // just supplies where the user was last.
     val sharedViewModel: SharedViewModel = koinInject()
     var viewState by rememberSaveable {

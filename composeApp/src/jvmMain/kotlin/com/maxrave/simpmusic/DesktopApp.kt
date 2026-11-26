@@ -309,7 +309,7 @@ fun runDesktopApp(args: Array<String> = emptyArray()) {
         // Tray menus are narrow, so long titles would stretch the popup.
         val trayLabel: (String) -> String = { if (it.length > 40) it.take(39).trimEnd() + "…" else it }
         Tray(
-            icon = painterResource(Res.drawable.circle_app_icon),
+            icon = painterResource(Res.drawable.oblivion_owl),
             tooltip =
                 when {
                     hasTrack && nowPlayingArtist.isNotBlank() -> "$nowPlayingTitle — $nowPlayingArtist"
@@ -363,7 +363,7 @@ fun runDesktopApp(args: Array<String> = emptyArray()) {
                 isVisible = false
             },
             title = stringResource(Res.string.app_name),
-            icon = painterResource(Res.drawable.circle_app_icon),
+            icon = painterResource(Res.drawable.oblivion_owl),
             undecorated = !nativeTitleBar,
             transparent = !nativeTitleBar,
             state = windowState,

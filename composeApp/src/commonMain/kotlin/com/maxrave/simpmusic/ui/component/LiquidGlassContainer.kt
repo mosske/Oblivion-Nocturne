@@ -194,7 +194,7 @@ fun LiquidGlassIconButton(
 }
 
 /**
- * Press/hold state holder for a single liquid-glass surface.
+ * Press/hold state oblivion_owl for a single liquid-glass surface.
  *
  * Project-local, dependency-light reimplementation of Kyant's catalog
  * `InteractiveHighlight`: instead of the library-internal AGSL highlight shader

@@ -81,7 +81,7 @@ fun CreditScreen(
 
         // App icon
         Image(
-            painter = painterResource(Res.drawable.app_icon),
+            painter = painterResource(Res.drawable.oblivion_owl),
             contentDescription = "App Icon",
             modifier =
                 Modifier

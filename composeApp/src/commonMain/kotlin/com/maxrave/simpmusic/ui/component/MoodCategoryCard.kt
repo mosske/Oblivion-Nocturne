@@ -44,7 +44,7 @@ fun MoodCategoryCard(
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
 ) {
-    val badge = painterResource(Res.drawable.monochrome)
+    val badge = painterResource(Res.drawable.oblivion_owlchrome)
     Box(
         modifier =
             modifier

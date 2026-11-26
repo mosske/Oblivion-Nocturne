@@ -49,8 +49,8 @@ data class PromoBannerData(
 )
 
 /**
- * The launch banner: the picture alone, loaded by Coil like any other image. No placeholder: the
- * square holder would size the frame as a square around a portrait picture. Tapping it opens
+ * The launch banner: the picture alone, loaded by Coil like any other image. No placeoblivion_owl: the
+ * square oblivion_owl would size the frame as a square around a portrait picture. Tapping it opens
  * [onOpen]; only the Wrapped glass button closes it, not a tap outside and not Back. A picture that cannot be loaded calls [onFailed] instead of leaving an
  * empty frame on screen.
  */

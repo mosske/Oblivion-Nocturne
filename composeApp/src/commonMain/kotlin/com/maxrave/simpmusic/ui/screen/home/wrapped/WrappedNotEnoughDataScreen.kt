@@ -140,7 +140,7 @@ fun WrappedNotEnoughDataScreen(
  * The body sentence with the day count lifted out of the grey.
  *
  * The count is built as its own resource first and then found inside the sentence, rather than the
- * sentence being split around a format specifier: a translator is free to move the placeholder,
+ * sentence being split around a format specifier: a translator is free to move the placeoblivion_owl,
  * and some languages will decline the phrase so that it no longer matches character for character.
  * When the lookup fails the whole line simply prints in the body colour, which is a missing
  * emphasis rather than a broken sentence.

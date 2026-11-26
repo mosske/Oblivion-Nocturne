@@ -76,6 +76,7 @@ fun AppBottomNavigationBar(
             BottomNavScreen.MixForYou.takeIf { showMixForYouTab },
             BottomNavScreen.Analytics.takeIf { showAnalyticsTab },
             BottomNavScreen.Library,
+            BottomNavScreen.Settings,
             BottomNavScreen.Search,
         )
     var selectedIndex by rememberSaveable {
@@ -404,6 +405,7 @@ fun AppNavigationRail(
             BottomNavScreen.MixForYou.takeIf { showMixForYouTab },
             BottomNavScreen.Analytics.takeIf { showAnalyticsTab },
             BottomNavScreen.Library,
+            BottomNavScreen.Settings,
             BottomNavScreen.Search,
         )
     var selectedIndex by rememberSaveable {
@@ -433,7 +435,7 @@ fun AppNavigationRail(
     NavigationRail(containerColor = Color.Transparent) {
         Spacer(Modifier.height(16.dp))
         Image(
-            painter = painterResource(Res.drawable.circle_app_icon),
+            painter = painterResource(Res.drawable.oblivion_owl),
             contentDescription = null,
             modifier =
                 Modifier

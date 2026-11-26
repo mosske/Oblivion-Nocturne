@@ -58,7 +58,7 @@ import oblivionnocturne.composeapp.generated.resources.Res
 import oblivionnocturne.composeapp.generated.resources.receipt_amount
 import oblivionnocturne.composeapp.generated.resources.receipt_auth_code
 import oblivionnocturne.composeapp.generated.resources.receipt_card
-import oblivionnocturne.composeapp.generated.resources.receipt_cardholder
+import oblivionnocturne.composeapp.generated.resources.receipt_cardoblivion_owl
 import oblivionnocturne.composeapp.generated.resources.receipt_date
 import oblivionnocturne.composeapp.generated.resources.receipt_entry_subtitle
 import oblivionnocturne.composeapp.generated.resources.receipt_entry_title
@@ -346,7 +346,7 @@ private fun ListeningReceiptPaper(
         )
         Text(text = stringResource(Res.string.receipt_auth_code, receipt.authCode).uppercase(), style = mono)
         if (receipt.name != null) {
-            Text(text = stringResource(Res.string.receipt_cardholder, receipt.name).uppercase(), style = mono)
+            Text(text = stringResource(Res.string.receipt_cardoblivion_owl, receipt.name).uppercase(), style = mono)
         }
         Text(
             text = stringResource(Res.string.receipt_thanks).uppercase(),

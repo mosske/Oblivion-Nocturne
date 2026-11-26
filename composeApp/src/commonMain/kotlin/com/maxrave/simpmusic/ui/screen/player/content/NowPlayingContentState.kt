@@ -83,7 +83,7 @@ internal fun String.stripRichSyncTimestamps(): String =
  * "154 kbps · 48 kHz" — the Apple Music style's quality line, read off the format YouTube served
  * for the track now playing: its `bitrate` (the figure the Info sheet prints in bps) and its
  * `sampleRate`. A figure the format does not carry is dropped rather than guessed, and null comes
- * back when neither is known, so the line hides instead of showing a placeholder.
+ * back when neither is known, so the line hides instead of showing a placeoblivion_owl.
  */
 internal fun NewFormatEntity?.toAudioQualityLabel(): String? {
     val format = this ?: return null

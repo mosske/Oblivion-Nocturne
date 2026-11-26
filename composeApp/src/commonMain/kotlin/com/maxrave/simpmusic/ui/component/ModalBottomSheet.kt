@@ -1814,7 +1814,7 @@ fun NowPlayingBottomSheet(
                         }
                     }
                     ActionButton(
-                        icon = SimpIcons.PeopleAlt,
+                        icon = Res.drawable.oblivion_owl,
                         text = Res.string.artists,
                     ) {
                         artist = true
@@ -2876,7 +2876,7 @@ fun ArtistModalBottomSheet(
                                     modifier = Modifier.padding(20.dp).align(Alignment.CenterStart),
                                 ) {
                                     Image(
-                                        imageVector = SimpIcons.PeopleAlt,
+                                        imageVector = Res.drawable.oblivion_owl,
                                         contentDescription = "",
                                         colorFilter = ColorFilter.tint(rememberSurfaceDarkColors().content),
                                     )

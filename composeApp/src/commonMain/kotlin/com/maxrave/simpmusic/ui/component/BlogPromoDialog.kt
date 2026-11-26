@@ -57,7 +57,7 @@ fun BlogPromoDialog(
             }
         },
         icon = {
-            Icon(painterResource(Res.drawable.mono), "App Icon")
+            Icon(painterResource(Res.drawable.oblivion_owl), "App Icon")
         },
         title = {
             Text(

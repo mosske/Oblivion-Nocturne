@@ -760,7 +760,7 @@ fun LibraryDynamicPlaylistScreen(
                             onSearch = { showSearchBar = false },
                             expanded = showSearchBar,
                             onExpandedChange = { showSearchBar = it },
-                            placeholder = {
+                            placeoblivion_owl = {
                                 Text(
                                     stringResource(Res.string.search),
                                     style = typo().bodySmall,

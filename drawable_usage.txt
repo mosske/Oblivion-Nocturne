@@ -1,0 +1,23 @@
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/AppBottomNavigationBar.kt:436:            painter = painterResource(Res.drawable.circle_app_icon),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/BlogPromoDialog.kt:60:            Icon(painterResource(Res.drawable.mono), "App Icon")
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/CommentsBottomSheet.kt:515:        painter = painterResource(Res.drawable.baseline_favorite_24),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/DesktopSidebar.kt:221:                Image(painterResource(Res.drawable.baseline_favorite_24), contentDescription = null, modifier = Modifier.size(24.dp))
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/DesktopSidebar.kt:224:                Image(painterResource(Res.drawable.baseline_downloaded), contentDescription = null, modifier = Modifier.size(24.dp))
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/HolderPainter.kt:46:    val art = imageResource(if (dark) Res.drawable.holder else Res.drawable.holder_light)
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/ModalBottomSheet.kt:2110:                    painter = painterResource(Res.drawable.baseline_favorite_24),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/MoodCategoryCard.kt:47:    val badge = painterResource(Res.drawable.monochrome)
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/PlaylistThumbnail.kt:216:    val painterRes = painterResource(Res.drawable.monochrome)
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/ReviewDialog.kt:65:            Icon(painterResource(Res.drawable.mono), "App Icon")
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/lyrics/ShareLyricsCard.kt:171:                painter = painterResource(Res.drawable.mono),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/component/BrandRow.kt:25:            painter = painterResource(Res.drawable.oblivion_owl),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/screen/home/analytics/ListeningReceipt.kt:260:    val scan = imageResource(Res.drawable.receipt_paper)
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/screen/home/wrapped/cards/WrappedShareCard.kt:339: * `Res.drawable.mono` is the app's logo, not an icon: `SimpIcons` is the Material Symbols set and
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/screen/home/wrapped/cards/WrappedShareCard.kt:370:                    painter = painterResource(Res.drawable.mono),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/screen/library/LocalPlaylistScreen.kt:892:                                                                        painter = painterResource(Res.drawable.baseline_downloaded),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/screen/library/LocalPlaylistScreen.kt:1139:                                                                painter = painterResource(Res.drawable.baseline_downloaded),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/screen/other/AlbumScreen.kt:569:                                                                                    painter = painterResource(Res.drawable.baseline_downloaded),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/screen/other/AlbumScreen.kt:773:                                                                            painter = painterResource(Res.drawable.baseline_downloaded),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/screen/other/ArtistScreen.kt:1379:                    painter = painterResource(Res.drawable.baseline_favorite_24),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/screen/other/CreditScreen.kt:84:            painter = painterResource(Res.drawable.app_icon),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/screen/other/PlaylistScreen.kt:732:                                                                                            painter = painterResource(Res.drawable.baseline_downloaded),
+composeApp/src/commonMain/kotlin/com/maxrave/simpmusic/ui/screen/other/PlaylistScreen.kt:947:                                                                                    painter = painterResource(Res.drawable.baseline_downloaded),

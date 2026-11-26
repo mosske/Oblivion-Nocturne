@@ -1206,7 +1206,7 @@ fun PlaylistScreen(
                                             onSearch = { showSearchBar = false },
                                             expanded = showSearchBar,
                                             onExpandedChange = { showSearchBar = it },
-                                            placeholder = {
+                                            placeoblivion_owl = {
                                                 Text(
                                                     stringResource(Res.string.search),
                                                     style = typo().bodyMedium,

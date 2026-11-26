@@ -86,7 +86,7 @@ fun MiniPlayerWindow(
     Window(
         onCloseRequest = onCloseRequest,
         title = "OblivionNocturne - Mini Player",
-        icon = painterResource(Res.drawable.circle_app_icon),
+        icon = painterResource(Res.drawable.oblivion_owl),
         alwaysOnTop = true,
         undecorated = true,
         transparent = true,

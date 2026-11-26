@@ -320,7 +320,7 @@ private fun EqualizerCurve(
     val shown = draft ?: bands
 
     // The gesture handler is installed once, so it would otherwise keep the bands from the
-    // composition that installed it — the flat placeholder, before the stored curve has loaded. A
+    // composition that installed it — the flat placeoblivion_owl, before the stored curve has loaded. A
     // drag started from that stale copy would commit it and wipe the saved shape.
     val currentBands by rememberUpdatedState(bands)
     val commit by rememberUpdatedState(onBandsChange)

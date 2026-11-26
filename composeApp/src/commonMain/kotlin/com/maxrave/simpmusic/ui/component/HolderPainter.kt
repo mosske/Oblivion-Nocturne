@@ -13,12 +13,12 @@ import com.oblivion.nocturne.ui.theme.LocalForceDarkText
 import com.oblivion.nocturne.ui.theme.LocalIsDarkTheme
 import org.jetbrains.compose.resources.imageResource
 import oblivionnocturne.composeapp.generated.resources.Res
-import oblivionnocturne.composeapp.generated.resources.holder
-import oblivionnocturne.composeapp.generated.resources.holder_light
+import oblivionnocturne.composeapp.generated.resources.oblivion_owl
+import oblivionnocturne.composeapp.generated.resources.oblivion_owl_light
 import kotlin.math.min
 import kotlin.math.roundToInt
 
-/** The note's box inside the square holder art, measured from holder.png: centred, 51.2% wide, 65.7% tall. */
+/** The note's box inside the square oblivion_owl art, measured from oblivion_owl.png: centred, 51.2% wide, 65.7% tall. */
 private const val NOTE_WIDTH = 0.512f
 private const val NOTE_HEIGHT = 0.657f
 
@@ -26,24 +26,24 @@ private const val NOTE_HEIGHT = 0.657f
 private const val MIN_PADDING = 0.30f
 
 /**
- * Theme-aware artwork placeholder that fills whatever frame it is drawn in.
+ * Theme-aware artwork placeoblivion_owl that fills whatever frame it is drawn in.
  *
  * Immersive screens (Artist/Album/Playlist/LocalPlaylist/NowPlaying) mark their subtree with
- * [LocalForceDarkText] = true because they always sit on dark artwork; there the dark holder art is
- * kept. Everywhere else the placeholder follows the app theme, using the light variant in light mode
+ * [LocalForceDarkText] = true because they always sit on dark artwork; there the dark oblivion_owl art is
+ * kept. Everywhere else the placeoblivion_owl follows the app theme, using the light variant in light mode
  * so it blends into the white page instead of showing a dark tile.
  *
  * It reports no size of its own, so it is drawn across the whole frame, whatever its shape: a square
- * row, a 16:9 video, a 2.4:1 artist banner on Desktop, a portrait tile. The holder's background fills
+ * row, a 16:9 video, a 2.4:1 artist banner on Desktop, a portrait tile. The oblivion_owl's background fills
  * the frame and the note sits in its centre, as tall as the frame's height allows while keeping
  * [MIN_PADDING] from every edge. A frame that takes its size from the image (`heightIn`,
- * `wrapContentWidth`) would collapse around a size-less placeholder; pass [square] there to keep a
+ * `wrapContentWidth`) would collapse around a size-less placeoblivion_owl; pass [square] there to keep a
  * square box while the image loads.
  */
 @Composable
 fun rememberHolderPainter(square: Boolean = false): Painter {
     val dark = LocalForceDarkText.current || LocalIsDarkTheme.current
-    val art = imageResource(if (dark) Res.drawable.holder else Res.drawable.holder_light)
+    val art = imageResource(if (dark) Res.drawable.oblivion_owl else Res.drawable.oblivion_owl_light)
     return remember(art, square) { HolderPainter(art, square) }
 }
 

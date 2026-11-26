@@ -168,7 +168,7 @@ internal fun ShareCardSignature(
             contentAlignment = Alignment.Center,
         ) {
             Icon(
-                painter = painterResource(Res.drawable.mono),
+                painter = painterResource(Res.drawable.oblivion_owl),
                 contentDescription = null,
                 tint = background.shareTintOn(content),
                 modifier = Modifier.size(10.dp),

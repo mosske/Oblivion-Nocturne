@@ -35,7 +35,7 @@ import coil3.request.crossfade
  * One artwork, always under the reel's scanlines.
  *
  * Every card that shows a photograph shows it through this, so a cover behind the opening mosaic
- * and a 30dp thumbnail in a list are visibly the same material. No placeholder and no error slot,
+ * and a 30dp thumbnail in a list are visibly the same material. No placeoblivion_owl and no error slot,
  * matching the app's other artwork call sites: a cover that has not arrived leaves the ground
  * colour showing, which under these scrims is indistinguishable from a very dark cover.
  */
