@@ -369,10 +369,7 @@ import oblivionnocturne.composeapp.generated.resources.blog_notification_title
                 return@derivedStateOf runBlocking {
                     getString(
                         Res.string.last_checked_at,
-                        DateTimeFormatter
-                            .ofPattern("yyyy-MM-dd HH:mm:ss")
-                            .withZone(ZoneId.systemDefault())
-                            .format(Instant.fromEpochMilliseconds(lastCheckLong).toString()),
+                                Instant.fromEpochMilliseconds(lastCheckLong).toString(),
                     )
                 }
             }
@@ -2450,10 +2447,7 @@ import oblivionnocturne.composeapp.generated.resources.blog_notification_title
                                     if (autoBackupLastTime == 0L) {
                                         stringResource(Res.string.never)
                                     } else {
-                                        DateTimeFormatter
-                                            .ofPattern("yyyy-MM-dd HH:mm:ss")
-                                            .withZone(ZoneId.systemDefault())
-                                            .format(Instant.fromEpochMilliseconds(autoBackupLastTime).toString())
+                                Instant.fromEpochMilliseconds(autoBackupLastTime).toString(),
                                     },
                             )
                         }
