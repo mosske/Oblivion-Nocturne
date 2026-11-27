@@ -2817,7 +2817,7 @@ fun SettingScreen(
                     item {
                         Column {
                             ActionButton(
-                                icon = Res.drawable.oblivion_owl,
+                                icon = SimpIcons.Person,
                                 text = Res.string.guest,
                             ) {
                                 viewModel.setUsedAccount(null)
