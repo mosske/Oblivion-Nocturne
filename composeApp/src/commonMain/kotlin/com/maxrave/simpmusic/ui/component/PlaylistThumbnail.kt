@@ -213,7 +213,7 @@ fun painterPlaylistThumbnail(
                     ),
             )
         }
-    val painterRes = painterResource(Res.drawable.oblivion_owlchrome)
+    val painterRes = painterResource(Res.drawable.monochrome)
     return PlaylistThumbnailPainter(
         size = Size(
             width = with(density) { sizeDp.first.toPx() },
