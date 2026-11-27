@@ -228,6 +228,7 @@ fun SettingScreen(
     sharedViewModel: SharedViewModel = koinInject(),
 ) {
     var width by rememberSaveable { mutableIntStateOf(0) }
+    val uriHandler = LocalUriHandler.current
 
     // Backup and restore
     val formatter =
