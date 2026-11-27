@@ -1,7 +1,4 @@
 package com.oblivion.nocturne.ui.screen.home.wrapped.cards
-import oblivionnocturne.composeapp.generated.resources.Res
-import oblivionnocturne.composeapp.generated.resources.oblivion_owl
-import org.jetbrains.compose.resources.painterResource
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

@@ -76,7 +76,6 @@ fun AppBottomNavigationBar(
             BottomNavScreen.MixForYou.takeIf { showMixForYouTab },
             BottomNavScreen.Analytics.takeIf { showAnalyticsTab },
             BottomNavScreen.Library,
-            BottomNavScreen.Settings,
             BottomNavScreen.Search,
         )
     var selectedIndex by rememberSaveable {
@@ -404,7 +403,6 @@ fun AppNavigationRail(
             BottomNavScreen.MixForYou.takeIf { showMixForYouTab },
             BottomNavScreen.Analytics.takeIf { showAnalyticsTab },
             BottomNavScreen.Library,
-            BottomNavScreen.Settings,
             BottomNavScreen.Search,
         )
     var selectedIndex by rememberSaveable {

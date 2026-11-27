@@ -406,7 +406,6 @@ import oblivionnocturne.composeapp.generated.resources.blog_notification_title
             settingListState.firstVisibleItemIndex > 0 ||
                 settingListState.firstVisibleItemScrollOffset > devicesGroupHeightPx
         }
-    }
     // The list's side margin, which the in-list toolbar stretches back across.
     val listSidePadding = 16.dp
     // Home-family ambient ground, and like Home's it SCROLLS AWAY with the content instead of
