@@ -2779,7 +2779,7 @@ fun SettingScreen(
                                                 .data(it.thumbnailUrl)
                                                 .crossfade(550)
                                                 .build(),
-                                        placeholder = rememberVectorPainter(Res.drawable.oblivion_owl),
+                                        placeholder = painterResource(Res.drawable.oblivion_owl),
                                         contentDescription = it.name,
                                         modifier =
                                             Modifier
