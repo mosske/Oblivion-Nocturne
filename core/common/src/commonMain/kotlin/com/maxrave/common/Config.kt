@@ -683,30 +683,21 @@ object MERGING_DATA_TYPE {
 }
 
 enum class LibraryChipType {
-    YOUTUBE_MUSIC_PLAYLIST,
     YOUR_LIBRARY,
+    WRAPPED,
+    CHART,
+    YOUTUBE_MUSIC_PLAYLIST,
     YOUTUBE_MIX_FOR_YOU,
     LOCAL_PLAYLIST,
     FAVORITE_PLAYLIST,
     DOWNLOADED_PLAYLIST,
     FAVORITE_PODCAST,
-    CHART,
-    WRAPPED
-    ;    ;
+    ;
 
     fun toStringValue(): String =
         when (this) {
+            YOUR_LIBRARY -> "your_library"
             YOUTUBE_MUSIC_PLAYLIST -> "youtube_music_playlist"
-            YOUR_LIBRARY -> "your_library"
-            YOUTUBE_MIX_FOR_YOU -> "youtube_mix_for_you"
-            LOCAL_PLAYLIST -> "local_playlist"
-            FAVORITE_PLAYLIST -> "favorite_playlist"
-            DOWNLOADED_PLAYLIST -> "downloaded_playlist"
-            FAVORITE_PODCAST -> "favorite_podcast"
-            CHART -> "chart"
-            WRAPPED -> "wrapped"
-        }
-            YOUR_LIBRARY -> "your_library"
             YOUTUBE_MIX_FOR_YOU -> "youtube_mix_for_you"
             LOCAL_PLAYLIST -> "local_playlist"
             FAVORITE_PLAYLIST -> "favorite_playlist"
