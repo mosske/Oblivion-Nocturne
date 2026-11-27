@@ -710,7 +710,7 @@ enum class LibraryChipType {
         fun fromStringValue(value: String): LibraryChipType? =
             when (value) {
                 "your_library" -> YOUR_LIBRARY
-                "youtube_music_playlist" -> YOUR_LIBRARY
+                "youtube_music_playlist" -> YOUTUBE_MUSIC_PLAYLIST
                 "youtube_mix_for_you" -> YOUTUBE_MIX_FOR_YOU
                 "local_playlist" -> LOCAL_PLAYLIST
                 "favorite_playlist" -> FAVORITE_PLAYLIST

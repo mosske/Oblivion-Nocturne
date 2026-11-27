@@ -69,7 +69,7 @@ class LibraryViewModel(
     private val podcastRepository: PodcastRepository,
     private val cacheRepository: CacheRepository,
 ) : BaseViewModel() {
-    private val _currentScreen: MutableStateFlow<LibraryChipType> = MutableStateFlow(LibraryChipType.YOUR_LIBRARY)
+    private val _currentScreen: MutableStateFlow<LibraryChipType> = MutableStateFlow(LibraryChipType.YOUTUBE_MUSIC_PLAYLIST)
     val currentScreen: StateFlow<LibraryChipType> get() = _currentScreen.asStateFlow()
 
     // A chip was picked (a tap, or a deep link) before the one saved last time finished loading.
