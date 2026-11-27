@@ -2816,8 +2816,7 @@ import oblivionnocturne.composeapp.generated.resources.blog_notification_title
                                                 .data(it.thumbnailUrl)
                                                 .crossfade(550)
                                                 .build(),
-                                        placeoblivion_owl = rememberVectorPainter(Res.drawable.oblivion_owl),
-                                        error = rememberVectorPainter(Res.drawable.oblivion_owl),
+                                        placeholder = rememberVectorPainter(Res.drawable.oblivion_owl),
                                         contentDescription = it.name,
                                         modifier =
                                             Modifier
@@ -3156,16 +3155,6 @@ import oblivionnocturne.composeapp.generated.resources.blog_notification_title
                                         coroutineScope.launch {
                                             sheetState.hide()
                                             showThirdPartyLibraries = false
-                                        }
-                                    }
-                                }
-                            },
-                        )
-                    }
-                },
-            )
-        }
-    }
 
     // The pinned copy of the toolbar, frosted: the frost waits for the Devices group to go under it,
     // because an always-on frost dimmed the glow behind the bar into a black band, which is exactly

@@ -68,7 +68,7 @@ import oblivionnocturne.composeapp.generated.resources.add_lyrics_line
 import oblivionnocturne.composeapp.generated.resources.add_lyrics_lines
 import oblivionnocturne.composeapp.generated.resources.add_lyrics_no_time
 import oblivionnocturne.composeapp.generated.resources.add_lyrics_no_timed_lines
-import oblivionnocturne.composeapp.generated.resources.add_lyrics_placeoblivion_owl
+import oblivionnocturne.composeapp.generated.resources.add_lyrics_placeholder
 import oblivionnocturne.composeapp.generated.resources.add_lyrics_problems
 import oblivionnocturne.composeapp.generated.resources.add_lyrics_repeated_word_line
 import oblivionnocturne.composeapp.generated.resources.add_lyrics_word_time_backwards
@@ -206,7 +206,7 @@ fun AddLyricsSheet(
                             Box {
                                 if (textState.text.isEmpty()) {
                                     Text(
-                                        text = stringResource(Res.string.add_lyrics_placeoblivion_owl),
+                                        text = stringResource(Res.string.add_lyrics_placeholder),
                                         style = typo().bodyMedium,
                                         color = colors.disabled,
                                     )

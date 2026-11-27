@@ -133,7 +133,7 @@ fun ShareSavedLyricsDialog(
                                             ),
                                     )
                                 },
-                                placeoblivion_owl = { Text(stringResource(Res.string.contributor_name), style = typo().bodySmall) },
+                                placeholder = { Text(stringResource(Res.string.contributor_name), style = typo().bodySmall) },
                                 singleLine = true,
                             )
                             Spacer(Modifier.height(8.dp))
@@ -150,7 +150,7 @@ fun ShareSavedLyricsDialog(
                                             ),
                                     )
                                 },
-                                placeoblivion_owl = { Text(stringResource(Res.string.contributor_email), style = typo().bodySmall) },
+                                placeholder = { Text(stringResource(Res.string.contributor_email), style = typo().bodySmall) },
                                 singleLine = true,
                                 isError = contributorEmail.isNotEmpty() && !contributorEmail.contains("@"),
                             )

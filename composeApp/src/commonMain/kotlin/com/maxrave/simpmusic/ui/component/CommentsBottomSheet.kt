@@ -232,7 +232,7 @@ fun CommentsBottomSheet(
                                 sheetState = sheetState,
                                 isLoggedIn = isLoggedIn,
                                 userAvatar = uiState.header?.userAvatar,
-                                placeoblivion_owl = uiState.replyingTo?.replyPlaceoblivion_owl ?: uiState.header?.placeoblivion_owl.orEmpty(),
+                                placeholder = uiState.replyingTo?.replyPlaceholder ?: uiState.header?.placeholder.orEmpty(),
                                 replyingTo = uiState.replyingTo?.author,
                                 posting = uiState.posting,
                                 colors = colors,
@@ -524,7 +524,7 @@ private fun CommentInput(
     sheetState: SheetState,
     isLoggedIn: Boolean,
     userAvatar: String?,
-    placeoblivion_owl: String,
+    placeholder: String,
     replyingTo: String?,
     posting: Boolean,
     colors: SurfaceDarkColors,
@@ -564,7 +564,7 @@ private fun CommentInput(
         } else {
             SignedInInput(
                 userAvatar = userAvatar,
-                placeoblivion_owl = placeoblivion_owl,
+                placeholder = placeholder,
                 replyingTo = replyingTo,
                 posting = posting,
                 colors = colors,
@@ -580,7 +580,7 @@ private fun CommentInput(
 @Composable
 private fun SignedInInput(
     userAvatar: String?,
-    placeoblivion_owl: String,
+    placeholder: String,
     replyingTo: String?,
     posting: Boolean,
     colors: SurfaceDarkColors,
@@ -647,7 +647,7 @@ private fun SignedInInput(
                                 .padding(horizontal = 16.dp, vertical = 10.dp),
                     ) {
                         if (text.isEmpty()) {
-                            Text(text = placeoblivion_owl, style = typo().bodyMedium, color = colors.subtitle, maxLines = 1)
+                            Text(text = placeholder, style = typo().bodyMedium, color = colors.subtitle, maxLines = 1)
                         }
                         field()
                     }

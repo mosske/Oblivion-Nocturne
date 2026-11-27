@@ -252,8 +252,8 @@ fun SearchScreen(
     val videoString = stringResource(Res.string.videos).lowercase()
     val podcastString = stringResource(Res.string.podcasts).lowercase()
 
-    // Animated Placeoblivion_owl
-    val placeoblivion_owlTexts =
+    // Animated Placeholder
+    val placeholderTexts =
         remember {
             listOf(
                 "$searchForString $songString...",
@@ -265,13 +265,13 @@ fun SearchScreen(
             )
         }
 
-    var currentPlaceoblivion_owlIndex by remember { mutableIntStateOf(0) }
+    var currentPlaceholderIndex by remember { mutableIntStateOf(0) }
 
-    // Animate placeoblivion_owl - pause when focused
+    // Animate placeholder - pause when focused
     LaunchedEffect(isFocused) {
         while (!isFocused) {
             delay(3000) // Change every 3 seconds
-            currentPlaceoblivion_owlIndex = (currentPlaceoblivion_owlIndex + 1) % placeoblivion_owlTexts.size
+            currentPlaceholderIndex = (currentPlaceholderIndex + 1) % placeholderTexts.size
         }
     }
 
@@ -1064,7 +1064,7 @@ fun SearchScreen(
                 windowInsets = WindowInsets(0),
             )
         }
-        // Search Bar with Animated Placeoblivion_owl
+        // Search Bar with Animated Placeholder
         SearchBar(
             inputField = {
                 SearchBarDefaults.InputField(
@@ -1100,10 +1100,10 @@ fun SearchScreen(
                     expanded = false,
                     onExpandedChange = {},
                     enabled = true,
-                    placeoblivion_owl = {
-                        // Animated placeoblivion_owl text
+                    placeholder = {
+                        // Animated placeholder text
                         AnimatedContent(
-                            targetState = currentPlaceoblivion_owlIndex,
+                            targetState = currentPlaceholderIndex,
                             transitionSpec = {
                                 (
                                     fadeIn(animationSpec = tween(500)) +
@@ -1113,10 +1113,10 @@ fun SearchScreen(
                                         slideOutVertically { height -> -height },
                                 )
                             },
-                            label = "placeoblivion_owl_animation",
+                            label = "placeholder_animation",
                         ) { index ->
                             Text(
-                                text = placeoblivion_owlTexts[index],
+                                text = placeholderTexts[index],
                                 style = typo().labelMedium,
                             )
                         }

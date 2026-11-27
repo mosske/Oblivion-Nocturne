@@ -142,7 +142,7 @@ internal val AppleMusicRomanizedColor = Color.White.copy(alpha = 0.62f)
 internal val AppleMusicInactiveLineColor = Color(0xFF9B9B9B)
 
 // Passing this to a rich-synced line is what ENABLES AMLL's emphasis maths in AnimatedWord; the
-// alpha and radius here are placeoblivion_owls, because that code computes both from the word's own
+// alpha and radius here are placeholders, because that code computes both from the word's own
 // duration and its position within the wipe. Only the colour is read as-is.
 //
 // Deliberately NOT applied to line-synced lyrics: those carry no per-word timing, so there is no

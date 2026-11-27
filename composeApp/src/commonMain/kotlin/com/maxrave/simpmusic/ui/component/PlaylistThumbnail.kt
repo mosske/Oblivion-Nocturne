@@ -81,8 +81,8 @@ internal fun generateGradientFromTitle(title: String): List<Color> {
 }
 
 /**
- * Deterministic placeoblivion_owl gradient colors for a playlist title — matches the
- * [PlaylistThumbnail] / [painterPlaylistThumbnail] placeoblivion_owl, so a screen can tint
+ * Deterministic placeholder gradient colors for a playlist title — matches the
+ * [PlaylistThumbnail] / [painterPlaylistThumbnail] placeholder, so a screen can tint
  * its background to match a local playlist that has no real artwork.
  */
 fun playlistTitleGradient(title: String): List<Color> = generateGradientFromTitle(title)

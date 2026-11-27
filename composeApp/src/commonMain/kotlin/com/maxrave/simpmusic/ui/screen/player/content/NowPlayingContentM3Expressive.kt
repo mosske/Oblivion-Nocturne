@@ -710,7 +710,7 @@ internal fun ExpressiveTrackInfoRow(
                         .diskCacheKey(state.screenData.thumbnailURL + "BIGGER")
                         .crossfade(true)
                         .build(),
-                placeoblivion_owl = rememberHolderPainter(square = true),
+                placeholder = rememberHolderPainter(square = true),
                 error = rememberHolderPainter(square = true),
                 contentDescription = null,
                 contentScale = ContentScale.FillWidth,

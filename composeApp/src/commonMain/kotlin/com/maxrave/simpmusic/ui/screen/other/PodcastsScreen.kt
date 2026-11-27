@@ -215,7 +215,7 @@ fun PodcastScreen(
                                                 .diskCacheKey(data.thumbnail.lastOrNull()?.url)
                                                 .crossfade(true)
                                                 .build(),
-                                        placeoblivion_owl = rememberHolderPainter(square = true),
+                                        placeholder = rememberHolderPainter(square = true),
                                         error = rememberHolderPainter(square = true),
                                         contentDescription = null,
                                         contentScale = ContentScale.FillHeight,

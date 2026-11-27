@@ -152,7 +152,7 @@ import kotlinx.coroutines.withTimeoutOrNull
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import oblivionnocturne.composeapp.generated.resources.Res
-import oblivionnocturne.composeapp.generated.resources.comment_placeoblivion_owl
+import oblivionnocturne.composeapp.generated.resources.comment_placeholder
 import oblivionnocturne.composeapp.generated.resources.crossfading
 import oblivionnocturne.composeapp.generated.resources.soundcloud_play_count_info
 import kotlin.math.abs
@@ -1074,7 +1074,7 @@ private fun CommentBox(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(
-            text = stringResource(Res.string.comment_placeoblivion_owl),
+            text = stringResource(Res.string.comment_placeholder),
             style = typo().bodyMedium,
             color = colors.onSurfaceVariant,
             maxLines = 1,

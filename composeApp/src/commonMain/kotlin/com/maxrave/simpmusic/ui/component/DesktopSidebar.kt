@@ -716,7 +716,7 @@ private fun SidebarCover(item: LibrarySidebarItem) {
     val fallback = rememberHolderPainter()
     AsyncImage(
         // A row the list rebuilds (filter, sort, scroll back) must not flash the oblivion_owl and fade the
-        // cover in again: one size-free memory key, used as its own placeoblivion_owl, puts the cover that
+        // cover in again: one size-free memory key, used as its own placeholder, puts the cover that
         // is already decoded on the very first frame, and there is no fade to replay.
         model =
             ImageRequest
@@ -725,9 +725,9 @@ private fun SidebarCover(item: LibrarySidebarItem) {
                 .diskCachePolicy(CachePolicy.ENABLED)
                 .diskCacheKey(item.thumbnail)
                 .memoryCacheKey(item.thumbnail)
-                .placeoblivion_owlMemoryCacheKey(item.thumbnail)
+                .placeholderMemoryCacheKey(item.thumbnail)
                 .build(),
-        placeoblivion_owl = fallback,
+        placeholder = fallback,
         error = fallback,
         fallback = fallback,
         contentDescription = null,

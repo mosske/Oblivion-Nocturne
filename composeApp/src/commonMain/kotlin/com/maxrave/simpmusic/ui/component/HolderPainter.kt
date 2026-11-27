@@ -26,18 +26,18 @@ private const val NOTE_HEIGHT = 0.657f
 private const val MIN_PADDING = 0.30f
 
 /**
- * Theme-aware artwork placeoblivion_owl that fills whatever frame it is drawn in.
+ * Theme-aware artwork placeholder that fills whatever frame it is drawn in.
  *
  * Immersive screens (Artist/Album/Playlist/LocalPlaylist/NowPlaying) mark their subtree with
  * [LocalForceDarkText] = true because they always sit on dark artwork; there the dark oblivion_owl art is
- * kept. Everywhere else the placeoblivion_owl follows the app theme, using the light variant in light mode
+ * kept. Everywhere else the placeholder follows the app theme, using the light variant in light mode
  * so it blends into the white page instead of showing a dark tile.
  *
  * It reports no size of its own, so it is drawn across the whole frame, whatever its shape: a square
  * row, a 16:9 video, a 2.4:1 artist banner on Desktop, a portrait tile. The oblivion_owl's background fills
  * the frame and the note sits in its centre, as tall as the frame's height allows while keeping
  * [MIN_PADDING] from every edge. A frame that takes its size from the image (`heightIn`,
- * `wrapContentWidth`) would collapse around a size-less placeoblivion_owl; pass [square] there to keep a
+ * `wrapContentWidth`) would collapse around a size-less placeholder; pass [square] there to keep a
  * square box while the image loads.
  */
 @Composable

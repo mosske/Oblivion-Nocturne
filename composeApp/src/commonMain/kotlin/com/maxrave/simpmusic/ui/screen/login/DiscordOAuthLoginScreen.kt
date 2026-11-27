@@ -182,7 +182,7 @@ fun DiscordOAuthLoginScreen(
                             onValueChange = { callbackInput = it },
                             singleLine = true,
                             textStyle = typo().bodySmall,
-                            placeoblivion_owl = {
+                            placeholder = {
                                 Text(
                                     text = stringResource(Res.string.lastfm_paste_callback_hint),
                                     style = typo().bodySmall,

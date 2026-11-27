@@ -468,8 +468,7 @@ fun LibraryScreen(
                                 .data(accountThumbnail)
                                 .crossfade(550)
                                 .build(),
-                        placeoblivion_owl = rememberVectorPainter(SimpIcons.PeopleAlt),
-                        error = rememberVectorPainter(Res.drawable.oblivion_owl),
+                        placeholder = rememberVectorPainter(SimpIcons.PeopleAlt),
                         contentDescription = null,
                         modifier =
                             Modifier
