@@ -220,6 +220,13 @@ import oblivionnocturne.composeapp.generated.resources.balance_media_loudness
 import oblivionnocturne.composeapp.generated.resources.better_lyrics
 import oblivionnocturne.composeapp.generated.resources.blog_notification_description
 import oblivionnocturne.composeapp.generated.resources.blog_notification_title
+@Composable
+fun SettingScreen(
+    navController: NavController,
+    innerPadding: PaddingValues = PaddingValues(),
+    viewModel: SettingsViewModel = koinViewModel(),
+    sharedViewModel: SharedViewModel = koinInject(),
+) {
     var width by rememberSaveable { mutableIntStateOf(0) }
 
     // Backup and restore
@@ -3177,6 +3184,7 @@ import oblivionnocturne.composeapp.generated.resources.blog_notification_title
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
+}
 private fun SettingTopBar(
     onBack: () -> Unit,
     modifier: Modifier = Modifier,
