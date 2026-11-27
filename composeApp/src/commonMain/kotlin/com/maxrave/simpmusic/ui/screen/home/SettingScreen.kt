@@ -2465,13 +2465,14 @@ fun SettingScreen(
                     subtitle = stringResource(Res.string.auto_check_for_update_description),
                     switch = (autoCheckUpdate to { viewModel.setAutoCheckUpdate(it) }),
                 )
-                SettingItem(
-                    title = stringResource(Res.string.update_channel),
+                val updateChannelTitle = stringResource(Res.string.update_channel)
+                    SettingItem(
+                    title = updateChannelTitle,
                     subtitle = "OblivionNocturne GitHub Release",
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.update_channel),
+                                title = updateChannelTitle,
                                 selectOne =
                                     SettingAlertState.SelectData(
                                         listSelect =
