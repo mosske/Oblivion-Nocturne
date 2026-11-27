@@ -1,4 +1,5 @@
 package com.oblivion.nocturne.ui.screen.home
+import kotlin.time.Instant
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
@@ -3305,6 +3306,7 @@ private fun ImportProgressDialog(
             }
         },
     )
+}
 }
 }
 }
