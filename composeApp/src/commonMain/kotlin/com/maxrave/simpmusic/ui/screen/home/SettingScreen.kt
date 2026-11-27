@@ -372,7 +372,7 @@ import oblivionnocturne.composeapp.generated.resources.blog_notification_title
                         DateTimeFormatter
                             .ofPattern("yyyy-MM-dd HH:mm:ss")
                             .withZone(ZoneId.systemDefault())
-                            .format(Instant.ofEpochMilli(lastCheckLong)),
+                            .format(Instant.fromEpochMilliseconds(lastCheckLong).toString()),
                     )
                 }
             }
@@ -2453,7 +2453,7 @@ import oblivionnocturne.composeapp.generated.resources.blog_notification_title
                                         DateTimeFormatter
                                             .ofPattern("yyyy-MM-dd HH:mm:ss")
                                             .withZone(ZoneId.systemDefault())
-                                            .format(Instant.ofEpochMilli(autoBackupLastTime))
+                                            .format(Instant.fromEpochMilliseconds(autoBackupLastTime).toString())
                                     },
                             )
                         }
