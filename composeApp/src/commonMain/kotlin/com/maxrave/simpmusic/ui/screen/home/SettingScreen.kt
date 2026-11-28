@@ -3141,7 +3141,6 @@ fun SettingScreen(
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-}
 private fun SettingTopBar(
     onBack: () -> Unit,
     modifier: Modifier = Modifier,

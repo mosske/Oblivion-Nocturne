@@ -1815,7 +1815,7 @@ fun NowPlayingBottomSheet(
                         }
                     }
                     ActionButton(
-                        icon = SimpIcons.Groups,
+                        icon = SimpIcons.Album,
                         text = Res.string.artists,
                     ) {
                         artist = true
