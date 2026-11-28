@@ -1,5 +1,4 @@
 package com.oblivion.nocturne.ui.screen.home
-@file:OptIn(ExperimentalMaterial3Api::class)
 import kotlin.time.Instant
 
 import androidx.compose.animation.AnimatedVisibility
@@ -452,6 +451,7 @@ import oblivionnocturne.composeapp.generated.resources.balance_media_loudness
 import oblivionnocturne.composeapp.generated.resources.better_lyrics
 import oblivionnocturne.composeapp.generated.resources.blog_notification_description
 import oblivionnocturne.composeapp.generated.resources.blog_notification_title
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingScreen(
     navController: NavController,
