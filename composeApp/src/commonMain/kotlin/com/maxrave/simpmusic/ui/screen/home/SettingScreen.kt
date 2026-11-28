@@ -174,6 +174,8 @@ import kotlinx.datetime.format.byUnicodePattern
 import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
+import com.oblivion.nocturne.ui.icon.Person
+import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.viewmodel.koinViewModel
 import oblivionnocturne.composeapp.generated.resources.Res
 import oblivionnocturne.composeapp.generated.resources.third_party_libraries
@@ -458,6 +460,83 @@ fun SettingScreen(
     var width by rememberSaveable { mutableIntStateOf(0) }
     val uriHandler = LocalUriHandler.current
     val platformContext = LocalPlatformContext.current
+    val str_ai_api_key = stringResource(Res.string.ai_api_key)
+    val str_ai_provider = stringResource(Res.string.ai_provider)
+    val str_backup_frequency = stringResource(Res.string.backup_frequency)
+    val str_better_lyrics = stringResource(Res.string.better_lyrics)
+    val str_cancel = stringResource(Res.string.cancel)
+    val str_categories_sponsor_block = stringResource(Res.string.categories_sponsor_block)
+    val str_change = stringResource(Res.string.change)
+    val str_change_language_warning = stringResource(Res.string.change_language_warning)
+    val str_clear = stringResource(Res.string.clear)
+    val str_clear_canvas_cache = stringResource(Res.string.clear_canvas_cache)
+    val str_clear_downloaded_cache = stringResource(Res.string.clear_downloaded_cache)
+    val str_clear_listening_history = stringResource(Res.string.clear_listening_history)
+    val str_clear_listening_history_confirm = stringResource(Res.string.clear_listening_history_confirm)
+    val str_clear_player_cache = stringResource(Res.string.clear_player_cache)
+    val str_clear_thumbnail_cache = stringResource(Res.string.clear_thumbnail_cache)
+    val str_content_country = stringResource(Res.string.content_country)
+    val str_contributor_email = stringResource(Res.string.contributor_email)
+    val str_contributor_name = stringResource(Res.string.contributor_name)
+    val str_crossfade_auto = stringResource(Res.string.crossfade_auto)
+    val str_crossfade_duration = stringResource(Res.string.crossfade_duration)
+    val str_custom_ai_model_id = stringResource(Res.string.custom_ai_model_id)
+    val str_custom_model_id_messages = stringResource(Res.string.custom_model_id_messages)
+    val str_daily = stringResource(Res.string.daily)
+    val str_download_quality = stringResource(Res.string.download_quality)
+    val str_equalizer_type = stringResource(Res.string.equalizer_type)
+    val str_gemini = stringResource(Res.string.gemini)
+    val str_invalid = stringResource(Res.string.invalid)
+    val str_invalid_api_key = stringResource(Res.string.invalid_api_key)
+    val str_invalid_host = stringResource(Res.string.invalid_host)
+    val str_invalid_language_code = stringResource(Res.string.invalid_language_code)
+    val str_invalid_port = stringResource(Res.string.invalid_port)
+    val str_keep_backups = stringResource(Res.string.keep_backups)
+    val str_language = stringResource(Res.string.language)
+    val str_limit_player_cache = stringResource(Res.string.limit_player_cache)
+    val str_log_out_from_discord = stringResource(Res.string.log_out_from_discord)
+    val str_log_out_from_lastfm = stringResource(Res.string.log_out_from_lastfm)
+    val str_log_out_from_spotify = stringResource(Res.string.log_out_from_spotify)
+    val str_lrclib = stringResource(Res.string.lrclib)
+    val str_lyrics_offset = stringResource(Res.string.lyrics_offset)
+    val str_lyrics_offset_invalid = stringResource(Res.string.lyrics_offset_invalid)
+    val str_lyrics_offset_message = stringResource(Res.string.lyrics_offset_message)
+    val str_lyrics_romanization = stringResource(Res.string.lyrics_romanization)
+    val str_lyrics_style = stringResource(Res.string.lyrics_style)
+    val str_main_lyrics_provider = stringResource(Res.string.main_lyrics_provider)
+    val str_monthly = stringResource(Res.string.monthly)
+    val str_now_playing_style = stringResource(Res.string.now_playing_style)
+    val str_oblivionnocturne_lyrics = stringResource(Res.string.oblivionnocturne_lyrics)
+    val str_ok = stringResource(Res.string.ok)
+    val str_openai = stringResource(Res.string.openai)
+    val str_openai_api_compatible = stringResource(Res.string.openai_api_compatible)
+    val str_preferred_audio_language = stringResource(Res.string.preferred_audio_language)
+    val str_preferred_audio_language_message = stringResource(Res.string.preferred_audio_language_message)
+    val str_proxy_host = stringResource(Res.string.proxy_host)
+    val str_proxy_host_message = stringResource(Res.string.proxy_host_message)
+    val str_proxy_password = stringResource(Res.string.proxy_password)
+    val str_proxy_password_message = stringResource(Res.string.proxy_password_message)
+    val str_proxy_port = stringResource(Res.string.proxy_port)
+    val str_proxy_port_message = stringResource(Res.string.proxy_port_message)
+    val str_proxy_type = stringResource(Res.string.proxy_type)
+    val str_proxy_username = stringResource(Res.string.proxy_username)
+    val str_proxy_username_message = stringResource(Res.string.proxy_username_message)
+    val str_quality = stringResource(Res.string.quality)
+    val str_save = stringResource(Res.string.save)
+    val str_set = stringResource(Res.string.set)
+    val str_smart_downloads_size = stringResource(Res.string.smart_downloads_size)
+    val str_socks = stringResource(Res.string.socks)
+    val str_theme = stringResource(Res.string.theme)
+    val str_theme_color = stringResource(Res.string.theme_color)
+    val str_translation_language = stringResource(Res.string.translation_language)
+    val str_translation_language_message = stringResource(Res.string.translation_language_message)
+    val str_video_download_quality = stringResource(Res.string.video_download_quality)
+    val str_video_quality = stringResource(Res.string.video_quality)
+    val str_warning = stringResource(Res.string.warning)
+    val str_weekly = stringResource(Res.string.weekly)
+    val str_youtube_subtitle_language = stringResource(Res.string.youtube_subtitle_language)
+    val str_youtube_subtitle_language_message = stringResource(Res.string.youtube_subtitle_language_message)
+    val str_youtube_transcript = stringResource(Res.string.youtube_transcript)
 
     // Backup and restore
     val formatter =
@@ -711,9 +790,6 @@ fun SettingScreen(
                             DataStoreManager.THEME_MODE_DARK to stringResource(Res.string.theme_mode_dark),
                             DataStoreManager.THEME_MODE_LIGHT to stringResource(Res.string.theme_mode_light),
                         )
-                    val str_theme = stringResource(Res.string.theme)
-                    val str_change = stringResource(Res.string.change)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                         title = stringResource(Res.string.theme),
                         subtitle = themeModeLabels.firstOrNull { it.first == themeMode }?.second ?: "",
@@ -750,9 +826,6 @@ fun SettingScreen(
                                 stringResource(Res.string.now_playing_style_apple_music) + requiresAndroid12,
                             DataStoreManager.NOW_PLAYING_STYLE_SOUNDCLOUD to stringResource(Res.string.now_playing_style_soundcloud),
                         )
-                    val str_now_playing_style = stringResource(Res.string.now_playing_style)
-                    val str_change = stringResource(Res.string.change)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                         title = stringResource(Res.string.now_playing_style),
                         subtitle = nowPlayingStyleLabels.firstOrNull { it.first == nowPlayingStyle }?.second ?: "",
@@ -785,9 +858,6 @@ fun SettingScreen(
                                 DataStoreManager.LYRICS_STYLE_APPLE_MUSIC to
                                     stringResource(Res.string.lyrics_style_apple_music) + requiresAndroid12,
                             )
-                        val str_lyrics_style = stringResource(Res.string.lyrics_style)
-                        val str_change = stringResource(Res.string.change)
-                        val str_cancel = stringResource(Res.string.cancel)
                         SettingItem(
                             title = stringResource(Res.string.lyrics_style),
                             subtitle = lyricsStyleLabels.firstOrNull { it.first == lyricsStyle }?.second ?: "",
@@ -832,7 +902,6 @@ fun SettingScreen(
                             RomanizationLanguage.MACEDONIAN to stringResource(Res.string.romanization_macedonian),
                         )
                     val romanizationSelected = RomanizationLanguage.parse(romanizationStored)
-                    val str_lyrics_romanization = stringResource(Res.string.lyrics_romanization)
                     SettingItem(
                         title = stringResource(Res.string.lyrics_romanization),
                         // Two different jobs for one line. Off, the row has to explain what the
@@ -899,9 +968,6 @@ fun SettingScreen(
                             }
                             add(DataStoreManager.THEME_COLOR_CUSTOM to stringResource(Res.string.theme_color_custom))
                         }
-                    val str_theme_color = stringResource(Res.string.theme_color)
-                    val str_change = stringResource(Res.string.change)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                         title = stringResource(Res.string.theme_color),
                         subtitle = colorSourceLabels.firstOrNull { it.first == themeColorSource }?.second ?: "",
@@ -954,12 +1020,6 @@ fun SettingScreen(
                         showYouTubeAccountDialog = true
                     },
                 )
-                val str_language = stringResource(Res.string.language)
-                val str_warning = stringResource(Res.string.warning)
-                val str_change_language_warning = stringResource(Res.string.change_language_warning)
-                val str_change = stringResource(Res.string.change)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.language),
                     subtitle = SUPPORTED_LANGUAGE.getLanguageFromCode(language ?: "en-US"),
@@ -995,9 +1055,6 @@ fun SettingScreen(
                         )
                     },
                 )
-                val str_content_country = stringResource(Res.string.content_country)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.content_country),
                     subtitle = location ?: "",
@@ -1022,11 +1079,6 @@ fun SettingScreen(
                         )
                     },
                 )
-                val str_preferred_audio_language = stringResource(Res.string.preferred_audio_language)
-                val str_invalid_language_code = stringResource(Res.string.invalid_language_code)
-                val str_preferred_audio_language_message = stringResource(Res.string.preferred_audio_language_message)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.preferred_audio_language),
                     subtitle = preferredAudioLanguage.ifEmpty { stringResource(Res.string.original_audio) },
@@ -1053,9 +1105,6 @@ fun SettingScreen(
                         )
                     },
                 )
-                val str_quality = stringResource(Res.string.quality)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.quality),
                     subtitle = quality ?: "",
@@ -1079,9 +1128,6 @@ fun SettingScreen(
                         )
                     },
                 )
-                val str_download_quality = stringResource(Res.string.download_quality)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.download_quality),
                     subtitle = downloadQuality ?: "",
@@ -1105,9 +1151,6 @@ fun SettingScreen(
                         )
                     },
                 )
-                val str_video_quality = stringResource(Res.string.video_quality)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.video_quality),
                     subtitle = videoQuality ?: "",
@@ -1130,9 +1173,6 @@ fun SettingScreen(
                         )
                     },
                 )
-                val str_video_download_quality = stringResource(Res.string.video_download_quality)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.video_download_quality),
                     subtitle = videoDownloadQuality ?: "",
@@ -1180,9 +1220,6 @@ fun SettingScreen(
                         isEnable = localTrackingEnabled || smartDownloadsEnabled,
                     )
                     if (smartDownloadsEnabled) {
-                        val str_smart_downloads_size = stringResource(Res.string.smart_downloads_size)
-                        val str_change = stringResource(Res.string.change)
-                        val str_cancel = stringResource(Res.string.cancel)
                         SettingItem(
                             title = stringResource(Res.string.smart_downloads_size),
                             subtitle = stringResource(Res.string.smart_downloads_size_value, smartDownloadsCount),
@@ -1266,10 +1303,6 @@ fun SettingScreen(
                 Crossfade(usingProxy) { it ->
                     if (it) {
                         Column {
-                            val str_proxy_type = stringResource(Res.string.proxy_type)
-                            val str_socks = stringResource(Res.string.socks)
-                            val str_change = stringResource(Res.string.change)
-                            val str_cancel = stringResource(Res.string.cancel)
                             SettingItem(
                                 title = stringResource(Res.string.proxy_type),
                                 subtitle =
@@ -1309,11 +1342,6 @@ fun SettingScreen(
                                     )
                                 },
                             )
-                            val str_proxy_host = stringResource(Res.string.proxy_host)
-                            val str_proxy_host_message = stringResource(Res.string.proxy_host_message)
-                            val str_invalid_host = stringResource(Res.string.invalid_host)
-                            val str_change = stringResource(Res.string.change)
-                            val str_cancel = stringResource(Res.string.cancel)
                             SettingItem(
                                 title = stringResource(Res.string.proxy_host),
                                 subtitle = proxyHost,
@@ -1342,11 +1370,6 @@ fun SettingScreen(
                                     )
                                 },
                             )
-                            val str_proxy_port = stringResource(Res.string.proxy_port)
-                            val str_proxy_port_message = stringResource(Res.string.proxy_port_message)
-                            val str_invalid_port = stringResource(Res.string.invalid_port)
-                            val str_change = stringResource(Res.string.change)
-                            val str_cancel = stringResource(Res.string.cancel)
                             SettingItem(
                                 title = stringResource(Res.string.proxy_port),
                                 subtitle = proxyPort.toString(),
@@ -1375,10 +1398,6 @@ fun SettingScreen(
                                     )
                                 },
                             )
-                            val str_proxy_username = stringResource(Res.string.proxy_username)
-                            val str_proxy_username_message = stringResource(Res.string.proxy_username_message)
-                            val str_change = stringResource(Res.string.change)
-                            val str_cancel = stringResource(Res.string.cancel)
                             SettingItem(
                                 title = stringResource(Res.string.proxy_username),
                                 subtitle = proxyUsername,
@@ -1403,10 +1422,6 @@ fun SettingScreen(
                                     )
                                 },
                             )
-                            val str_proxy_password = stringResource(Res.string.proxy_password)
-                            val str_proxy_password_message = stringResource(Res.string.proxy_password_message)
-                            val str_change = stringResource(Res.string.change)
-                            val str_cancel = stringResource(Res.string.cancel)
                             SettingItem(
                                 title = stringResource(Res.string.proxy_password),
                                 subtitle =
@@ -1459,9 +1474,6 @@ fun SettingScreen(
                             DataStoreManager.EQUALIZER_TYPE_BUILT_IN to stringResource(Res.string.equalizer_type_built_in),
                             DataStoreManager.EQUALIZER_TYPE_SYSTEM to stringResource(Res.string.equalizer_type_system),
                         )
-                    val str_equalizer_type = stringResource(Res.string.equalizer_type)
-                    val str_change = stringResource(Res.string.change)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                         title = stringResource(Res.string.equalizer_type),
                         subtitle = equalizerTypeLabels.firstOrNull { it.first == equalizerType }?.second ?: "",
@@ -1594,9 +1606,6 @@ fun SettingScreen(
                 )
                 AnimatedVisibility(visible = crossfadeEnabled) {
                     Column {
-                        val str_crossfade_duration = stringResource(Res.string.crossfade_duration)
-                        val str_crossfade_auto = stringResource(Res.string.crossfade_auto)
-                        val str_change = stringResource(Res.string.change)
                         SettingItem(
                             title = stringResource(Res.string.crossfade_duration),
                             subtitle =
@@ -1696,10 +1705,6 @@ fun SettingScreen(
                     subtitle = stringResource(Res.string.local_tracking_description),
                     switch = (localTrackingEnabled to { viewModel.setLocalTrackingEnabled(it) }),
                 )
-                val str_clear_listening_history = stringResource(Res.string.clear_listening_history)
-                val str_clear_listening_history_confirm = stringResource(Res.string.clear_listening_history_confirm)
-                val str_clear = stringResource(Res.string.clear)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.clear_listening_history),
                     subtitle = stringResource(Res.string.clear_listening_history_description),
@@ -1721,13 +1726,6 @@ fun SettingScreen(
         }
         item(key = "lyrics") {
             SettingGroup(title = stringResource(Res.string.lyrics)) {
-                val str_main_lyrics_provider = stringResource(Res.string.main_lyrics_provider)
-                val str_oblivionnocturne_lyrics = stringResource(Res.string.oblivionnocturne_lyrics)
-                val str_youtube_transcript = stringResource(Res.string.youtube_transcript)
-                val str_lrclib = stringResource(Res.string.lrclib)
-                val str_better_lyrics = stringResource(Res.string.better_lyrics)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.main_lyrics_provider),
                     subtitle =
@@ -1772,11 +1770,6 @@ fun SettingScreen(
                     },
                 )
 
-                val str_lyrics_offset = stringResource(Res.string.lyrics_offset)
-                val str_lyrics_offset_message = stringResource(Res.string.lyrics_offset_message)
-                val str_lyrics_offset_invalid = stringResource(Res.string.lyrics_offset_invalid)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.lyrics_offset),
                     subtitle =
@@ -1816,11 +1809,6 @@ fun SettingScreen(
                     },
                 )
 
-                val str_translation_language = stringResource(Res.string.translation_language)
-                val str_invalid_language_code = stringResource(Res.string.invalid_language_code)
-                val str_translation_language_message = stringResource(Res.string.translation_language_message)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.translation_language),
                     subtitle = translationLanguage ?: "",
@@ -1847,11 +1835,6 @@ fun SettingScreen(
                     },
                     isEnable = true,
                 )
-                val str_youtube_subtitle_language = stringResource(Res.string.youtube_subtitle_language)
-                val str_invalid_language_code = stringResource(Res.string.invalid_language_code)
-                val str_youtube_subtitle_language_message = stringResource(Res.string.youtube_subtitle_language_message)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.youtube_subtitle_language),
                     subtitle = youtubeSubtitleLanguage,
@@ -1880,9 +1863,6 @@ fun SettingScreen(
                 SettingItem(
                     switch = (helpBuildLyricsDatabase to { viewModel.setHelpBuildLyricsDatabase(it) }),
                 )
-                val str_contributor_name = stringResource(Res.string.contributor_name)
-                val str_set = stringResource(Res.string.set)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.contributor_name),
                     subtitle = contributor.first.ifEmpty { stringResource(Res.string.anonymous) },
@@ -1906,10 +1886,6 @@ fun SettingScreen(
                         )
                     },
                 )
-                val str_contributor_email = stringResource(Res.string.contributor_email)
-                val str_invalid = stringResource(Res.string.invalid)
-                val str_set = stringResource(Res.string.set)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.contributor_email),
                     subtitle = contributor.second.ifEmpty { stringResource(Res.string.anonymous) },
@@ -1944,12 +1920,6 @@ fun SettingScreen(
         }
         item(key = "AI") {
             SettingGroup(title = stringResource(Res.string.ai)) {
-                val str_ai_provider = stringResource(Res.string.ai_provider)
-                val str_openai = stringResource(Res.string.openai)
-                val str_gemini = stringResource(Res.string.gemini)
-                val str_openai_api_compatible = stringResource(Res.string.openai_api_compatible)
-                val str_change = stringResource(Res.string.change)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.ai_provider),
                     subtitle =
@@ -1994,10 +1964,6 @@ fun SettingScreen(
                         )
                     },
                 )
-                val str_ai_api_key = stringResource(Res.string.ai_api_key)
-                val str_invalid_api_key = stringResource(Res.string.invalid_api_key)
-                val str_set = stringResource(Res.string.set)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.ai_api_key),
                     subtitle = if (isHasApiKey) "XXXXXXXXXX" else "N/A",
@@ -2023,11 +1989,6 @@ fun SettingScreen(
                         )
                     },
                 )
-                val str_custom_ai_model_id = stringResource(Res.string.custom_ai_model_id)
-                val str_invalid = stringResource(Res.string.invalid)
-                val str_custom_model_id_messages = stringResource(Res.string.custom_model_id_messages)
-                val str_set = stringResource(Res.string.set)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.custom_ai_model_id),
                     subtitle = customModelId.ifEmpty { stringResource(Res.string.default_models) },
@@ -2066,8 +2027,6 @@ fun SettingScreen(
                     // The example JSON stays out of the translated text, so no translation can break it.
                     val customHeadersMessage =
                         stringResource(Res.string.custom_headers_message) + "\n{\"key1\":\"value1\",\"key2\":\"value2\"}"
-                    val str_set = stringResource(Res.string.set)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                         title = customBaseUrlTitle,
                         subtitle = customOpenAIBaseUrl.ifEmpty { defaultBaseUrl },
@@ -2095,8 +2054,6 @@ fun SettingScreen(
                             )
                         },
                     )
-                    val str_set = stringResource(Res.string.set)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                         title = stringResource(Res.string.custom_headers),
                         subtitle = stringResource(if (customOpenAIHeaders.isNotEmpty()) Res.string.configured else Res.string.not_set),
@@ -2145,7 +2102,6 @@ fun SettingScreen(
             // Hidden entirely in "YouTube-only" mode — Spotify has nothing to offer without its source.
             if (!sharedViewModel.youtubeOnly.value) {
                 SettingGroup(title = stringResource(Res.string.spotify)) {
-                    val str_log_out_from_spotify = stringResource(Res.string.log_out_from_spotify)
                     SettingItem(
                         // The title follows the state: a row that still reads "Log in" while logged in
                         // gives no clue that tapping it signs you out.
@@ -2196,7 +2152,6 @@ fun SettingScreen(
             }
         item(key = "discord") {
             SettingGroup(title = stringResource(Res.string.discord_integration)) {
-                val str_log_out_from_discord = stringResource(Res.string.log_out_from_discord)
                 SettingItem(
                     title =
                         if (discordLoggedIn) {
@@ -2233,7 +2188,6 @@ fun SettingScreen(
         if (viewModel.lastfmAvailable) {
             item(key = "lastfm") {
                 SettingGroup(title = stringResource(Res.string.lastfm_integration)) {
-                    val str_log_out_from_lastfm = stringResource(Res.string.log_out_from_lastfm)
                     SettingItem(
                         title =
                             if (lastfmLoggedIn) {
@@ -2297,9 +2251,6 @@ fun SettingScreen(
                 )
                 val listName =
                     SponsorBlockType.toList().map { it.displayString() }
-                val str_categories_sponsor_block = stringResource(Res.string.categories_sponsor_block)
-                val str_save = stringResource(Res.string.save)
-                val str_cancel = stringResource(Res.string.cancel)
                 SettingItem(
                     title = stringResource(Res.string.categories_sponsor_block),
                     subtitle = stringResource(Res.string.what_segments_will_be_skipped),
@@ -2347,9 +2298,6 @@ fun SettingScreen(
         if (getPlatform() == Platform.Android) {
             item(key = "storage") {
                 SettingGroup(title = stringResource(Res.string.storage)) {
-                    val str_clear_player_cache = stringResource(Res.string.clear_player_cache)
-                    val str_clear = stringResource(Res.string.clear)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                         title = stringResource(Res.string.player_cache),
                         subtitle = "${playerCache.bytesToMB()} MB",
@@ -2367,9 +2315,6 @@ fun SettingScreen(
                             )
                         },
                     )
-                    val str_clear_downloaded_cache = stringResource(Res.string.clear_downloaded_cache)
-                    val str_clear = stringResource(Res.string.clear)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                         title = stringResource(Res.string.downloaded_cache),
                         subtitle = "${downloadedCache.bytesToMB()} MB",
@@ -2387,9 +2332,6 @@ fun SettingScreen(
                             )
                         },
                     )
-                    val str_clear_thumbnail_cache = stringResource(Res.string.clear_thumbnail_cache)
-                    val str_clear = stringResource(Res.string.clear)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                         title = stringResource(Res.string.thumbnail_cache),
                         subtitle = "${thumbnailCache.bytesToMB()} MB",
@@ -2407,9 +2349,6 @@ fun SettingScreen(
                             )
                         },
                     )
-                    val str_clear_canvas_cache = stringResource(Res.string.clear_canvas_cache)
-                    val str_clear = stringResource(Res.string.clear)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                         title = stringResource(Res.string.spotify_canvas_cache),
                         subtitle = "${canvasCache.bytesToMB()} MB",
@@ -2427,9 +2366,6 @@ fun SettingScreen(
                             )
                         },
                     )
-                    val str_limit_player_cache = stringResource(Res.string.limit_player_cache)
-                    val str_change = stringResource(Res.string.change)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                         title = stringResource(Res.string.limit_player_cache),
                         subtitle = LIMIT_CACHE_SIZE.getItemFromData(limitPlayerCache).toString(),
@@ -2702,12 +2638,6 @@ fun SettingScreen(
                     )
                     AnimatedVisibility(visible = autoBackupEnabled) {
                         Column {
-                            val str_backup_frequency = stringResource(Res.string.backup_frequency)
-                            val str_daily = stringResource(Res.string.daily)
-                            val str_weekly = stringResource(Res.string.weekly)
-                            val str_monthly = stringResource(Res.string.monthly)
-                            val str_change = stringResource(Res.string.change)
-                            val str_cancel = stringResource(Res.string.cancel)
                             SettingItem(
                                 title = stringResource(Res.string.backup_frequency),
                                 subtitle =
@@ -2757,9 +2687,6 @@ fun SettingScreen(
                                     )
                                 },
                             )
-                            val str_keep_backups = stringResource(Res.string.keep_backups)
-                            val str_change = stringResource(Res.string.change)
-                            val str_cancel = stringResource(Res.string.cancel)
                             SettingItem(
                                 title = stringResource(Res.string.keep_backups),
                                 subtitle = stringResource(Res.string.keep_backups_format, "$autoBackupMaxFiles"),
@@ -2842,8 +2769,6 @@ fun SettingScreen(
                     switch = (autoCheckUpdate to { viewModel.setAutoCheckUpdate(it) }),
                 )
                 val updateChannelTitle = stringResource(Res.string.update_channel)
-                    val str_change = stringResource(Res.string.change)
-                    val str_cancel = stringResource(Res.string.cancel)
                     SettingItem(
                     title = updateChannelTitle,
                     subtitle = "OblivionNocturne GitHub Release",
