@@ -461,6 +461,7 @@ fun SettingScreen(
     var width by rememberSaveable { mutableIntStateOf(0) }
     val uriHandler = LocalUriHandler.current
     val platformContext = LocalPlatformContext.current
+    val density = LocalDensity.current
     val str_ai_api_key = stringResource(Res.string.ai_api_key)
     val str_ai_provider = stringResource(Res.string.ai_provider)
     val str_backup_frequency = stringResource(Res.string.backup_frequency)
@@ -511,6 +512,7 @@ fun SettingScreen(
     val str_monthly = stringResource(Res.string.monthly)
     val str_now_playing_style = stringResource(Res.string.now_playing_style)
     val str_oblivionnocturne_lyrics = stringResource(Res.string.oblivionnocturne_lyrics)
+    val str_ok = stringResource(Res.string.ok)
     val str_openai = stringResource(Res.string.openai)
     val str_openai_api_compatible = stringResource(Res.string.openai_api_compatible)
     val str_preferred_audio_language = stringResource(Res.string.preferred_audio_language)
@@ -540,7 +542,6 @@ fun SettingScreen(
     val str_youtube_subtitle_language = stringResource(Res.string.youtube_subtitle_language)
     val str_youtube_subtitle_language_message = stringResource(Res.string.youtube_subtitle_language_message)
     val str_youtube_transcript = stringResource(Res.string.youtube_transcript)
-    val stringResource(Res.string.ok) = stringResource(Res.string.ok)
     // Backup and restore
     val formatter =
         LocalDateTime.Format {
@@ -2401,7 +2402,7 @@ fun SettingScreen(
                                     .height(8.dp)
                                     .clip(RoundedCornerShape(8.dp))
                                     .onGloballyPositioned { layoutCoordinates ->
-                                        with(LocalDensity.current) {
+                                        with(density) {
                                             width =
                                                 layoutCoordinates.size.width
                                                     .toDp()
@@ -3122,7 +3123,7 @@ fun SettingScreen(
                                                 viewModel.logOutAllYouTube()
                                                 showYouTubeAccountDialog = false
                                             },
-                                        dismiss = stringResource(Res.string.cancel),
+                                        dismiss = str_cancel,
                                     ),
                                 )
                             }
@@ -3561,7 +3562,7 @@ private fun ImportProgressDialog(
         confirmButton = {
             if (finished) {
                 TextButton(onClick = onDismiss) {
-                    Text(text = stringResource(Res.string.ok))
+                    Text(text = str_ok)
                 }
             }
         },
