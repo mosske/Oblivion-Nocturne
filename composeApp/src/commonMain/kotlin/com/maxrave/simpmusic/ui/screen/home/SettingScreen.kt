@@ -461,6 +461,7 @@ fun SettingScreen(
     var width by rememberSaveable { mutableIntStateOf(0) }
     val uriHandler = LocalUriHandler.current
     val platformContext = LocalPlatformContext.current
+    val coroutineScope = rememberCoroutineScope()
     val density = LocalDensity.current
     val str_ai_api_key = stringResource(Res.string.ai_api_key)
     val str_ai_provider = stringResource(Res.string.ai_provider)
