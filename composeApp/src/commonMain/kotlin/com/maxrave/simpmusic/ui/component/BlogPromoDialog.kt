@@ -13,6 +13,7 @@ import com.oblivion.nocturne.ui.theme.typo
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import oblivionnocturne.composeapp.generated.resources.Res
+import oblivionnocturne.composeapp.generated.resources.oblivion_owl
 import oblivionnocturne.composeapp.generated.resources.blog_promo_message
 import oblivionnocturne.composeapp.generated.resources.blog_promo_title
 import oblivionnocturne.composeapp.generated.resources.later

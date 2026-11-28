@@ -199,6 +199,7 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import oblivionnocturne.composeapp.generated.resources.Res
+import oblivionnocturne.composeapp.generated.resources.oblivion_owl
 import oblivionnocturne.composeapp.generated.resources.add_lyrics
 import oblivionnocturne.composeapp.generated.resources.add_to_a_playlist
 import oblivionnocturne.composeapp.generated.resources.add_to_queue
@@ -1814,7 +1815,7 @@ fun NowPlayingBottomSheet(
                         }
                     }
                     ActionButton(
-                        icon = Res.drawable.oblivion_owl,
+                        icon = SimpIcons.Person,
                         text = Res.string.artists,
                     ) {
                         artist = true
@@ -2876,7 +2877,7 @@ fun ArtistModalBottomSheet(
                                     modifier = Modifier.padding(20.dp).align(Alignment.CenterStart),
                                 ) {
                                     Image(
-                                        imageVector = Res.drawable.oblivion_owl,
+                                        painter = painterResource(Res.drawable.oblivion_owl),
                                         contentDescription = "",
                                         colorFilter = ColorFilter.tint(rememberSurfaceDarkColors().content),
                                     )

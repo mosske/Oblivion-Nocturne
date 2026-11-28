@@ -368,20 +368,14 @@ fun SettingScreen(
     val hazeState =
         rememberHazeState()
 
-    val checkForUpdateSubtitle by remember {
-        derivedStateOf {
-            if (isCheckingUpdate) {
-                return@derivedStateOf getString(Res.string.checking)
-            } else {
-                val lastCheckLong = lastCheckUpdate?.toLong() ?: 0L
-                return@derivedStateOf runBlocking {
-                    getString(
-                        Res.string.last_checked_at,
-                                Instant.fromEpochMilliseconds(lastCheckLong).toString(),
-                    )
-                }
-            }
-        }
+    val lastCheckFormatted = remember(lastCheckUpdate) {
+        val lastCheckLong = lastCheckUpdate?.toLong() ?: 0L
+        Instant.fromEpochMilliseconds(lastCheckLong).toString()
+    }
+    val checkForUpdateSubtitle = if (isCheckingUpdate) {
+        stringResource(Res.string.checking)
+    } else {
+        stringResource(Res.string.last_checked_at, lastCheckFormatted)
     }
     var showYouTubeAccountDialog by rememberSaveable {
         mutableStateOf(false)
@@ -412,6 +406,7 @@ fun SettingScreen(
             settingListState.firstVisibleItemIndex > 0 ||
                 settingListState.firstVisibleItemScrollOffset > devicesGroupHeightPx
         }
+    }
     // The list's side margin, which the in-list toolbar stretches back across.
     val listSidePadding = 16.dp
     // Home-family ambient ground, and like Home's it SCROLLS AWAY with the content instead of
