@@ -711,13 +711,14 @@ fun SettingScreen(
                             DataStoreManager.THEME_MODE_DARK to stringResource(Res.string.theme_mode_dark),
                             DataStoreManager.THEME_MODE_LIGHT to stringResource(Res.string.theme_mode_light),
                         )
+                    val str_theme = stringResource(Res.string.theme)
                     SettingItem(
                         title = stringResource(Res.string.theme),
                         subtitle = themeModeLabels.firstOrNull { it.first == themeMode }?.second ?: "",
                         onClick = {
                             viewModel.setAlertData(
                                 SettingAlertState(
-                                    title = getString(Res.string.theme),
+                                    title = str_theme,
                                     selectOne =
                                         SettingAlertState.SelectData(
                                             listSelect = themeModeLabels.map { (it.first == themeMode) to it.second },
@@ -747,13 +748,14 @@ fun SettingScreen(
                                 stringResource(Res.string.now_playing_style_apple_music) + requiresAndroid12,
                             DataStoreManager.NOW_PLAYING_STYLE_SOUNDCLOUD to stringResource(Res.string.now_playing_style_soundcloud),
                         )
+                    val str_now_playing_style = stringResource(Res.string.now_playing_style)
                     SettingItem(
                         title = stringResource(Res.string.now_playing_style),
                         subtitle = nowPlayingStyleLabels.firstOrNull { it.first == nowPlayingStyle }?.second ?: "",
                         onClick = {
                             viewModel.setAlertData(
                                 SettingAlertState(
-                                    title = getString(Res.string.now_playing_style),
+                                    title = str_now_playing_style,
                                     selectOne =
                                         SettingAlertState.SelectData(
                                             listSelect = nowPlayingStyleLabels.map { (it.first == nowPlayingStyle) to it.second },
@@ -779,13 +781,14 @@ fun SettingScreen(
                                 DataStoreManager.LYRICS_STYLE_APPLE_MUSIC to
                                     stringResource(Res.string.lyrics_style_apple_music) + requiresAndroid12,
                             )
+                        val str_lyrics_style = stringResource(Res.string.lyrics_style)
                         SettingItem(
                             title = stringResource(Res.string.lyrics_style),
                             subtitle = lyricsStyleLabels.firstOrNull { it.first == lyricsStyle }?.second ?: "",
                             onClick = {
                                 viewModel.setAlertData(
                                     SettingAlertState(
-                                        title = getString(Res.string.lyrics_style),
+                                        title = str_lyrics_style,
                                         selectOne =
                                             SettingAlertState.SelectData(
                                                 listSelect = lyricsStyleLabels.map { (it.first == lyricsStyle) to it.second },
@@ -823,6 +826,7 @@ fun SettingScreen(
                             RomanizationLanguage.MACEDONIAN to stringResource(Res.string.romanization_macedonian),
                         )
                     val romanizationSelected = RomanizationLanguage.parse(romanizationStored)
+                    val str_lyrics_romanization = stringResource(Res.string.lyrics_romanization)
                     SettingItem(
                         title = stringResource(Res.string.lyrics_romanization),
                         // Two different jobs for one line. Off, the row has to explain what the
@@ -850,7 +854,7 @@ fun SettingScreen(
                         onClick = {
                             viewModel.setAlertData(
                                 SettingAlertState(
-                                    title = getString(Res.string.lyrics_romanization),
+                                    title = str_lyrics_romanization,
                                     // NO `message` here, deliberately. The dialog picks its body with
                                     // an if/else-if chain that tests `message` FIRST, and that branch
                                     // renders only the text and an optional textField — a multipleSelect
@@ -864,7 +868,7 @@ fun SettingScreen(
                                                 },
                                         ),
                                     confirm =
-                                        getString(Res.string.save) to { state ->
+                                        str_save to { state ->
                                             val chosen = state.multipleSelect?.getListSelected().orEmpty()
                                             val languages =
                                                 romanizationLabels.filter { it.second in chosen }.map { it.first }.toSet()
@@ -889,13 +893,14 @@ fun SettingScreen(
                             }
                             add(DataStoreManager.THEME_COLOR_CUSTOM to stringResource(Res.string.theme_color_custom))
                         }
+                    val str_theme_color = stringResource(Res.string.theme_color)
                     SettingItem(
                         title = stringResource(Res.string.theme_color),
                         subtitle = colorSourceLabels.firstOrNull { it.first == themeColorSource }?.second ?: "",
                         onClick = {
                             viewModel.setAlertData(
                                 SettingAlertState(
-                                    title = getString(Res.string.theme_color),
+                                    title = str_theme_color,
                                     selectOne =
                                         SettingAlertState.SelectData(
                                             listSelect = colorSourceLabels.map { (it.first == themeColorSource) to it.second },
@@ -941,13 +946,17 @@ fun SettingScreen(
                         showYouTubeAccountDialog = true
                     },
                 )
+                val str_language = stringResource(Res.string.language)
+                val str_warning = stringResource(Res.string.warning)
+                val str_change_language_warning = stringResource(Res.string.change_language_warning)
+                val str_change = stringResource(Res.string.change)
                 SettingItem(
                     title = stringResource(Res.string.language),
                     subtitle = SUPPORTED_LANGUAGE.getLanguageFromCode(language ?: "en-US"),
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.language),
+                                title = str_language,
                                 selectOne =
                                     SettingAlertState.SelectData(
                                         listSelect =
@@ -959,10 +968,10 @@ fun SettingScreen(
                                         val code = SUPPORTED_LANGUAGE.getCodeFromLanguage(state.selectOne?.getSelected() ?: "English")
                                         viewModel.setBasicAlertData(
                                             SettingBasicAlertState(
-                                                title = getString(Res.string.warning),
-                                                message = getString(Res.string.change_language_warning),
+                                                title = str_warning,
+                                                message = str_change_language_warning,
                                                 confirm =
-                                                    getString(Res.string.change) to {
+                                                    str_change to {
                                                         sharedViewModel.activityRecreate()
                                                         viewModel.setBasicAlertData(null)
                                                         viewModel.changeLanguage(code)
@@ -976,13 +985,14 @@ fun SettingScreen(
                         )
                     },
                 )
+                val str_content_country = stringResource(Res.string.content_country)
                 SettingItem(
                     title = stringResource(Res.string.content_country),
                     subtitle = location ?: "",
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.content_country),
+                                title = str_content_country,
                                 selectOne =
                                     SettingAlertState.SelectData(
                                         listSelect =
@@ -1000,24 +1010,27 @@ fun SettingScreen(
                         )
                     },
                 )
+                val str_preferred_audio_language = stringResource(Res.string.preferred_audio_language)
+                val str_invalid_language_code = stringResource(Res.string.invalid_language_code)
+                val str_preferred_audio_language_message = stringResource(Res.string.preferred_audio_language_message)
                 SettingItem(
                     title = stringResource(Res.string.preferred_audio_language),
                     subtitle = preferredAudioLanguage.ifEmpty { stringResource(Res.string.original_audio) },
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.preferred_audio_language),
+                                title = str_preferred_audio_language,
                                 textField =
                                     SettingAlertState.TextFieldData(
-                                        label = getString(Res.string.preferred_audio_language),
+                                        label = str_preferred_audio_language,
                                         value = preferredAudioLanguage,
                                         // Empty is valid here: it means "original audio".
                                         verifyCodeBlock = {
                                             (it.isEmpty() || it.isTwoLetterCode()) to
-                                                getString(Res.string.invalid_language_code)
+                                                str_invalid_language_code
                                         },
                                     ),
-                                message = getString(Res.string.preferred_audio_language_message),
+                                message = str_preferred_audio_language_message,
                                 confirm = stringResource(Res.string.change) to { state ->
                                         viewModel.setPreferredAudioLanguage(state.textField?.value ?: "")
                                     },
@@ -1026,6 +1039,7 @@ fun SettingScreen(
                         )
                     },
                 )
+                val str_quality = stringResource(Res.string.quality)
                 SettingItem(
                     title = stringResource(Res.string.quality),
                     subtitle = quality ?: "",
@@ -1033,7 +1047,7 @@ fun SettingScreen(
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.quality),
+                                title = str_quality,
                                 selectOne =
                                     SettingAlertState.SelectData(
                                         listSelect =
@@ -1049,6 +1063,7 @@ fun SettingScreen(
                         )
                     },
                 )
+                val str_download_quality = stringResource(Res.string.download_quality)
                 SettingItem(
                     title = stringResource(Res.string.download_quality),
                     subtitle = downloadQuality ?: "",
@@ -1056,7 +1071,7 @@ fun SettingScreen(
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.download_quality),
+                                title = str_download_quality,
                                 selectOne =
                                     SettingAlertState.SelectData(
                                         listSelect =
@@ -1072,13 +1087,14 @@ fun SettingScreen(
                         )
                     },
                 )
+                val str_video_quality = stringResource(Res.string.video_quality)
                 SettingItem(
                     title = stringResource(Res.string.video_quality),
                     subtitle = videoQuality ?: "",
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.video_quality),
+                                title = str_video_quality,
                                 selectOne =
                                     SettingAlertState.SelectData(
                                         listSelect =
@@ -1094,13 +1110,14 @@ fun SettingScreen(
                         )
                     },
                 )
+                val str_video_download_quality = stringResource(Res.string.video_download_quality)
                 SettingItem(
                     title = stringResource(Res.string.video_download_quality),
                     subtitle = videoDownloadQuality ?: "",
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.video_download_quality),
+                                title = str_video_download_quality,
                                 selectOne =
                                     SettingAlertState.SelectData(
                                         listSelect =
@@ -1141,6 +1158,7 @@ fun SettingScreen(
                         isEnable = localTrackingEnabled || smartDownloadsEnabled,
                     )
                     if (smartDownloadsEnabled) {
+                        val str_smart_downloads_size = stringResource(Res.string.smart_downloads_size)
                         SettingItem(
                             title = stringResource(Res.string.smart_downloads_size),
                             subtitle = stringResource(Res.string.smart_downloads_size_value, smartDownloadsCount),
@@ -1148,7 +1166,7 @@ fun SettingScreen(
                             onClick = {
                                 viewModel.setAlertData(
                                     SettingAlertState(
-                                        title = getString(Res.string.smart_downloads_size),
+                                        title = str_smart_downloads_size,
                                         selectOne =
                                             SettingAlertState.SelectData(
                                                 listSelect =
@@ -1224,6 +1242,8 @@ fun SettingScreen(
                 Crossfade(usingProxy) { it ->
                     if (it) {
                         Column {
+                            val str_proxy_type = stringResource(Res.string.proxy_type)
+                            val str_socks = stringResource(Res.string.socks)
                             SettingItem(
                                 title = stringResource(Res.string.proxy_type),
                                 subtitle =
@@ -1234,7 +1254,7 @@ fun SettingScreen(
                                 onClick = {
                                     viewModel.setAlertData(
                                         SettingAlertState(
-                                            title = getString(Res.string.proxy_type),
+                                            title = str_proxy_type,
                                             selectOne =
                                                 SettingAlertState.SelectData(
                                                     listSelect =
@@ -1244,12 +1264,12 @@ fun SettingScreen(
                                                                         Res.string.http,
                                                                     ),
                                                             (proxyType == DataStoreManager.ProxyType.PROXY_TYPE_SOCKS) to
-                                                                getString(Res.string.socks),
+                                                                str_socks,
                                                         ),
                                                 ),
                                             confirm = stringResource(Res.string.change) to { state ->
                                                     viewModel.setProxy(
-                                                        if (state.selectOne?.getSelected() == getString(Res.string.socks)) {
+                                                        if (state.selectOne?.getSelected() == str_socks) {
                                                             DataStoreManager.ProxyType.PROXY_TYPE_SOCKS
                                                         } else {
                                                             DataStoreManager.ProxyType.PROXY_TYPE_HTTP
@@ -1263,20 +1283,23 @@ fun SettingScreen(
                                     )
                                 },
                             )
+                            val str_proxy_host = stringResource(Res.string.proxy_host)
+                            val str_proxy_host_message = stringResource(Res.string.proxy_host_message)
+                            val str_invalid_host = stringResource(Res.string.invalid_host)
                             SettingItem(
                                 title = stringResource(Res.string.proxy_host),
                                 subtitle = proxyHost,
                                 onClick = {
                                     viewModel.setAlertData(
                                         SettingAlertState(
-                                            title = getString(Res.string.proxy_host),
-                                            message = getString(Res.string.proxy_host_message),
+                                            title = str_proxy_host,
+                                            message = str_proxy_host_message,
                                             textField =
                                                 SettingAlertState.TextFieldData(
-                                                    label = getString(Res.string.proxy_host),
+                                                    label = str_proxy_host,
                                                     value = proxyHost,
                                                     verifyCodeBlock = {
-                                                        isValidProxyHost(it) to getString(Res.string.invalid_host)
+                                                        isValidProxyHost(it) to str_invalid_host
                                                     },
                                                 ),
                                             confirm = stringResource(Res.string.change) to { state ->
@@ -1291,20 +1314,23 @@ fun SettingScreen(
                                     )
                                 },
                             )
+                            val str_proxy_port = stringResource(Res.string.proxy_port)
+                            val str_proxy_port_message = stringResource(Res.string.proxy_port_message)
+                            val str_invalid_port = stringResource(Res.string.invalid_port)
                             SettingItem(
                                 title = stringResource(Res.string.proxy_port),
                                 subtitle = proxyPort.toString(),
                                 onClick = {
                                     viewModel.setAlertData(
                                         SettingAlertState(
-                                            title = getString(Res.string.proxy_port),
-                                            message = getString(Res.string.proxy_port_message),
+                                            title = str_proxy_port,
+                                            message = str_proxy_port_message,
                                             textField =
                                                 SettingAlertState.TextFieldData(
-                                                    label = getString(Res.string.proxy_port),
+                                                    label = str_proxy_port,
                                                     value = proxyPort.toString(),
                                                     verifyCodeBlock = {
-                                                        (it.toIntOrNull() != null) to getString(Res.string.invalid_port)
+                                                        (it.toIntOrNull() != null) to str_invalid_port
                                                     },
                                                 ),
                                             confirm = stringResource(Res.string.change) to { state ->
@@ -1319,17 +1345,19 @@ fun SettingScreen(
                                     )
                                 },
                             )
+                            val str_proxy_username = stringResource(Res.string.proxy_username)
+                            val str_proxy_username_message = stringResource(Res.string.proxy_username_message)
                             SettingItem(
                                 title = stringResource(Res.string.proxy_username),
                                 subtitle = proxyUsername,
                                 onClick = {
                                     viewModel.setAlertData(
                                         SettingAlertState(
-                                            title = getString(Res.string.proxy_username),
-                                            message = getString(Res.string.proxy_username_message),
+                                            title = str_proxy_username,
+                                            message = str_proxy_username_message,
                                             textField =
                                                 SettingAlertState.TextFieldData(
-                                                    label = getString(Res.string.proxy_username),
+                                                    label = str_proxy_username,
                                                     value = proxyUsername,
                                                 ),
                                             confirm = stringResource(Res.string.change) to { state ->
@@ -1343,6 +1371,8 @@ fun SettingScreen(
                                     )
                                 },
                             )
+                            val str_proxy_password = stringResource(Res.string.proxy_password)
+                            val str_proxy_password_message = stringResource(Res.string.proxy_password_message)
                             SettingItem(
                                 title = stringResource(Res.string.proxy_password),
                                 subtitle =
@@ -1354,11 +1384,11 @@ fun SettingScreen(
                                 onClick = {
                                     viewModel.setAlertData(
                                         SettingAlertState(
-                                            title = getString(Res.string.proxy_password),
-                                            message = getString(Res.string.proxy_password_message),
+                                            title = str_proxy_password,
+                                            message = str_proxy_password_message,
                                             textField =
                                                 SettingAlertState.TextFieldData(
-                                                    label = getString(Res.string.proxy_password),
+                                                    label = str_proxy_password,
                                                     value = proxyPassword,
                                                 ),
                                             confirm = stringResource(Res.string.change) to { state ->
@@ -1395,13 +1425,14 @@ fun SettingScreen(
                             DataStoreManager.EQUALIZER_TYPE_BUILT_IN to stringResource(Res.string.equalizer_type_built_in),
                             DataStoreManager.EQUALIZER_TYPE_SYSTEM to stringResource(Res.string.equalizer_type_system),
                         )
+                    val str_equalizer_type = stringResource(Res.string.equalizer_type)
                     SettingItem(
                         title = stringResource(Res.string.equalizer_type),
                         subtitle = equalizerTypeLabels.firstOrNull { it.first == equalizerType }?.second ?: "",
                         onClick = {
                             viewModel.setAlertData(
                                 SettingAlertState(
-                                    title = getString(Res.string.equalizer_type),
+                                    title = str_equalizer_type,
                                     selectOne =
                                         SettingAlertState.SelectData(
                                             listSelect = equalizerTypeLabels.map { (it.first == equalizerType) to it.second },
@@ -1527,6 +1558,8 @@ fun SettingScreen(
                 )
                 AnimatedVisibility(visible = crossfadeEnabled) {
                     Column {
+                        val str_crossfade_duration = stringResource(Res.string.crossfade_duration)
+                        val str_crossfade_auto = stringResource(Res.string.crossfade_auto)
                         SettingItem(
                             title = stringResource(Res.string.crossfade_duration),
                             subtitle =
@@ -1541,13 +1574,13 @@ fun SettingScreen(
                             onClick = {
                                 viewModel.setAlertData(
                                     SettingAlertState(
-                                        title = getString(Res.string.crossfade_duration),
+                                        title = str_crossfade_duration,
                                         selectOne =
                                             SettingAlertState.SelectData(
                                                 listSelect =
                                                     listOf(
                                                         (crossfadeDuration == DataStoreManager.CROSSFADE_DURATION_AUTO) to
-                                                            getString(Res.string.crossfade_auto),
+                                                            str_crossfade_auto,
                                                         (crossfadeDuration == 1000) to "1s",
                                                         (crossfadeDuration == 2000) to "2s",
                                                         (crossfadeDuration == 3000) to "3s",
@@ -1626,16 +1659,19 @@ fun SettingScreen(
                     subtitle = stringResource(Res.string.local_tracking_description),
                     switch = (localTrackingEnabled to { viewModel.setLocalTrackingEnabled(it) }),
                 )
+                val str_clear_listening_history = stringResource(Res.string.clear_listening_history)
+                val str_clear_listening_history_confirm = stringResource(Res.string.clear_listening_history_confirm)
+                val str_clear = stringResource(Res.string.clear)
                 SettingItem(
                     title = stringResource(Res.string.clear_listening_history),
                     subtitle = stringResource(Res.string.clear_listening_history_description),
                     onClick = {
                         viewModel.setBasicAlertData(
                             SettingBasicAlertState(
-                                title = getString(Res.string.clear_listening_history),
-                                message = getString(Res.string.clear_listening_history_confirm),
+                                title = str_clear_listening_history,
+                                message = str_clear_listening_history_confirm,
                                 confirm =
-                                    getString(Res.string.clear) to {
+                                    str_clear to {
                                         viewModel.clearListeningHistory()
                                     },
                                 dismiss = stringResource(Res.string.cancel),
@@ -1647,6 +1683,11 @@ fun SettingScreen(
         }
         item(key = "lyrics") {
             SettingGroup(title = stringResource(Res.string.lyrics)) {
+                val str_main_lyrics_provider = stringResource(Res.string.main_lyrics_provider)
+                val str_oblivionnocturne_lyrics = stringResource(Res.string.oblivionnocturne_lyrics)
+                val str_youtube_transcript = stringResource(Res.string.youtube_transcript)
+                val str_lrclib = stringResource(Res.string.lrclib)
+                val str_better_lyrics = stringResource(Res.string.better_lyrics)
                 SettingItem(
                     title = stringResource(Res.string.main_lyrics_provider),
                     subtitle =
@@ -1660,27 +1701,27 @@ fun SettingScreen(
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.main_lyrics_provider),
+                                title = str_main_lyrics_provider,
                                 selectOne =
                                     SettingAlertState.SelectData(
                                         listSelect =
                                             listOf(
                                                 (mainLyricsProvider == DataStoreManager.OblivionNocturne) to
-                                                    getString(Res.string.oblivionnocturne_lyrics),
+                                                    str_oblivionnocturne_lyrics,
                                                 (mainLyricsProvider == DataStoreManager.YOUTUBE) to
-                                                    getString(Res.string.youtube_transcript),
-                                                (mainLyricsProvider == DataStoreManager.LRCLIB) to getString(Res.string.lrclib),
+                                                    str_youtube_transcript,
+                                                (mainLyricsProvider == DataStoreManager.LRCLIB) to str_lrclib,
                                                 (mainLyricsProvider == DataStoreManager.BETTER_LYRICS) to
-                                                    getString(Res.string.better_lyrics),
+                                                    str_better_lyrics,
                                             ),
                                     ),
                                 confirm = stringResource(Res.string.change) to { state ->
                                         viewModel.setLyricsProvider(
                                             when (state.selectOne?.getSelected()) {
-                                                getString(Res.string.oblivionnocturne_lyrics) -> DataStoreManager.OblivionNocturne
-                                                getString(Res.string.youtube_transcript) -> DataStoreManager.YOUTUBE
-                                                getString(Res.string.lrclib) -> DataStoreManager.LRCLIB
-                                                getString(Res.string.better_lyrics) -> DataStoreManager.BETTER_LYRICS
+                                                str_oblivionnocturne_lyrics -> DataStoreManager.OblivionNocturne
+                                                str_youtube_transcript -> DataStoreManager.YOUTUBE
+                                                str_lrclib -> DataStoreManager.LRCLIB
+                                                str_better_lyrics -> DataStoreManager.BETTER_LYRICS
                                                 else -> DataStoreManager.OblivionNocturne
                                             },
                                         )
@@ -1691,6 +1732,9 @@ fun SettingScreen(
                     },
                 )
 
+                val str_lyrics_offset = stringResource(Res.string.lyrics_offset)
+                val str_lyrics_offset_message = stringResource(Res.string.lyrics_offset_message)
+                val str_lyrics_offset_invalid = stringResource(Res.string.lyrics_offset_invalid)
                 SettingItem(
                     title = stringResource(Res.string.lyrics_offset),
                     subtitle =
@@ -1701,20 +1745,20 @@ fun SettingScreen(
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.lyrics_offset),
+                                title = str_lyrics_offset,
                                 // The dialog renders its text field INSIDE the `message != null`
                                 // branch, so a state carrying a textField and no message opens an
                                 // empty box with no error anywhere.
-                                message = getString(Res.string.lyrics_offset_message),
+                                message = str_lyrics_offset_message,
                                 textField =
                                     SettingAlertState.TextFieldData(
-                                        label = getString(Res.string.lyrics_offset),
+                                        label = str_lyrics_offset,
                                         value = lyricsOffsetMs.toString(),
                                         // Only that it is a whole number — no range. How far a
                                         // listener's own audio path lags is theirs to say.
                                         verifyCodeBlock = {
                                             (it.trim().toIntOrNull() != null) to
-                                                getString(Res.string.lyrics_offset_invalid)
+                                                str_lyrics_offset_invalid
                                         },
                                     ),
                                 confirm = stringResource(Res.string.change) to { state ->
@@ -1730,23 +1774,26 @@ fun SettingScreen(
                     },
                 )
 
+                val str_translation_language = stringResource(Res.string.translation_language)
+                val str_invalid_language_code = stringResource(Res.string.invalid_language_code)
+                val str_translation_language_message = stringResource(Res.string.translation_language_message)
                 SettingItem(
                     title = stringResource(Res.string.translation_language),
                     subtitle = translationLanguage ?: "",
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.translation_language),
+                                title = str_translation_language,
                                 textField =
                                     SettingAlertState.TextFieldData(
-                                        label = getString(Res.string.translation_language),
+                                        label = str_translation_language,
                                         value = translationLanguage ?: "",
                                         verifyCodeBlock = {
                                             (it.length == 2 && it.isTwoLetterCode()) to
-                                                getString(Res.string.invalid_language_code)
+                                                str_invalid_language_code
                                         },
                                     ),
-                                message = getString(Res.string.translation_language_message),
+                                message = str_translation_language_message,
                                 confirm = stringResource(Res.string.change) to { state ->
                                         viewModel.setTranslationLanguage(state.textField?.value ?: "")
                                     },
@@ -1756,23 +1803,26 @@ fun SettingScreen(
                     },
                     isEnable = true,
                 )
+                val str_youtube_subtitle_language = stringResource(Res.string.youtube_subtitle_language)
+                val str_invalid_language_code = stringResource(Res.string.invalid_language_code)
+                val str_youtube_subtitle_language_message = stringResource(Res.string.youtube_subtitle_language_message)
                 SettingItem(
                     title = stringResource(Res.string.youtube_subtitle_language),
                     subtitle = youtubeSubtitleLanguage,
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.youtube_subtitle_language),
+                                title = str_youtube_subtitle_language,
                                 textField =
                                     SettingAlertState.TextFieldData(
-                                        label = getString(Res.string.youtube_subtitle_language),
+                                        label = str_youtube_subtitle_language,
                                         value = youtubeSubtitleLanguage,
                                         verifyCodeBlock = {
                                             (it.length == 2 && it.isTwoLetterCode()) to
-                                                getString(Res.string.invalid_language_code)
+                                                str_invalid_language_code
                                         },
                                     ),
-                                message = getString(Res.string.youtube_subtitle_language_message),
+                                message = str_youtube_subtitle_language_message,
                                 confirm = stringResource(Res.string.change) to { state ->
                                         viewModel.setYoutubeSubtitleLanguage(state.textField?.value ?: "")
                                     },
@@ -1784,6 +1834,8 @@ fun SettingScreen(
                 SettingItem(
                     switch = (helpBuildLyricsDatabase to { viewModel.setHelpBuildLyricsDatabase(it) }),
                 )
+                val str_contributor_name = stringResource(Res.string.contributor_name)
+                val str_set = stringResource(Res.string.set)
                 SettingItem(
                     title = stringResource(Res.string.contributor_name),
                     subtitle = contributor.first.ifEmpty { stringResource(Res.string.anonymous) },
@@ -1791,15 +1843,15 @@ fun SettingScreen(
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.contributor_name),
+                                title = str_contributor_name,
                                 textField =
                                     SettingAlertState.TextFieldData(
-                                        label = getString(Res.string.contributor_name),
+                                        label = str_contributor_name,
                                         value = "",
                                     ),
                                 message = "",
                                 confirm =
-                                    getString(Res.string.set) to { state ->
+                                    str_set to { state ->
                                         viewModel.setContributorName(state.textField?.value ?: "")
                                     },
                                 dismiss = stringResource(Res.string.cancel),
@@ -1807,6 +1859,9 @@ fun SettingScreen(
                         )
                     },
                 )
+                val str_contributor_email = stringResource(Res.string.contributor_email)
+                val str_invalid = stringResource(Res.string.invalid)
+                val str_set = stringResource(Res.string.set)
                 SettingItem(
                     title = stringResource(Res.string.contributor_email),
                     subtitle = contributor.second.ifEmpty { stringResource(Res.string.anonymous) },
@@ -1814,14 +1869,14 @@ fun SettingScreen(
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.contributor_email),
+                                title = str_contributor_email,
                                 textField =
                                     SettingAlertState.TextFieldData(
-                                        label = getString(Res.string.contributor_email),
+                                        label = str_contributor_email,
                                         value = "",
                                         verifyCodeBlock = {
                                             if (it.isNotEmpty()) {
-                                                (it.contains("@")) to getString(Res.string.invalid)
+                                                (it.contains("@")) to str_invalid
                                             } else {
                                                 true to ""
                                             }
@@ -1829,7 +1884,7 @@ fun SettingScreen(
                                     ),
                                 message = "",
                                 confirm =
-                                    getString(Res.string.set) to { state ->
+                                    str_set to { state ->
                                         viewModel.setContributorEmail(state.textField?.value ?: "")
                                     },
                                 dismiss = stringResource(Res.string.cancel),
@@ -1841,6 +1896,10 @@ fun SettingScreen(
         }
         item(key = "AI") {
             SettingGroup(title = stringResource(Res.string.ai)) {
+                val str_ai_provider = stringResource(Res.string.ai_provider)
+                val str_openai = stringResource(Res.string.openai)
+                val str_gemini = stringResource(Res.string.gemini)
+                val str_openai_api_compatible = stringResource(Res.string.openai_api_compatible)
                 SettingItem(
                     title = stringResource(Res.string.ai_provider),
                     subtitle =
@@ -1853,24 +1912,24 @@ fun SettingScreen(
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.ai_provider),
+                                title = str_ai_provider,
                                 selectOne =
                                     SettingAlertState.SelectData(
                                         listSelect =
                                             listOf(
                                                 (mainLyricsProvider == DataStoreManager.AI_PROVIDER_OPENAI) to
-                                                    getString(Res.string.openai),
+                                                    str_openai,
                                                 (mainLyricsProvider == DataStoreManager.AI_PROVIDER_GEMINI) to
-                                                    getString(Res.string.gemini),
+                                                    str_gemini,
                                                 (mainLyricsProvider == DataStoreManager.AI_PROVIDER_CUSTOM_OPENAI) to
-                                                    getString(Res.string.openai_api_compatible),
+                                                    str_openai_api_compatible,
                                             ),
                                     ),
                                 confirm = stringResource(Res.string.change) to { state ->
                                         viewModel.setAIProvider(
                                             when (state.selectOne?.getSelected()) {
-                                                getString(Res.string.openai) -> DataStoreManager.AI_PROVIDER_OPENAI
-                                                getString(Res.string.gemini) -> DataStoreManager.AI_PROVIDER_GEMINI
+                                                str_openai -> DataStoreManager.AI_PROVIDER_OPENAI
+                                                str_gemini -> DataStoreManager.AI_PROVIDER_GEMINI
                                                 getString(
                                                         Res.string.openai_api_compatible,
                                                     ),
@@ -1885,24 +1944,27 @@ fun SettingScreen(
                         )
                     },
                 )
+                val str_ai_api_key = stringResource(Res.string.ai_api_key)
+                val str_invalid_api_key = stringResource(Res.string.invalid_api_key)
+                val str_set = stringResource(Res.string.set)
                 SettingItem(
                     title = stringResource(Res.string.ai_api_key),
                     subtitle = if (isHasApiKey) "XXXXXXXXXX" else "N/A",
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.ai_api_key),
+                                title = str_ai_api_key,
                                 textField =
                                     SettingAlertState.TextFieldData(
-                                        label = getString(Res.string.ai_api_key),
+                                        label = str_ai_api_key,
                                         value = "",
                                         verifyCodeBlock = {
-                                            (it.isNotEmpty()) to getString(Res.string.invalid_api_key)
+                                            (it.isNotEmpty()) to str_invalid_api_key
                                         },
                                     ),
                                 message = "",
                                 confirm =
-                                    getString(Res.string.set) to { state ->
+                                    str_set to { state ->
                                         viewModel.setAIApiKey(state.textField?.value ?: "")
                                     },
                                 dismiss = stringResource(Res.string.cancel),
@@ -1910,24 +1972,28 @@ fun SettingScreen(
                         )
                     },
                 )
+                val str_custom_ai_model_id = stringResource(Res.string.custom_ai_model_id)
+                val str_invalid = stringResource(Res.string.invalid)
+                val str_custom_model_id_messages = stringResource(Res.string.custom_model_id_messages)
+                val str_set = stringResource(Res.string.set)
                 SettingItem(
                     title = stringResource(Res.string.custom_ai_model_id),
                     subtitle = customModelId.ifEmpty { stringResource(Res.string.default_models) },
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.custom_ai_model_id),
+                                title = str_custom_ai_model_id,
                                 textField =
                                     SettingAlertState.TextFieldData(
-                                        label = getString(Res.string.custom_ai_model_id),
+                                        label = str_custom_ai_model_id,
                                         value = "",
                                         verifyCodeBlock = {
-                                            (it.isNotEmpty() && !it.contains(" ")) to getString(Res.string.invalid)
+                                            (it.isNotEmpty() && !it.contains(" ")) to str_invalid
                                         },
                                     ),
-                                message = getString(Res.string.custom_model_id_messages),
+                                message = str_custom_model_id_messages,
                                 confirm =
-                                    getString(Res.string.set) to { state ->
+                                    str_set to { state ->
                                         viewModel.setCustomModelId(state.textField?.value ?: "")
                                     },
                                 dismiss = stringResource(Res.string.cancel),
@@ -1948,6 +2014,7 @@ fun SettingScreen(
                     // The example JSON stays out of the translated text, so no translation can break it.
                     val customHeadersMessage =
                         stringResource(Res.string.custom_headers_message) + "\n{\"key1\":\"value1\",\"key2\":\"value2\"}"
+                    val str_set = stringResource(Res.string.set)
                     SettingItem(
                         title = customBaseUrlTitle,
                         subtitle = customOpenAIBaseUrl.ifEmpty { defaultBaseUrl },
@@ -1965,7 +2032,7 @@ fun SettingScreen(
                                         ),
                                     message = customBaseUrlMessage,
                                     confirm =
-                                        getString(Res.string.set) to { state ->
+                                        str_set to { state ->
                                             val baseUrl = state.textField?.value ?: ""
                                             viewModel.setCustomOpenAIBaseUrl(baseUrl)
                                             localNetworkPermission.requestIfNeeded(baseUrl)
@@ -1975,6 +2042,7 @@ fun SettingScreen(
                             )
                         },
                     )
+                    val str_set = stringResource(Res.string.set)
                     SettingItem(
                         title = stringResource(Res.string.custom_headers),
                         subtitle = stringResource(if (customOpenAIHeaders.isNotEmpty()) Res.string.configured else Res.string.not_set),
@@ -2002,7 +2070,7 @@ fun SettingScreen(
                                         ),
                                     message = customHeadersMessage,
                                     confirm =
-                                        getString(Res.string.set) to { state ->
+                                        str_set to { state ->
                                             viewModel.setCustomOpenAIHeaders(state.textField?.value ?: "")
                                         },
                                     dismiss = stringResource(Res.string.cancel),
@@ -2023,6 +2091,7 @@ fun SettingScreen(
             // Hidden entirely in "YouTube-only" mode — Spotify has nothing to offer without its source.
             if (!sharedViewModel.youtubeOnly.value) {
                 SettingGroup(title = stringResource(Res.string.spotify)) {
+                    val str_log_out_from_spotify = stringResource(Res.string.log_out_from_spotify)
                     SettingItem(
                         // The title follows the state: a row that still reads "Log in" while logged in
                         // gives no clue that tapping it signs you out.
@@ -2041,7 +2110,7 @@ fun SettingScreen(
                     onClick = {
                         if (spotifyLoggedIn) {
                             viewModel.confirmLogOut(
-                                confirmLabel = getString(Res.string.log_out_from_spotify),
+                                confirmLabel = str_log_out_from_spotify,
                             ) { viewModel.setSpotifyLogIn(false) }
                         } else {
                             navController.navigate(SpotifyLoginDestination)
@@ -2073,6 +2142,7 @@ fun SettingScreen(
             }
         item(key = "discord") {
             SettingGroup(title = stringResource(Res.string.discord_integration)) {
+                val str_log_out_from_discord = stringResource(Res.string.log_out_from_discord)
                 SettingItem(
                     title =
                         if (discordLoggedIn) {
@@ -2089,7 +2159,7 @@ fun SettingScreen(
                     onClick = {
                         if (discordLoggedIn) {
                             viewModel.confirmLogOut(
-                                confirmLabel = getString(Res.string.log_out_from_discord),
+                                confirmLabel = str_log_out_from_discord,
                             ) { viewModel.logOutDiscord() }
                         } else {
                             navController.navigate(DiscordLoginDestination)
@@ -2109,6 +2179,7 @@ fun SettingScreen(
         if (viewModel.lastfmAvailable) {
             item(key = "lastfm") {
                 SettingGroup(title = stringResource(Res.string.lastfm_integration)) {
+                    val str_log_out_from_lastfm = stringResource(Res.string.log_out_from_lastfm)
                     SettingItem(
                         title =
                             if (lastfmLoggedIn) {
@@ -2125,7 +2196,7 @@ fun SettingScreen(
                         onClick = {
                             if (lastfmLoggedIn) {
                                 viewModel.confirmLogOut(
-                                    confirmLabel = getString(Res.string.log_out_from_lastfm),
+                                    confirmLabel = str_log_out_from_lastfm,
                                 ) { viewModel.logOutLastfm() }
                             } else {
                                 navController.navigate(LastfmLoginDestination)
@@ -2172,13 +2243,15 @@ fun SettingScreen(
                 )
                 val listName =
                     SponsorBlockType.toList().map { it.displayString() }
+                val str_categories_sponsor_block = stringResource(Res.string.categories_sponsor_block)
+                val str_save = stringResource(Res.string.save)
                 SettingItem(
                     title = stringResource(Res.string.categories_sponsor_block),
                     subtitle = stringResource(Res.string.what_segments_will_be_skipped),
                     onClick = {
                         viewModel.setAlertData(
                             SettingAlertState(
-                                title = getString(Res.string.categories_sponsor_block),
+                                title = str_categories_sponsor_block,
                                 multipleSelect =
                                     SettingAlertState.SelectData(
                                         listSelect =
@@ -2195,7 +2268,7 @@ fun SettingScreen(
                                                 },
                                     ),
                                 confirm =
-                                    getString(Res.string.save) to { state ->
+                                    str_save to { state ->
                                         viewModel.setSponsorBlockCategories(
                                             state.multipleSelect
                                                 ?.getListSelected()
@@ -2219,16 +2292,18 @@ fun SettingScreen(
         if (getPlatform() == Platform.Android) {
             item(key = "storage") {
                 SettingGroup(title = stringResource(Res.string.storage)) {
+                    val str_clear_player_cache = stringResource(Res.string.clear_player_cache)
+                    val str_clear = stringResource(Res.string.clear)
                     SettingItem(
                         title = stringResource(Res.string.player_cache),
                         subtitle = "${playerCache.bytesToMB()} MB",
                         onClick = {
                             viewModel.setBasicAlertData(
                                 SettingBasicAlertState(
-                                    title = getString(Res.string.clear_player_cache),
+                                    title = str_clear_player_cache,
                                     message = null,
                                     confirm =
-                                        getString(Res.string.clear) to {
+                                        str_clear to {
                                             viewModel.clearPlayerCache()
                                         },
                                     dismiss = stringResource(Res.string.cancel),
@@ -2236,16 +2311,18 @@ fun SettingScreen(
                             )
                         },
                     )
+                    val str_clear_downloaded_cache = stringResource(Res.string.clear_downloaded_cache)
+                    val str_clear = stringResource(Res.string.clear)
                     SettingItem(
                         title = stringResource(Res.string.downloaded_cache),
                         subtitle = "${downloadedCache.bytesToMB()} MB",
                         onClick = {
                             viewModel.setBasicAlertData(
                                 SettingBasicAlertState(
-                                    title = getString(Res.string.clear_downloaded_cache),
+                                    title = str_clear_downloaded_cache,
                                     message = null,
                                     confirm =
-                                        getString(Res.string.clear) to {
+                                        str_clear to {
                                             viewModel.clearDownloadedCache()
                                         },
                                     dismiss = stringResource(Res.string.cancel),
@@ -2253,16 +2330,18 @@ fun SettingScreen(
                             )
                         },
                     )
+                    val str_clear_thumbnail_cache = stringResource(Res.string.clear_thumbnail_cache)
+                    val str_clear = stringResource(Res.string.clear)
                     SettingItem(
                         title = stringResource(Res.string.thumbnail_cache),
                         subtitle = "${thumbnailCache.bytesToMB()} MB",
                         onClick = {
                             viewModel.setBasicAlertData(
                                 SettingBasicAlertState(
-                                    title = getString(Res.string.clear_thumbnail_cache),
+                                    title = str_clear_thumbnail_cache,
                                     message = null,
                                     confirm =
-                                        getString(Res.string.clear) to {
+                                        str_clear to {
                                             viewModel.clearThumbnailCache(platformContext)
                                         },
                                     dismiss = stringResource(Res.string.cancel),
@@ -2270,16 +2349,18 @@ fun SettingScreen(
                             )
                         },
                     )
+                    val str_clear_canvas_cache = stringResource(Res.string.clear_canvas_cache)
+                    val str_clear = stringResource(Res.string.clear)
                     SettingItem(
                         title = stringResource(Res.string.spotify_canvas_cache),
                         subtitle = "${canvasCache.bytesToMB()} MB",
                         onClick = {
                             viewModel.setBasicAlertData(
                                 SettingBasicAlertState(
-                                    title = getString(Res.string.clear_canvas_cache),
+                                    title = str_clear_canvas_cache,
                                     message = null,
                                     confirm =
-                                        getString(Res.string.clear) to {
+                                        str_clear to {
                                             viewModel.clearCanvasCache()
                                         },
                                     dismiss = stringResource(Res.string.cancel),
@@ -2287,13 +2368,14 @@ fun SettingScreen(
                             )
                         },
                     )
+                    val str_limit_player_cache = stringResource(Res.string.limit_player_cache)
                     SettingItem(
                         title = stringResource(Res.string.limit_player_cache),
                         subtitle = LIMIT_CACHE_SIZE.getItemFromData(limitPlayerCache).toString(),
                         onClick = {
                             viewModel.setAlertData(
                                 SettingAlertState(
-                                    title = getString(Res.string.limit_player_cache),
+                                    title = str_limit_player_cache,
                                     selectOne =
                                         SettingAlertState.SelectData(
                                             listSelect =
@@ -2559,6 +2641,10 @@ fun SettingScreen(
                     )
                     AnimatedVisibility(visible = autoBackupEnabled) {
                         Column {
+                            val str_backup_frequency = stringResource(Res.string.backup_frequency)
+                            val str_daily = stringResource(Res.string.daily)
+                            val str_weekly = stringResource(Res.string.weekly)
+                            val str_monthly = stringResource(Res.string.monthly)
                             SettingItem(
                                 title = stringResource(Res.string.backup_frequency),
                                 subtitle =
@@ -2571,17 +2657,17 @@ fun SettingScreen(
                                 onClick = {
                                     viewModel.setAlertData(
                                         SettingAlertState(
-                                            title = getString(Res.string.backup_frequency),
+                                            title = str_backup_frequency,
                                             selectOne =
                                                 SettingAlertState.SelectData(
                                                     listSelect =
                                                         listOf(
                                                             (autoBackupFrequency == DataStoreManager.AUTO_BACKUP_FREQUENCY_DAILY) to
-                                                                getString(Res.string.daily),
+                                                                str_daily,
                                                             (autoBackupFrequency == DataStoreManager.AUTO_BACKUP_FREQUENCY_WEEKLY) to
-                                                                getString(Res.string.weekly),
+                                                                str_weekly,
                                                             (autoBackupFrequency == DataStoreManager.AUTO_BACKUP_FREQUENCY_MONTHLY) to
-                                                                getString(Res.string.monthly),
+                                                                str_monthly,
                                                         ),
                                                 ),
                                             confirm = stringResource(Res.string.change) to { state ->
@@ -2608,13 +2694,14 @@ fun SettingScreen(
                                     )
                                 },
                             )
+                            val str_keep_backups = stringResource(Res.string.keep_backups)
                             SettingItem(
                                 title = stringResource(Res.string.keep_backups),
                                 subtitle = stringResource(Res.string.keep_backups_format, "$autoBackupMaxFiles"),
                                 onClick = {
                                     viewModel.setAlertData(
                                         SettingAlertState(
-                                            title = getString(Res.string.keep_backups),
+                                            title = str_keep_backups,
                                             selectOne =
                                                 SettingAlertState.SelectData(
                                                     listSelect =
