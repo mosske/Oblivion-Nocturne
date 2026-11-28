@@ -176,6 +176,8 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import oblivionnocturne.composeapp.generated.resources.Res
+import oblivionnocturne.composeapp.generated.resources.third_party_libraries
+import oblivionnocturne.composeapp.generated.resources.upload_your_listening_history_to_youtube_music_server_it_will_make_yt_music_recommendation_system_better_working_only_if_logged_in
 import oblivionnocturne.composeapp.generated.resources.animated_artwork_info
 import oblivionnocturne.composeapp.generated.resources.cancel
 import oblivionnocturne.composeapp.generated.resources.canvas_info
@@ -3317,8 +3319,9 @@ fun SettingScreen(
                             windowInsets = WindowInsets(0, 0, 0, 0),
                             title = {
                                 Text(
-                                    text =
-                                        stringResource(
+                                    text = stringResource(Res.string.third_party_libraries),
+                                    style = typo().titleMedium,
+                                )
                             },
                             navigationIcon = {
                                 Box(Modifier.padding(horizontal = 5.dp)) {
@@ -3332,6 +3335,16 @@ fun SettingScreen(
                                         coroutineScope.launch {
                                             sheetState.hide()
                                             showThirdPartyLibraries = false
+                                        }
+                                    }
+                                }
+                            },
+                        )
+                    }
+                },
+            )
+        }
+    }
 
     // The pinned copy of the toolbar, frosted: the frost waits for the Devices group to go under it,
     // because an always-on frost dimmed the glow behind the bar into a black band, which is exactly
