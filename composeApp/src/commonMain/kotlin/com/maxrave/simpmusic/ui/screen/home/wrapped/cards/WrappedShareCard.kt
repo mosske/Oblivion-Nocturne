@@ -48,6 +48,7 @@ import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import oblivionnocturne.composeapp.generated.resources.Res
+import oblivionnocturne.composeapp.generated.resources.oblivion_owl
 import oblivionnocturne.composeapp.generated.resources.mono
 import oblivionnocturne.composeapp.generated.resources.wrapped_archetype_deep_diver
 import oblivionnocturne.composeapp.generated.resources.wrapped_archetype_devotee
