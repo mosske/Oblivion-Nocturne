@@ -178,6 +178,7 @@ import com.oblivion.nocturne.ui.icon.Person
 import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.viewmodel.koinViewModel
 import oblivionnocturne.composeapp.generated.resources.Res
+import oblivionnocturne.composeapp.generated.resources.oblivion_owl
 import oblivionnocturne.composeapp.generated.resources.third_party_libraries
 import oblivionnocturne.composeapp.generated.resources.upload_your_listening_history_to_youtube_music_server_it_will_make_yt_music_recommendation_system_better_working_only_if_logged_in
 import oblivionnocturne.composeapp.generated.resources.animated_artwork_info
@@ -486,6 +487,7 @@ fun SettingScreen(
     val str_download_quality = stringResource(Res.string.download_quality)
     val str_equalizer_type = stringResource(Res.string.equalizer_type)
     val str_gemini = stringResource(Res.string.gemini)
+    val str_http = stringResource(Res.string.http)
     val str_invalid = stringResource(Res.string.invalid)
     val str_invalid_api_key = stringResource(Res.string.invalid_api_key)
     val str_invalid_host = stringResource(Res.string.invalid_host)
@@ -494,9 +496,11 @@ fun SettingScreen(
     val str_keep_backups = stringResource(Res.string.keep_backups)
     val str_language = stringResource(Res.string.language)
     val str_limit_player_cache = stringResource(Res.string.limit_player_cache)
+    val str_log_out = stringResource(Res.string.log_out)
     val str_log_out_from_discord = stringResource(Res.string.log_out_from_discord)
     val str_log_out_from_lastfm = stringResource(Res.string.log_out_from_lastfm)
     val str_log_out_from_spotify = stringResource(Res.string.log_out_from_spotify)
+    val str_log_out_warning = stringResource(Res.string.log_out_warning)
     val str_lrclib = stringResource(Res.string.lrclib)
     val str_lyrics_offset = stringResource(Res.string.lyrics_offset)
     val str_lyrics_offset_invalid = stringResource(Res.string.lyrics_offset_invalid)
@@ -507,7 +511,6 @@ fun SettingScreen(
     val str_monthly = stringResource(Res.string.monthly)
     val str_now_playing_style = stringResource(Res.string.now_playing_style)
     val str_oblivionnocturne_lyrics = stringResource(Res.string.oblivionnocturne_lyrics)
-    val str_ok = stringResource(Res.string.ok)
     val str_openai = stringResource(Res.string.openai)
     val str_openai_api_compatible = stringResource(Res.string.openai_api_compatible)
     val str_preferred_audio_language = stringResource(Res.string.preferred_audio_language)
@@ -537,7 +540,7 @@ fun SettingScreen(
     val str_youtube_subtitle_language = stringResource(Res.string.youtube_subtitle_language)
     val str_youtube_subtitle_language_message = stringResource(Res.string.youtube_subtitle_language_message)
     val str_youtube_transcript = stringResource(Res.string.youtube_transcript)
-
+    val stringResource(Res.string.ok) = stringResource(Res.string.ok)
     // Backup and restore
     val formatter =
         LocalDateTime.Format {
@@ -1319,9 +1322,7 @@ fun SettingScreen(
                                                     listSelect =
                                                         listOf(
                                                             (proxyType == DataStoreManager.ProxyType.PROXY_TYPE_HTTP) to
-                                                                getString(
-                                                                        Res.string.http,
-                                                                    ),
+                                                                str_http,
                                                             (proxyType == DataStoreManager.ProxyType.PROXY_TYPE_SOCKS) to
                                                                 str_socks,
                                                         ),
@@ -1642,9 +1643,7 @@ fun SettingScreen(
                                         confirm = str_change to { state ->
                                                 val duration =
                                                     when (state.selectOne?.getSelected()) {
-                                                        getString(
-                                                                Res.string.crossfade_auto,
-                                                            ),
+                                                        str_crossfade_auto,
                                                         -> DataStoreManager.CROSSFADE_DURATION_AUTO
                                                         "1s" -> 1000
                                                         "2s" -> 2000
@@ -1950,9 +1949,7 @@ fun SettingScreen(
                                             when (state.selectOne?.getSelected()) {
                                                 str_openai -> DataStoreManager.AI_PROVIDER_OPENAI
                                                 str_gemini -> DataStoreManager.AI_PROVIDER_GEMINI
-                                                getString(
-                                                        Res.string.openai_api_compatible,
-                                                    ),
+                                                str_openai_api_compatible,
                                                 -> DataStoreManager.AI_PROVIDER_CUSTOM_OPENAI
 
                                                 else -> DataStoreManager.AI_PROVIDER_OPENAI
@@ -2404,7 +2401,7 @@ fun SettingScreen(
                                     .height(8.dp)
                                     .clip(RoundedCornerShape(8.dp))
                                     .onGloballyPositioned { layoutCoordinates ->
-                                        with(localDensity) {
+                                        with(LocalDensity.current) {
                                             width =
                                                 layoutCoordinates.size.width
                                                     .toDp()
@@ -2666,17 +2663,11 @@ fun SettingScreen(
                                             confirm = str_change to { state ->
                                                     val frequency =
                                                         when (state.selectOne?.getSelected()) {
-                                                            getString(
-                                                                    Res.string.daily,
-                                                                ),
+                                                            str_daily,
                                                             -> DataStoreManager.AUTO_BACKUP_FREQUENCY_DAILY
-                                                            getString(
-                                                                    Res.string.weekly,
-                                                                ),
+                                                            str_weekly,
                                                             -> DataStoreManager.AUTO_BACKUP_FREQUENCY_WEEKLY
-                                                            getString(
-                                                                    Res.string.monthly,
-                                                                ),
+                                                            str_monthly,
                                                             -> DataStoreManager.AUTO_BACKUP_FREQUENCY_MONTHLY
                                                             else -> DataStoreManager.AUTO_BACKUP_FREQUENCY_DAILY
                                                         }
@@ -3124,10 +3115,10 @@ fun SettingScreen(
                             ) {
                                 viewModel.setBasicAlertData(
                                     SettingBasicAlertState(
-                                        title = getString(Res.string.warning),
-                                        message = getString(Res.string.log_out_warning),
+                                        title = str_warning,
+                                        message = str_log_out_warning,
                                         confirm =
-                                            getString(Res.string.log_out) to {
+                                            str_log_out to {
                                                 viewModel.logOutAllYouTube()
                                                 showYouTubeAccountDialog = false
                                             },
@@ -3570,7 +3561,7 @@ private fun ImportProgressDialog(
         confirmButton = {
             if (finished) {
                 TextButton(onClick = onDismiss) {
-                    Text(text = str_ok)
+                    Text(text = stringResource(Res.string.ok))
                 }
             }
         },
