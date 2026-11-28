@@ -1,4 +1,5 @@
 package com.oblivion.nocturne.ui.screen.home
+@file:OptIn(ExperimentalMaterial3Api::class)
 import kotlin.time.Instant
 
 import androidx.compose.animation.AnimatedVisibility
