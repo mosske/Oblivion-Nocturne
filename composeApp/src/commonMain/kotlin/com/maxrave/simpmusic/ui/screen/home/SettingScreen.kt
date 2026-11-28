@@ -176,6 +176,232 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import oblivionnocturne.composeapp.generated.resources.Res
+import oblivionnocturne.composeapp.generated.resources.animated_artwork_info
+import oblivionnocturne.composeapp.generated.resources.cancel
+import oblivionnocturne.composeapp.generated.resources.canvas_info
+import oblivionnocturne.composeapp.generated.resources.categories_sponsor_block
+import oblivionnocturne.composeapp.generated.resources.change
+import oblivionnocturne.composeapp.generated.resources.change_language_warning
+import oblivionnocturne.composeapp.generated.resources.check_for_update
+import oblivionnocturne.composeapp.generated.resources.checking
+import oblivionnocturne.composeapp.generated.resources.clear
+import oblivionnocturne.composeapp.generated.resources.clear_canvas_cache
+import oblivionnocturne.composeapp.generated.resources.clear_downloaded_cache
+import oblivionnocturne.composeapp.generated.resources.clear_listening_history
+import oblivionnocturne.composeapp.generated.resources.clear_listening_history_confirm
+import oblivionnocturne.composeapp.generated.resources.clear_listening_history_description
+import oblivionnocturne.composeapp.generated.resources.clear_player_cache
+import oblivionnocturne.composeapp.generated.resources.clear_thumbnail_cache
+import oblivionnocturne.composeapp.generated.resources.combine_local_and_youtube_liked_songs
+import oblivionnocturne.composeapp.generated.resources.combine_local_and_youtube_liked_songs_description
+import oblivionnocturne.composeapp.generated.resources.content
+import oblivionnocturne.composeapp.generated.resources.content_country
+import oblivionnocturne.composeapp.generated.resources.contributor_email
+import oblivionnocturne.composeapp.generated.resources.contributor_name
+import oblivionnocturne.composeapp.generated.resources.crossfade
+import oblivionnocturne.composeapp.generated.resources.crossfade_auto
+import oblivionnocturne.composeapp.generated.resources.crossfade_description
+import oblivionnocturne.composeapp.generated.resources.crossfade_dj_mode
+import oblivionnocturne.composeapp.generated.resources.crossfade_dj_mode_description
+import oblivionnocturne.composeapp.generated.resources.crossfade_duration
+import oblivionnocturne.composeapp.generated.resources.crossfade_skip_album
+import oblivionnocturne.composeapp.generated.resources.crossfade_skip_album_description
+import oblivionnocturne.composeapp.generated.resources.custom_ai_model_id
+import oblivionnocturne.composeapp.generated.resources.custom_color
+import oblivionnocturne.composeapp.generated.resources.custom_model_id_messages
+import oblivionnocturne.composeapp.generated.resources.daily
+import oblivionnocturne.composeapp.generated.resources.database
+import oblivionnocturne.composeapp.generated.resources.default_models
+import oblivionnocturne.composeapp.generated.resources.developer_blog_tagline
+import oblivionnocturne.composeapp.generated.resources.discord_integration
+import oblivionnocturne.composeapp.generated.resources.download_quality
+import oblivionnocturne.composeapp.generated.resources.downloaded_cache
+import oblivionnocturne.composeapp.generated.resources.enable_animated_artwork
+import oblivionnocturne.composeapp.generated.resources.enable_canvas
+import oblivionnocturne.composeapp.generated.resources.enable_liquid_glass_effect
+import oblivionnocturne.composeapp.generated.resources.enable_liquid_glass_effect_description
+import oblivionnocturne.composeapp.generated.resources.enable_rich_presence
+import oblivionnocturne.composeapp.generated.resources.enable_scrobbling
+import oblivionnocturne.composeapp.generated.resources.enable_sponsor_block
+import oblivionnocturne.composeapp.generated.resources.enable_spotify_lyrics
+import oblivionnocturne.composeapp.generated.resources.equalizer
+import oblivionnocturne.composeapp.generated.resources.equalizer_description
+import oblivionnocturne.composeapp.generated.resources.equalizer_type
+import oblivionnocturne.composeapp.generated.resources.equalizer_type_built_in
+import oblivionnocturne.composeapp.generated.resources.equalizer_type_system
+import oblivionnocturne.composeapp.generated.resources.free_space
+import oblivionnocturne.composeapp.generated.resources.gemini
+import oblivionnocturne.composeapp.generated.resources.guest
+import oblivionnocturne.composeapp.generated.resources.http
+import oblivionnocturne.composeapp.generated.resources.import_data
+import oblivionnocturne.composeapp.generated.resources.import_data_intro
+import oblivionnocturne.composeapp.generated.resources.import_failed
+import oblivionnocturne.composeapp.generated.resources.import_playlists_from_other_apps
+import oblivionnocturne.composeapp.generated.resources.import_progress_songs
+import oblivionnocturne.composeapp.generated.resources.import_reading_file
+import oblivionnocturne.composeapp.generated.resources.import_result
+import oblivionnocturne.composeapp.generated.resources.import_result_skipped
+import oblivionnocturne.composeapp.generated.resources.intro_login_to_discord
+import oblivionnocturne.composeapp.generated.resources.intro_login_to_lastfm
+import oblivionnocturne.composeapp.generated.resources.intro_login_to_spotify
+import oblivionnocturne.composeapp.generated.resources.invalid
+import oblivionnocturne.composeapp.generated.resources.invalid_api_key
+import oblivionnocturne.composeapp.generated.resources.invalid_host
+import oblivionnocturne.composeapp.generated.resources.invalid_language_code
+import oblivionnocturne.composeapp.generated.resources.invalid_port
+import oblivionnocturne.composeapp.generated.resources.keep_backups
+import oblivionnocturne.composeapp.generated.resources.keep_backups_format
+import oblivionnocturne.composeapp.generated.resources.keep_your_youtube_playlist_offline
+import oblivionnocturne.composeapp.generated.resources.keep_your_youtube_playlist_offline_description
+import oblivionnocturne.composeapp.generated.resources.kill_service_on_exit
+import oblivionnocturne.composeapp.generated.resources.kill_service_on_exit_description
+import oblivionnocturne.composeapp.generated.resources.language
+import oblivionnocturne.composeapp.generated.resources.last_backup
+import oblivionnocturne.composeapp.generated.resources.last_checked_at
+import oblivionnocturne.composeapp.generated.resources.lastfm_integration
+import oblivionnocturne.composeapp.generated.resources.limit_player_cache
+import oblivionnocturne.composeapp.generated.resources.listening_history
+import oblivionnocturne.composeapp.generated.resources.local_tracking_description
+import oblivionnocturne.composeapp.generated.resources.local_tracking_title
+import oblivionnocturne.composeapp.generated.resources.log_in_to_discord
+import oblivionnocturne.composeapp.generated.resources.log_in_to_lastfm
+import oblivionnocturne.composeapp.generated.resources.log_in_to_spotify
+import oblivionnocturne.composeapp.generated.resources.log_out
+import oblivionnocturne.composeapp.generated.resources.log_out_from_discord
+import oblivionnocturne.composeapp.generated.resources.log_out_from_lastfm
+import oblivionnocturne.composeapp.generated.resources.log_out_from_spotify
+import oblivionnocturne.composeapp.generated.resources.log_out_warning
+import oblivionnocturne.composeapp.generated.resources.logged_in
+import oblivionnocturne.composeapp.generated.resources.logged_in_as
+import oblivionnocturne.composeapp.generated.resources.login_sync_android_description
+import oblivionnocturne.composeapp.generated.resources.login_sync_android_title
+import oblivionnocturne.composeapp.generated.resources.login_sync_desktop_description
+import oblivionnocturne.composeapp.generated.resources.login_sync_desktop_title
+import oblivionnocturne.composeapp.generated.resources.login_sync_section
+import oblivionnocturne.composeapp.generated.resources.lrclib
+import oblivionnocturne.composeapp.generated.resources.lyrics
+import oblivionnocturne.composeapp.generated.resources.lyrics_offset
+import oblivionnocturne.composeapp.generated.resources.lyrics_offset_invalid
+import oblivionnocturne.composeapp.generated.resources.lyrics_offset_message
+import oblivionnocturne.composeapp.generated.resources.lyrics_offset_value
+import oblivionnocturne.composeapp.generated.resources.lyrics_romanization
+import oblivionnocturne.composeapp.generated.resources.lyrics_romanization_description
+import oblivionnocturne.composeapp.generated.resources.lyrics_style
+import oblivionnocturne.composeapp.generated.resources.lyrics_style_apple_music
+import oblivionnocturne.composeapp.generated.resources.lyrics_style_classic
+import oblivionnocturne.composeapp.generated.resources.main_lyrics_provider
+import oblivionnocturne.composeapp.generated.resources.manage_your_youtube_accounts
+import oblivionnocturne.composeapp.generated.resources.monthly
+import oblivionnocturne.composeapp.generated.resources.never
+import oblivionnocturne.composeapp.generated.resources.no_account
+import oblivionnocturne.composeapp.generated.resources.normalize_volume
+import oblivionnocturne.composeapp.generated.resources.not_available_while_casting
+import oblivionnocturne.composeapp.generated.resources.now_playing_style
+import oblivionnocturne.composeapp.generated.resources.now_playing_style_apple_music
+import oblivionnocturne.composeapp.generated.resources.now_playing_style_m3_expressive
+import oblivionnocturne.composeapp.generated.resources.now_playing_style_soundcloud
+import oblivionnocturne.composeapp.generated.resources.now_playing_style_spotify
+import oblivionnocturne.composeapp.generated.resources.oblivionnocturne_lyrics
+import oblivionnocturne.composeapp.generated.resources.ok
+import oblivionnocturne.composeapp.generated.resources.open_system_equalizer
+import oblivionnocturne.composeapp.generated.resources.openai
+import oblivionnocturne.composeapp.generated.resources.openai_api_compatible
+import oblivionnocturne.composeapp.generated.resources.original_audio
+import oblivionnocturne.composeapp.generated.resources.other_app
+import oblivionnocturne.composeapp.generated.resources.play_explicit_content
+import oblivionnocturne.composeapp.generated.resources.play_explicit_content_description
+import oblivionnocturne.composeapp.generated.resources.play_video_for_video_track_instead_of_audio_only
+import oblivionnocturne.composeapp.generated.resources.playback
+import oblivionnocturne.composeapp.generated.resources.player_cache
+import oblivionnocturne.composeapp.generated.resources.preferred_audio_language
+import oblivionnocturne.composeapp.generated.resources.preferred_audio_language_message
+import oblivionnocturne.composeapp.generated.resources.proxy
+import oblivionnocturne.composeapp.generated.resources.proxy_description
+import oblivionnocturne.composeapp.generated.resources.proxy_host
+import oblivionnocturne.composeapp.generated.resources.proxy_host_message
+import oblivionnocturne.composeapp.generated.resources.proxy_password
+import oblivionnocturne.composeapp.generated.resources.proxy_password_message
+import oblivionnocturne.composeapp.generated.resources.proxy_port
+import oblivionnocturne.composeapp.generated.resources.proxy_port_message
+import oblivionnocturne.composeapp.generated.resources.proxy_type
+import oblivionnocturne.composeapp.generated.resources.proxy_username
+import oblivionnocturne.composeapp.generated.resources.proxy_username_message
+import oblivionnocturne.composeapp.generated.resources.quality
+import oblivionnocturne.composeapp.generated.resources.radio_audio_only
+import oblivionnocturne.composeapp.generated.resources.radio_audio_only_description
+import oblivionnocturne.composeapp.generated.resources.requires_android_12
+import oblivionnocturne.composeapp.generated.resources.restore_your_data
+import oblivionnocturne.composeapp.generated.resources.restore_your_saved_data
+import oblivionnocturne.composeapp.generated.resources.rich_presence_info
+import oblivionnocturne.composeapp.generated.resources.romanization_belarusian
+import oblivionnocturne.composeapp.generated.resources.romanization_bulgarian
+import oblivionnocturne.composeapp.generated.resources.romanization_chinese
+import oblivionnocturne.composeapp.generated.resources.romanization_hindi
+import oblivionnocturne.composeapp.generated.resources.romanization_japanese
+import oblivionnocturne.composeapp.generated.resources.romanization_japanese_dict_downloading
+import oblivionnocturne.composeapp.generated.resources.romanization_japanese_dict_failed
+import oblivionnocturne.composeapp.generated.resources.romanization_korean
+import oblivionnocturne.composeapp.generated.resources.romanization_kyrgyz
+import oblivionnocturne.composeapp.generated.resources.romanization_macedonian
+import oblivionnocturne.composeapp.generated.resources.romanization_punjabi
+import oblivionnocturne.composeapp.generated.resources.romanization_russian
+import oblivionnocturne.composeapp.generated.resources.romanization_serbian
+import oblivionnocturne.composeapp.generated.resources.romanization_ukrainian
+import oblivionnocturne.composeapp.generated.resources.save
+import oblivionnocturne.composeapp.generated.resources.save_all_your_playlist_data
+import oblivionnocturne.composeapp.generated.resources.save_playback_state
+import oblivionnocturne.composeapp.generated.resources.save_shuffle_and_repeat_mode
+import oblivionnocturne.composeapp.generated.resources.scrobbling_info
+import oblivionnocturne.composeapp.generated.resources.send_back_listening_data_to_google
+import oblivionnocturne.composeapp.generated.resources.set
+import oblivionnocturne.composeapp.generated.resources.settings
+import oblivionnocturne.composeapp.generated.resources.signed_in
+import oblivionnocturne.composeapp.generated.resources.skip_no_music_part
+import oblivionnocturne.composeapp.generated.resources.skip_silent
+import oblivionnocturne.composeapp.generated.resources.skip_sponsor_part_of_video
+import oblivionnocturne.composeapp.generated.resources.smart_downloads
+import oblivionnocturne.composeapp.generated.resources.smart_downloads_description
+import oblivionnocturne.composeapp.generated.resources.smart_downloads_needs_local_tracking
+import oblivionnocturne.composeapp.generated.resources.smart_downloads_size
+import oblivionnocturne.composeapp.generated.resources.smart_downloads_size_value
+import oblivionnocturne.composeapp.generated.resources.socks
+import oblivionnocturne.composeapp.generated.resources.sponsorBlock
+import oblivionnocturne.composeapp.generated.resources.sponsor_block_intro
+import oblivionnocturne.composeapp.generated.resources.spotify
+import oblivionnocturne.composeapp.generated.resources.spotify_canvas_cache
+import oblivionnocturne.composeapp.generated.resources.spotify_lyrícs_info
+import oblivionnocturne.composeapp.generated.resources.storage
+import oblivionnocturne.composeapp.generated.resources.such_as_music_video_lyrics_video_podcasts_and_more
+import oblivionnocturne.composeapp.generated.resources.sync_follow_to_youtube
+import oblivionnocturne.composeapp.generated.resources.sync_follow_to_youtube_description
+import oblivionnocturne.composeapp.generated.resources.theme
+import oblivionnocturne.composeapp.generated.resources.theme_color
+import oblivionnocturne.composeapp.generated.resources.theme_color_custom
+import oblivionnocturne.composeapp.generated.resources.theme_color_default
+import oblivionnocturne.composeapp.generated.resources.theme_color_wallpaper
+import oblivionnocturne.composeapp.generated.resources.theme_mode_dark
+import oblivionnocturne.composeapp.generated.resources.theme_mode_light
+import oblivionnocturne.composeapp.generated.resources.theme_mode_system
+import oblivionnocturne.composeapp.generated.resources.thumbnail_cache
+import oblivionnocturne.composeapp.generated.resources.translation_language
+import oblivionnocturne.composeapp.generated.resources.translation_language_message
+import oblivionnocturne.composeapp.generated.resources.unknown
+import oblivionnocturne.composeapp.generated.resources.update_channel
+import oblivionnocturne.composeapp.generated.resources.use_ai_translation
+import oblivionnocturne.composeapp.generated.resources.use_ai_translation_description
+import oblivionnocturne.composeapp.generated.resources.use_your_system_equalizer
+import oblivionnocturne.composeapp.generated.resources.user_interface
+import oblivionnocturne.composeapp.generated.resources.version
+import oblivionnocturne.composeapp.generated.resources.version_format
+import oblivionnocturne.composeapp.generated.resources.video_download_quality
+import oblivionnocturne.composeapp.generated.resources.video_quality
+import oblivionnocturne.composeapp.generated.resources.warning
+import oblivionnocturne.composeapp.generated.resources.weekly
+import oblivionnocturne.composeapp.generated.resources.what_segments_will_be_skipped
+import oblivionnocturne.composeapp.generated.resources.youtube_account
+import oblivionnocturne.composeapp.generated.resources.youtube_subtitle_language
+import oblivionnocturne.composeapp.generated.resources.youtube_subtitle_language_message
+import oblivionnocturne.composeapp.generated.resources.youtube_transcript
 import oblivionnocturne.composeapp.generated.resources.base_url
 import oblivionnocturne.composeapp.generated.resources.configured
 import oblivionnocturne.composeapp.generated.resources.custom_base_url
@@ -229,6 +455,7 @@ fun SettingScreen(
 ) {
     var width by rememberSaveable { mutableIntStateOf(0) }
     val uriHandler = LocalUriHandler.current
+    val platformContext = LocalPlatformContext.current
 
     // Backup and restore
     val formatter =
@@ -2497,13 +2724,9 @@ fun SettingScreen(
                 )
                 SettingItem(
                     title = stringResource(Res.string.author),
-                    subtitle = stringResource(Res.string.maxrave_dev),
+                    subtitle = stringResource(Res.string.developer_blog_tagline),
                     onClick = {
-                        uriHandler.openUri("https://github.com/mosske")
-                    },
-                )
-                // Follow-me-on-X row - informational text only (no personal social link)
-                SettingItem(
+                        uriHandler.openUri("https://github.com/mosske/Oblivion-Nocturne")
                     },
                 )
                 if (getPlatform() == Platform.Android) {
@@ -2513,10 +2736,6 @@ fun SettingScreen(
                         switch = (blogNotificationEnabled to { viewModel.setBlogNotificationEnabled(it) }),
                     )
                 }
-                // Buy-me-coffee row - informational text only (no donation link)
-                SettingItem(
-                    },
-                )
             }
         }
         item(key = "developer_option") {
