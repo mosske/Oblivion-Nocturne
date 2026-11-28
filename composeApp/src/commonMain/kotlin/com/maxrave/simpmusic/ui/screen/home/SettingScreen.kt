@@ -3563,7 +3563,7 @@ private fun ImportProgressDialog(
         confirmButton = {
             if (finished) {
                 TextButton(onClick = onDismiss) {
-                    Text(text = str_ok)
+                    Text(text = stringResource(Res.string.ok))
                 }
             }
         },
